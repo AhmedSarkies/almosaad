@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Helper</title>
+    <link rel="stylesheet" href="style/normalize.css" />
+    <link rel="stylesheet" href="style/bootstrap.min.css" />
+    <link rel="stylesheet" href="style/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <div class="over-lay">
+      <span class="loader"></span>
+    </div>
+    <!-- Start Header -->
+    <header class="navbar pt-0 pb-0 ps-2 pe-2 ps-md-5 pe-md-5">
+      <div
+        class="col-12 d-flex justify-content-between align-items-center text-center pt-0 pb-0 ps-2 pe-2 ps-md-5 pe-md-5"
+      >
+        <div class="menu-btn text-light p-0 col-0" href="#">
+          <i class="fa-solid fa-bars p-5"></i>
+        </div>
+        <a
+          class="logo d-md-flex d-none text-decoration-none text-light fs-3 ms-5 me-xxl-3 me-2 col-0"
+          href="index.html"
+          >المساعد</a
+        >
+        <a class="brand d-md-none d-flex col-0" href="#">
+          <img src="images/icon/Vector-Smart-Object.png" alt="" />
+        </a>
+        <ul
+          class="navbar-nav p-0 me-xl-3 me-0 d-flex justify-content-between justify-content-md-center justify-content-sm-center align-items-center text-center flex-lg-row-reverse col-md-5 col-sm-4 col-0"
+          dir="ltr"
+        >
+          <li
+            class="nav-item d-flex justify-content-center pt-5 pb-5 p-0 me-xl-5 me-lg-0 col-xl-4 col-lg-5 col-6 d-lg-flex d-none"
+          >
+            <a class="nav-link text-light" href="index.html"
+              >أضف عملك <i class="fa-solid fa-plus"></i
+            ></a>
+          </li>
+          <li
+            class="nav-item d-flex justify-content-center pt-5 pb-5 p-0 col-xl-4 col-lg-5 col-6 d-lg-flex d-none"
+          >
+            <a class="nav-link text-light" href="#"
+              >ابحث عن عمال <i class="fa-brands fa-searchengin"></i
+            ></a>
+          </li>
+          <li
+            class="nav-item d-flex justify-content-center pt-5 pb-5 p-0 col-xl-4 col-lg-5 col-6 d-xl-flex d-none"
+          >
+            <a class="nav-link text-light" href="#"
+              >تصفح الأعمال <i class="fa-solid fa-boxes-stacked"></i
+            ></a>
+          </li>
+        </ul>
+        <ul
+          class="navbar-nav nav-sign d-flex justify-content-center align-items-center text-center flex-lg-row-reverse col-xl-4"
+          dir="ltr"
+        >
+          <li class="nav-item col-xl-4 col-12">
+            <a class="nav-link bg-light sign w-100" href="#">تسجيل الدخول</a>
+          </li>
+          <li class="nav-item me-2 d-xl-flex d-none col-4">
+            <a class="nav-link bg-light sign w-100" href="#">تسجيل في الموقع</a>
+          </li>
+        </ul>
+        <a class="brand d-md-flex d-none col-0" href="#">
+          <img src="images/icon/Vector-Smart-Object.png" alt="" />
+        </a>
+      </div>
+    </header>
+    <!-- End Header -->
+    <!-- Start Sidebar -->
+    <div class="side-bar">
+      <form action="" class="">
+        <input
+          class="search-btn form-control rounded-0"
+          type="search"
+          name=""
+          id=""
+          placeholder="ابحث عن ..."
+          dir="rtl"
+        />
+      </form>
+      <hr />
+      <ul class="navbar-nav p-0" dir="rtl">
+        <li class="nav-item p-2">
+          <a class="nav-link fw-bold" href="#">تسجيل الدخول</a>
+        </li>
+        <li class="nav-item p-2">
+          <a class="nav-link fw-bold" href="#">تسجيل في الموقع</a>
+        </li>
+        <li class="nav-item p-2" dir="ltr">
+          <a class="nav-link fw-bold" href="index.html"
+            >أضف عملك <i class="fa-solid fa-plus"></i
+          ></a>
+        </li>
+        <li class="nav-item p-2" dir="ltr">
+          <a class="nav-link fw-bold" href="index.html"
+            >ابحث عن عمال <i class="fa-brands fa-searchengin"></i
+          ></a>
+        </li>
+        <li class="nav-item p-2" dir="ltr">
+          <a class="nav-link fw-bold" href="index.html"
+            >تصفح الأعمال <i class="fa-solid fa-boxes-stacked"></i
+          ></a>
+        </li>
+      </ul>
+    </div>
+    <!-- End Sidebar -->
+    <!-- Start Landing Page -->
+    <div class="landing d-flex justify-content-center align-items-center">
+      <div class="overlay">
+        <img src="images/icon/landing.jpg" alt="" />
+      </div>
+      <div class="introduction-text text-light text-center">
+        <h1 class="fw-bold">أنجز أعمالك فى أسرع وقت بسهولة وأمان</h1>
+        <h4 class="mt-3 mb-4 fw-bold">أبحث عن الحرفى الذيى تريده لإنجاز أعمالك</h4>
+        <div class="container">
+          <div class="search-wrap">
+            <div class="search-box">
+              <input
+                type="text"
+                class="search-input"
+                placeholder="عنوان المهام التى تريد تنفيذها ...."
+              />
+              <a
+                class="btn btn-common d-flex justify-content-center align-items-center"
+              >
+                ابدأ مهامك الأن
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Landing Page -->
+    <!-- Start How Work -->
+    <div class="how-work pt-3 pb-3">
+      <div class="how-work-head">
+        <div class="container">
+          <div class="row">
+            <div class="work-text text-center mt-4">
+              <h1 class="heading heading-collect">كيف يعمل المساعد؟</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="how-work-body">
+        <div class="container">
+          <div class="row">
+            <div
+              class="d-flex justify-content-around align-items-end flex-column"
+            >
+              <div
+                class="work-text text-center d-flex align-content-center justify-content-end mt-5 mb-3"
+              >
+                <span class="me-2">أضف الأعمال</span>
+                <img src="images/icon/checked.png" alt="" />
+              </div>
+              <div>
+                <p class="fs-4 fw-bold text-black-50" dir="rtl">
+                  أضف تفاصيل عملك والمهارات المطلوبة لإنجازه وابدأ باستقبال عروض
+                  الساعدين عليه.
+                </p>
+              </div>
+            </div>
+            <div
+              class="d-flex justify-content-around align-items-end flex-column"
+            >
+              <div
+                class="work-text text-center d-flex align-content-center justify-content-end mt-5 mb-3"
+              >
+                <span class="me-2">اختر العرض المناسب</span>
+                <img src="images/icon/checked.png" alt="" />
+              </div>
+              <div>
+                <p class="fs-4 fw-bold text-black-50" dir="rtl">
+                  من بين العروض المقدمة لاعطالك ومهامك، اختر العرض المناسب
+                  لمتطلبات المشروع ثم ابدأ مباشرة مرحلة التنفيذ
+                </p>
+              </div>
+            </div>
+            <div
+              class="d-flex justify-content-around align-items-end flex-column"
+            >
+              <div
+                class="work-text text-center d-flex align-content-center justify-content-end mt-5 mb-3"
+              >
+                <span class="me-2">استلم الأعمال</span>
+                <img src="images/icon/checked.png" alt="" />
+              </div>
+              <div>
+                <p class="fs-4 fw-bold text-black-50" dir="rtl">
+                  سيعمل المساعد الذى اخترته معك حتى انتهاء العمل وتسليم العمل
+                  بشكل كامل كما أردته.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End How Work -->
+    <!-- Start Why Us -->
+    <div class="why-us" dir="rtl">
+      <div class="container">
+        <div
+          class="row col-12 d-flex justify-content-center align-content-center text-center"
+        >
+          <h1>لماذا المساعد؟</h1>
+          <div class="why-box mt-5 col-xl-4 col-lg-5 col-md-6 col-sm-12">
+            <img src="/images/icon/rocket.png" alt="" />
+            <h2>نفذ مشاريعك بسهولة</h2>
+            <p>اطرح مشروعك واترك مهمة تنفيذه لأفضل خبراء الوطن العربي</p>
+          </div>
+          <div class="why-box mt-5 col-xl-4 col-lg-5 col-md-6 col-sm-12">
+            <img src="/images/icon/like.png" alt="" />
+            <h2>وظف أفضل الحرفيين</h2>
+            <p>زُر ملفات الحرفيين، اطلع على اعمالهم السابقة وظف الأفضل</p>
+          </div>
+          <div class="why-box mt-5 col-xl-4 col-lg-5 col-md-6 col-sm-12">
+            <img src="/images/icon/payment-method.png" />
+            <h2>ادفع بكل أريحية</h2>
+            <p>لن تدفع سوى مقابل ما يتم إنجازه من وظائف</p>
+          </div>
+          <div class="why-box mt-5 col-xl-4 col-lg-5 col-md-6 col-sm-12">
+            <img src="/images/icon/group.png" alt="" />
+            <h2>ابنِ فريق عمل متكامل</h2>
+            <p>خبراء فى مختلف المجالات ومختلف البلدان</p>
+          </div>
+          <div class="why-box mt-5 col-xl-4 col-lg-5 col-md-6 col-sm-12">
+            <img src="/images/icon/support (1).png" alt="" />
+            <h2>انجز أعمالك بسرعة</h2>
+            <p>اختر أفضل الحرفيين وأرسل له الوظيفة مباشرة مع ضمان كامل حقوقك</p>
+          </div>
+          <div class="why-box mt-5 col-xl-4 col-lg-5 col-md-6 col-sm-12">
+            <img src="/images/icon/low-price.png" alt="" />
+            <h2>نفذ مشاريعك بتكاليف أقل</h2>
+            <p>وظّف أفضل الخبرات حسبما يتناسب مع مزانيتك</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Why Us -->
+    <!-- Start Sections Helper -->
+    <div class="sections-helper" dir="rtl">
+      <div class="container">
+        <div
+          class="row col-12 d-flex justify-content-center align-content-center text-center"
+        >
+          <h1>أقسام المساعد</h1>
+          <div
+            class="sections-helper-box mt-5 col-xl-3 col-lg-4 col-md-6 col-sm-6"
+          >
+            <img class="mb-3" src="/images/icon/carpenter (1).png" alt="" />
+            <h2>نجارة</h2>
+          </div>
+          <div
+            class="sections-helper-box mt-5 col-xl-3 col-lg-4 col-md-6 col-sm-6"
+          >
+            <img class="mb-3" src="/images/icon/plug.png" alt="" />
+            <h2>كهرباء</h2>
+          </div>
+          <div
+            class="sections-helper-box mt-5 col-xl-3 col-lg-4 col-md-6 col-sm-6"
+          >
+            <img class="mb-3" src="/images/icon/painting-brush.png" />
+            <h2>دهان ونقاشة</h2>
+          </div>
+          <div
+            class="sections-helper-box mt-5 col-xl-3 col-lg-4 col-md-6 col-sm-6"
+          >
+            <img class="mb-3" src="/images/icon/air-conditioner.png" alt="" />
+            <h2>تكييف وتبريد</h2>
+          </div>
+          <div
+            class="sections-helper-box mt-5 col-xl-3 col-lg-4 col-md-6 col-sm-6"
+          >
+            <img class="mb-3" src="/images/icon/house-decoration.png" alt="" />
+            <h2>ديكور</h2>
+          </div>
+          <div
+            class="sections-helper-box mt-5 col-xl-3 col-lg-4 col-md-6 col-sm-6"
+          >
+            <img class="mb-3" src="/images/icon/blacksmith.png" alt="" />
+            <h2>حدادة</h2>
+          </div>
+          <div
+            class="sections-helper-box mt-5 col-xl-3 col-lg-4 col-md-6 col-sm-6"
+          >
+            <img class="mb-3" src="/images/icon/brickwall.png" alt="" />
+            <h2>بناء</h2>
+          </div>
+          <div
+            class="sections-helper-box mt-5 col-xl-3 col-lg-4 col-md-6 col-sm-6"
+          >
+            <img class="mb-3" src="/images/icon/plumbering.png" alt="" />
+            <h2>سباكة</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Sections Helper -->
+    <!-- Start Questions -->
+    <div class="questions text-light pt-5 pb-5">
+      <!-- Start Heading -->
+      <div class="questions-head">
+        <div class="container">
+          <div class="row">
+            <div class="questions-text text-center mt-5">
+              <h1 class="heading heading-collect">الأسئلة الشائعة</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Heading -->
+      <!-- Start Body -->
+      <div class="questions-body">
+        <div class="container">
+          <div class="row align-items-center justify-content-center">
+            <div class="question-tap col-12">
+              <div
+                class="question d-flex justify-content-between align-items-center flex-row-reverse"
+              >
+                <p class="title fw-bold">
+                  هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم
+                  توليد هذا النص من مولد النص العربى ؟؟
+                </p>
+                <i class="fa-regular fa-circle-up question-icon"></i>
+              </div>
+              <p class="pra question-pra">
+                .هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم
+                توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا
+                النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى
+                يولدها التطبيق هذا النص هو مثال لنص يمكن أن يستبدل في نفس
+                المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن
+                تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد
+                الحروف التى يولدها التطبيق. هذا النص هو مثال لنص يمكن أن يستبدل
+                في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث
+                يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى
+                زيادة عدد الحروف التى يولدها التطبيق.
+              </p>
+            </div>
+            <div class="question-tap col-12">
+              <div
+                class="question d-flex justify-content-between align-items-center flex-row-reverse"
+              >
+                <p class="title fw-bold">
+                  هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم
+                  توليد هذا النص من مولد النص العربى ؟؟
+                </p>
+                <i class="fa-regular fa-circle-up question-icon"></i>
+              </div>
+              <p class="pra question-pra">
+                .هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم
+                توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا
+                النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى
+                يولدها التطبيق هذا النص هو مثال لنص يمكن أن يستبدل في نفس
+                المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن
+                تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد
+                الحروف التى يولدها التطبيق. هذا النص هو مثال لنص يمكن أن يستبدل
+                في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث
+                يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى
+                زيادة عدد الحروف التى يولدها التطبيق.
+              </p>
+            </div>
+            <div class="question-tap col-12">
+              <div
+                class="question d-flex justify-content-between align-items-center flex-row-reverse"
+              >
+                <p class="title fw-bold">
+                  هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم
+                  توليد هذا النص من مولد النص العربى ؟؟
+                </p>
+                <i class="fa-regular fa-circle-up question-icon"></i>
+              </div>
+              <p class="pra question-pra">
+                .هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم
+                توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا
+                النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى
+                يولدها التطبيق هذا النص هو مثال لنص يمكن أن يستبدل في نفس
+                المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن
+                تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد
+                الحروف التى يولدها التطبيق. هذا النص هو مثال لنص يمكن أن يستبدل
+                في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث
+                يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى
+                زيادة عدد الحروف التى يولدها التطبيق.
+              </p>
+            </div>
+            <div class="question-tap col-12">
+              <div
+                class="question d-flex justify-content-between align-items-center flex-row-reverse"
+              >
+                <p class="title fw-bold">
+                  هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم
+                  توليد هذا النص من مولد النص العربى ؟؟
+                </p>
+                <i class="fa-regular fa-circle-up question-icon"></i>
+              </div>
+              <p class="pra question-pra">
+                .هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم
+                توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا
+                النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى
+                يولدها التطبيق هذا النص هو مثال لنص يمكن أن يستبدل في نفس
+                المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن
+                تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد
+                الحروف التى يولدها التطبيق. هذا النص هو مثال لنص يمكن أن يستبدل
+                في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث
+                يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى
+                زيادة عدد الحروف التى يولدها التطبيق.
+              </p>
+            </div>
+            <div class="question-tap col-12">
+              <div
+                class="question d-flex justify-content-between align-items-center flex-row-reverse"
+              >
+                <p class="title fw-bold">
+                  هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم
+                  توليد هذا النص من مولد النص العربى ؟؟
+                </p>
+                <i class="fa-regular fa-circle-up question-icon"></i>
+              </div>
+              <p class="pra question-pra">
+                .هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم
+                توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا
+                النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى
+                يولدها التطبيق هذا النص هو مثال لنص يمكن أن يستبدل في نفس
+                المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن
+                تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد
+                الحروف التى يولدها التطبيق. هذا النص هو مثال لنص يمكن أن يستبدل
+                في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث
+                يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى
+                زيادة عدد الحروف التى يولدها التطبيق.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Body -->
+    </div>
+    <!-- End Questions -->
+    <!-- Start Project -->
+    <div class="start-project text-light pt-3 pb-3">
+      <div class="start-project-head">
+        <div class="container">
+          <div class="row">
+            <div class="project-text text-center mt-4">
+              <h1 class="heading heading-collect">هل انت جاهز لبدء مشروعك</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="start-project-body">
+        <div class="container">
+          <div class="row">
+            <div
+              class="project-text text-center d-flex justify-content-center mt-5 mb-3"
+            >
+              <a
+                class="start-project-btn sign text-decoration-none btn col-xxl-2 col-xl-3 col-lg-4 col-md-5 col-6"
+                href="#"
+                >ابدأ مهامك</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Project -->
+    <!-- Start Footer -->
+    <footer
+      class="d-flex justify-content-between align-items-center col-12"
+      dir="rtl"
+    >
+      <div
+        class="container d-flex flex-xl-row flex-column justify-content-between align-items-center text-light p-0"
+      >
+        <div
+          class="col-xxl-5 col-xl-6 col-lg-7 col-12 d-flex justify-content-between"
+        >
+          <a class="text-decoration-none text-light text-center p-2" href="#"
+            >مركز المساعدة</a
+          >
+          <a class="text-decoration-none text-light text-center p-2" href="#"
+            >سياسة الخصوصية</a
+          >
+          <a class="text-decoration-none text-light text-center p-2" href="#"
+            >شروط الاستخدام</a
+          >
+          <a class="text-decoration-none text-light text-center p-2" href="#"
+            >الاسئلة الشائعة</a
+          >
+        </div>
+        <div class="col-xl-4 col-12 text-center mt-xl-0 mt-3">
+          &copy; 2022 المساعد. جميع الحقوق محفوظة.
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

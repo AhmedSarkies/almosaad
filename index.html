@@ -17,19 +17,23 @@
     <link rel="stylesheet" href="style/style.css" />
   </head>
   <body>
-    <div class="over-lay">
-      <span class="loader"></span>
+    <!-- Start Loader -->
+    <div class="loader-container">
+      Loading
+      <div class="loader load-top"></div>
+      <div class="loader load-bottom"></div>
     </div>
+    <!-- End Loader -->
     <!-- Start Header -->
-    <header class="navbar pt-0 pb-0 ps-2 pe-2 ps-md-5 pe-md-5">
+    <header class="navbar p-0 pe-3 ps-3">
       <div
-        class="col-12 d-flex justify-content-between align-items-center text-center pt-0 pb-0 ps-2 pe-2 ps-md-5 pe-md-5"
+        class="col-12 d-flex justify-content-between align-items-center text-center p-0"
       >
         <div class="menu-btn text-light p-0 col-0" href="#">
-          <i class="fa-solid fa-bars p-5"></i>
+          <i class="fa-solid fa-bars nav-p-17"></i>
         </div>
         <a
-          class="logo d-md-flex d-none text-decoration-none text-light fs-3 ms-5 me-xxl-3 me-2 col-0"
+          class="logo d-md-flex d-none text-decoration-none text-light ms-5 me-xxl-3 me-2 col-0"
           href="index.html"
           >المساعد</a
         >
@@ -41,21 +45,21 @@
           dir="ltr"
         >
           <li
-            class="nav-item d-flex justify-content-center pt-5 pb-5 p-0 me-xl-5 me-lg-0 col-xl-4 col-lg-5 col-6 d-lg-flex d-none"
+            class="nav-item d-flex justify-content-center nav-p-20 me-xl-5 me-lg-0 col-xl-4 col-lg-5 col-6 d-lg-flex d-none"
           >
             <a class="nav-link text-light" href="index.html"
               >أضف عملك <i class="fa-solid fa-plus"></i
             ></a>
           </li>
           <li
-            class="nav-item d-flex justify-content-center pt-5 pb-5 p-0 col-xl-4 col-lg-5 col-6 d-lg-flex d-none"
+            class="nav-item d-flex justify-content-center nav-p-20 col-xl-4 col-lg-5 col-6 d-lg-flex d-none"
           >
             <a class="nav-link text-light" href="#"
               >ابحث عن عمال <i class="fa-brands fa-searchengin"></i
             ></a>
           </li>
           <li
-            class="nav-item d-flex justify-content-center pt-5 pb-5 p-0 col-xl-4 col-lg-5 col-6 d-xl-flex d-none"
+            class="nav-item d-flex justify-content-center nav-p-20 col-xl-4 col-lg-5 col-6 d-xl-flex d-none"
           >
             <a class="nav-link text-light" href="#"
               >تصفح الأعمال <i class="fa-solid fa-boxes-stacked"></i
@@ -66,11 +70,11 @@
           class="navbar-nav nav-sign d-flex justify-content-center align-items-center text-center flex-lg-row-reverse col-xl-4"
           dir="ltr"
         >
-          <li class="nav-item col-xl-4 col-12">
-            <a class="nav-link bg-light sign w-100" href="#">تسجيل الدخول</a>
+          <li class="nav-item p-0 col-xl-4 col-12">
+            <a class="nav-link bg-light sign" href="#">تسجيل الدخول</a>
           </li>
-          <li class="nav-item me-2 d-xl-flex d-none col-4">
-            <a class="nav-link bg-light sign w-100" href="#">تسجيل في الموقع</a>
+          <li class="nav-item p-0 me-2 d-xl-flex d-none col-4">
+            <a class="nav-link bg-light sign" href="#">تسجيل في الموقع</a>
           </li>
         </ul>
         <a class="brand d-md-flex d-none col-0" href="#">
@@ -218,35 +222,35 @@
         <div
           class="row col-12 d-flex justify-content-center align-content-center text-center"
         >
-          <h1>لماذا المساعد؟</h1>
+          <h1 class="heading">لماذا المساعد؟</h1>
           <div class="why-box mt-5 col-xl-4 col-lg-5 col-md-6 col-sm-12">
             <img src="/images/icon/rocket.png" alt="" />
-            <h2>نفذ مشاريعك بسهولة</h2>
+            <h2 class="mt-5">نفذ مشاريعك بسهولة</h2>
             <p>اطرح مشروعك واترك مهمة تنفيذه لأفضل خبراء الوطن العربي</p>
           </div>
           <div class="why-box mt-5 col-xl-4 col-lg-5 col-md-6 col-sm-12">
             <img src="/images/icon/like.png" alt="" />
-            <h2>وظف أفضل الحرفيين</h2>
+            <h2 class="mt-5">وظف أفضل الحرفيين</h2>
             <p>زُر ملفات الحرفيين، اطلع على اعمالهم السابقة وظف الأفضل</p>
           </div>
           <div class="why-box mt-5 col-xl-4 col-lg-5 col-md-6 col-sm-12">
             <img src="/images/icon/payment-method.png" />
-            <h2>ادفع بكل أريحية</h2>
+            <h2 class="mt-5">ادفع بكل أريحية</h2>
             <p>لن تدفع سوى مقابل ما يتم إنجازه من وظائف</p>
           </div>
           <div class="why-box mt-5 col-xl-4 col-lg-5 col-md-6 col-sm-12">
             <img src="/images/icon/group.png" alt="" />
-            <h2>ابنِ فريق عمل متكامل</h2>
+            <h2 class="mt-5">ابنِ فريق عمل متكامل</h2>
             <p>خبراء فى مختلف المجالات ومختلف البلدان</p>
           </div>
           <div class="why-box mt-5 col-xl-4 col-lg-5 col-md-6 col-sm-12">
             <img src="/images/icon/support (1).png" alt="" />
-            <h2>انجز أعمالك بسرعة</h2>
+            <h2 class="mt-5">انجز أعمالك بسرعة</h2>
             <p>اختر أفضل الحرفيين وأرسل له الوظيفة مباشرة مع ضمان كامل حقوقك</p>
           </div>
           <div class="why-box mt-5 col-xl-4 col-lg-5 col-md-6 col-sm-12">
             <img src="/images/icon/low-price.png" alt="" />
-            <h2>نفذ مشاريعك بتكاليف أقل</h2>
+            <h2 class="mt-5">نفذ مشاريعك بتكاليف أقل</h2>
             <p>وظّف أفضل الخبرات حسبما يتناسب مع مزانيتك</p>
           </div>
         </div>
@@ -259,7 +263,7 @@
         <div
           class="row col-12 d-flex justify-content-center align-content-center text-center"
         >
-          <h1>أقسام المساعد</h1>
+          <h1 class="heading">أقسام المساعد</h1>
           <div
             class="sections-helper-box mt-5 col-xl-3 col-lg-4 col-md-6 col-sm-6"
           >

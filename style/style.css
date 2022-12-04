@@ -447,10 +447,6 @@ footer a:hover {
     right: -100%;
     width: 100%;
   }
-  .sign {
-    font-size: 13px !important;
-    padding: 0 5px !important;
-  }
   .landing .container .search-wrap .search-box .btn {
     width: 80%;
   }

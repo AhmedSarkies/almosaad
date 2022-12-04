@@ -184,10 +184,13 @@ header .nav-item,
   height: 100%;
   position: absolute;
 }
-.landing .overlay img {
-  opacity: 0.9;
+.landing .overlay-opacity-60 {
+  position: absolute;
+  background-color: #000;
+  opacity: 0.6;
   width: 100%;
   height: 100%;
+  z-index: 1;
 }
 .landing .introduction-text {
   z-index: 2;

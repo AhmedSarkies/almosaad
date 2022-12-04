@@ -6,57 +6,44 @@ body {
   font-family: "Cairo", sans-serif;
 }
 /* Start Loader In All Pages */
-.loader {
+.loader-container.loading {
+  background-color: #fff;
   width: 100%;
   height: 100%;
-  z-index: 999999;
-  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translate(50%, 50%);
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  display: inline-block;
-  border: 3px solid;
-  border-color: var(--secondary-color) var(--secondary-color) transparent
-    transparent;
-  box-sizing: border-box;
+  pointer-events: none;
+  z-index: 9999999;
   opacity: 0;
   visibility: hidden;
-  animation: rotation 1s linear infinite;
-  transition: opacity 2s ease-in-out, visibility 0s ease-in-out 2s;
+  font-weight: bold;
+  animation: text-color 1s ease-in-out infinite alternate;
+  transition: opacity 0s ease-in-out 5s, visibility 0s ease-in-out 5s;
 }
-.loader::after,
-.loader::before {
-  content: "";
-  box-sizing: border-box;
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  border: 3px solid;
-  border-color: transparent transparent var(--secondary-color)
-    var(--secondary-color);
-  width: 40px;
-  height: 40px;
+  width: 90px;
+  height: 90px;
+  border: 10px solid transparent;
   border-radius: 50%;
-  box-sizing: border-box;
-  animation: rotationBack 0.5s linear infinite;
-  transform-origin: center center;
+  animation: loader var(--duration) var(--timing) infinite;
 }
-.loader::before {
-  width: 32px;
-  height: 32px;
-  border-color: var(--secondary-color) var(--secondary-color) transparent
-    transparent;
-  animation: rotation 1.5s linear infinite;
+.load-top {
+  border-top-color: var(--main-color);
+  --duration: 2s;
+  --timing: ease-in-out;
 }
-
-@keyframes rotation {
+.load-left {
+  border-left-color: var(--main-color);
+  --duration: 2.5s;
+  --timing: ease-in;
+}
+@keyframes loader {
   0% {
     transform: rotate(0deg);
   }
@@ -64,12 +51,15 @@ body {
     transform: rotate(360deg);
   }
 }
-@keyframes rotationBack {
+@keyframes text-color {
   0% {
-    transform: rotate(0deg);
+    color: rgba(0, 0, 0, 1);
+  }
+  50% {
+    color: rgba(0, 0, 0, 0.5);
   }
   100% {
-    transform: rotate(-360deg);
+    color: rgba(0, 0, 0, 0.1);
   }
 }
 /* End Loader In All Pages */
@@ -83,16 +73,16 @@ header {
   min-height: 75px;
   z-index: 99999;
 }
-.header-fixed {
+.header-sticky {
   position: sticky;
   top: 0;
   z-index: 99999;
   width: 100%;
-  box-shadow: 0 0 20px var(--main-color);
+  box-shadow: 0 0 20px #00000060;
 }
 header .nav-item,
 .side-bar .nav-item {
-  font-size: 20px;
+  font-size: 16px !important;
 }
 .menu-btn svg {
   cursor: pointer;
@@ -108,13 +98,14 @@ header .nav-item,
 .sign {
   color: var(--main-color) !important;
   font-weight: 900 !important;
-  font-size: 20px;
+  font-size: 14px !important;
   border-radius: 7px;
-  height: 60px;
+  width: 100%;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 .sign:hover {
   background-color: var(--secondary-color) !important;
@@ -122,10 +113,11 @@ header .nav-item,
   transition: 0.4s ease-in-out;
 }
 .logo {
-  width: 50px;
+  font-size: 30px;
 }
 .brand img {
-  width: 100px;
+  width: 75px;
+  height: 75px;
 }
 .nav-item:hover {
   background-color: var(--secondary-color);
@@ -133,6 +125,12 @@ header .nav-item,
 }
 .nav-sign .nav-item {
   border-radius: 8px;
+}
+.nav-p-17 {
+  padding: 17px;
+}
+.nav-p-20 {
+  padding: 20px;
 }
 /* End Header In All Pages */
 /* End Sidebar In All Pages */
@@ -143,7 +141,7 @@ header .nav-item,
   width: 300px;
   height: 100vh;
   position: fixed;
-  top: 142px;
+  top: 80px;
   right: -300px;
   overflow-y: auto;
   transition-property: right;
@@ -163,6 +161,7 @@ header .nav-item,
   border: 0 !important;
   box-shadow: none !important;
   font-weight: 600;
+  font-size: 18px;
 }
 .side-bar .nav-item {
   color: var(--main-color);
@@ -178,6 +177,7 @@ header .nav-item,
 .landing {
   z-index: -1;
   height: 100vh;
+  margin-top: -8px;
 }
 .landing .overlay {
   width: 100%;
@@ -204,21 +204,21 @@ header .nav-item,
   left: 0;
   width: 100%;
   border: 0;
-  font-size: 22px;
+  font-size: 16px;
   font-weight: 900;
   padding: 10px 20px;
   border-radius: 7px;
   outline: none;
   color: #8b7d77;
   direction: rtl;
-  height: 80px;
+  height: 60px;
 }
 .landing .container .search-wrap .search-box .btn {
   position: absolute;
-  height: 65px;
+  height: 47px;
   margin: 7px;
   border: 0;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 900;
   border-radius: 7px;
   color: #fff;
@@ -247,28 +247,25 @@ header .nav-item,
   font-size: 45px;
   color: #fff;
   font-weight: 900;
-  padding: 50px 0 70px 0;
+  padding: 30px 0;
 }
 .why-us .why-box,
 .sections-helper .sections-helper-box {
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
   color: #fff;
   font-weight: 900;
 }
 .why-us .why-box h2 {
-  margin-top: 30px !important;
+  font-size: 30px !important;
 }
 .why-us .why-box p {
-  font-size: 20px;
   font-weight: 500;
 }
 .why-us .why-box img,
 .sections-helper .sections-helper-box img {
   width: 80px;
-  width: 84px;
 }
 /* End Why Us */
 
@@ -310,46 +307,34 @@ header .nav-item,
 /* Start Questions */
 .questions {
   background-color: var(--main-color);
-  font-size: 24px;
 }
-.questions .container-questions {
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
-  border-radius: 25px;
-  padding-top: 60px;
-  padding-bottom: 45px;
-  margin-top: 50px;
-  margin-bottom: 120px;
+.title {
+  font-size: 18px;
 }
-.question-tap {
-  border-radius: 30px;
-  padding: 30px;
-  transition: 0.8s;
+.questions-head {
+  margin-bottom: 30px;
 }
 .question {
+  padding: 20px 0;
   text-align: end;
   cursor: pointer;
   transition: 0.5s;
 }
 .question-icon {
-  font-size: 36px;
+  font-size: 30px;
   color: #fff;
   transform: rotate(-45deg);
   transition: 0.5s;
 }
 .question-pra {
+  font-size: 16px;
+  padding: 5px;
   display: none;
   direction: rtl;
-}
-.questions .active {
-  background-color: var(--main-color);
-  margin-bottom: 30px;
 }
 .questions .active .question-icon {
   transform: rotate(-135deg);
   transition: 0.5s;
-}
-.questions .active .question {
-  margin-bottom: 10px;
 }
 /* End Questions */
 
@@ -368,6 +353,8 @@ header .nav-item,
   background-color: #fff !important;
   color: var(--main-color);
   border-radius: 7px;
+  font-size: 14px !important;
+  width: 30%;
   font-weight: 900;
 }
 /* End Start Project */
@@ -388,14 +375,83 @@ footer a:hover {
 
 /* Start Media */
 @media (max-width: 1400px) {
+  .fa-bars {
+    font-size: 40px !important;
+  }
   header .nav-item,
   .side-bar .nav-item {
-    font-size: 18px;
+    padding: 17.5px 10px;
+    font-size: 15px !important;
+  }
+  .sign {
+    font-size: 12px !important;
+  }
+  .side-bar {
+    top: 75px;
+  }
+  .heading {
+    font-size: 40px !important;
+  }
+}
+@media (max-width: 1200px) {
+  .sign {
+    font-size: 13px !important;
+    padding: 0 10px !important;
+  }
+  .heading {
+    font-size: 35px !important;
+  }
+}
+@media (max-width: 991px) {
+  .landing .container .search-wrap .search-box {
+    display: flex;
+    justify-content: center;
+  }
+  .landing .container .search-wrap .search-box .search-input {
+    display: none;
+  }
+  .landing .container .search-wrap .search-box .btn {
+    width: 60%;
+  }
+  .heading {
+    font-size: 30px !important;
+  }
+  .why-us .why-box h2 {
+    font-size: 25px !important;
+  }
+  .title {
+    font-size: 14px;
+  }
+  .question-icon {
+    font-size: 25px;
+  }
+  .question-pra {
+    font-size: 12px;
+  }
+  .start-project-btn {
+    width: 45%;
   }
 }
 @media (max-width: 400px) {
   .brand img {
     display: none !important;
+  }
+  .side-bar {
+    right: -100%;
+    width: 100%;
+  }
+  .sign {
+    font-size: 13px !important;
+    padding: 0 5px !important;
+  }
+  .landing .container .search-wrap .search-box .btn {
+    width: 80%;
+  }
+  .why-us .why-box h2 {
+    font-size: 20px !important;
+  }
+  .start-project-btn {
+    width: 60%;
   }
 }
 /* End Media */

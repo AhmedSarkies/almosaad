@@ -6,19 +6,22 @@ body {
   font-family: "Cairo", sans-serif;
 }
 /* Start Loader In All Pages */
-.loader-container.loading {
+.loader-container {
   background-color: #fff;
   width: 100%;
   height: 100%;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   position: fixed;
   pointer-events: none;
   z-index: 9999999;
+  font-weight: bold;
+}
+.loader-container.loading {
+  display: flex;
   opacity: 0;
   visibility: hidden;
-  font-weight: bold;
   animation: text-color 1s ease-in-out infinite alternate;
   transition: opacity 0s ease-in-out 5s, visibility 0s ease-in-out 5s;
 }

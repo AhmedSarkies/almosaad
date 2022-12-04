@@ -1,17 +1,22 @@
 $(() => {
-  // Start Fixed Header
+  // Start Loader
+  $(this).on("load", function () {
+    $(".loader-container").addClass("loading");
+  });
+  // End Loader
+  // Start Sticky Header
   $(this).scroll(function () {
     if ($(this).scrollTop() > 0) {
-      $(`header`).addClass(`header-fixed`);
+      $(`header`).addClass(`header-sticky`);
     } else {
-      $(`header`).removeClass(`header-fixed`);
+      $(`header`).removeClass(`header-sticky`);
     }
   });
-  // End Fixed Header
+  // End Sticky Header
   //   Start Menu
-  $(".menu-btn").on("click", function () {
-    $(".side-bar").toggleClass("active");
+  $(".menu-btn").on("click", function (event) {
     $(".menu-btn").toggleClass("active");
+    $(".side-bar").toggleClass("active");
   });
   //   End Menu
   // Start Question

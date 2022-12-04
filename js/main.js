@@ -14,9 +14,19 @@ $(() => {
   });
   // End Sticky Header
   //   Start Menu
-  $(".menu-btn").on("click", function (event) {
-    $(".menu-btn").toggleClass("active");
-    $(".side-bar").toggleClass("active");
+  document.addEventListener("click", function (event) {
+    if (event.target.classList.contains("fa-bars")) {
+      $(".menu-btn").toggleClass("active");
+      $(".side-bar").toggleClass("active");
+    } else if (
+      event.target.classList.contains("side-bar") ||
+      event.target.classList.contains("search-btn")
+    ) {
+      return;
+    } else if (!event.target.classList.contains("fa-bars")) {
+      $(".menu-btn").removeClass("active");
+      $(".side-bar").removeClass("active");
+    }
   });
   //   End Menu
   // Start Question

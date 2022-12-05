@@ -77,7 +77,7 @@ header {
   background-color: var(--main-color);
   box-shadow: none;
   font-weight: 600;
-  min-height: 75px;
+  max-height: 65px;
   z-index: 99999;
 }
 .header-sticky {
@@ -91,14 +91,12 @@ header .nav-item,
 .side-bar .nav-item {
   font-size: 16px !important;
 }
-.menu-btn svg {
+.menu-btn .fa-bars {
   cursor: pointer;
-  font-size: 40px;
+  padding: 13px 16px;
+  font-size: 35px !important;
 }
-.fa-bars {
-  font-size: 45px !important;
-}
-.fa-bars:hover,
+.menu-btn:hover,
 .menu-btn.active {
   background-color: var(--secondary-color);
 }
@@ -108,7 +106,7 @@ header .nav-item,
   font-size: 14px !important;
   border-radius: 7px;
   width: 100%;
-  height: 40px;
+  height: 38px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -120,11 +118,11 @@ header .nav-item,
   transition: 0.4s ease-in-out;
 }
 .logo {
-  font-size: 30px;
+  font-size: 35px;
 }
 .brand img {
-  width: 75px;
-  height: 75px;
+  width: 65px;
+  height: 65px;
 }
 .nav-item:hover {
   background-color: var(--secondary-color);
@@ -133,23 +131,21 @@ header .nav-item,
 .nav-sign .nav-item {
   border-radius: 8px;
 }
-.nav-p-17 {
-  padding: 17px;
-}
-.nav-p-20 {
-  padding: 20px;
+.nav-p-12 {
+  padding: 12px;
 }
 /* End Header In All Pages */
 /* End Sidebar In All Pages */
 .side-bar {
+  padding-bottom: 100px;
   background-color: #fff;
   box-shadow: none;
   z-index: 99999;
   width: 300px;
-  height: 100vh;
+  height: 100%;
   position: fixed;
-  top: 80px;
-  right: -300px;
+  top: 65px;
+  right: -100%;
   overflow-y: auto;
   transition-property: right;
   transition: 0.4s ease-in-out;
@@ -174,9 +170,17 @@ header .nav-item,
   color: var(--main-color);
   background-color: #fff;
 }
-.side-bar .nav-item:hover {
+.side-bar .nav-item:hover,
+.side-bar .nav-item-menu .nav-item:hover {
   color: #fff;
   background-color: var(--main-color);
+}
+.fa-angle-left.active {
+  transform: rotate(-90deg);
+  transition: 0.4s ease-in-out;
+}
+.nav-item-menu {
+  display: none;
 }
 /* End Sidebar In All Pages */
 
@@ -382,19 +386,15 @@ footer a:hover {
 
 /* Start Media */
 @media (max-width: 1400px) {
-  .fa-bars {
-    font-size: 40px !important;
-  }
   header .nav-item,
   .side-bar .nav-item {
-    padding: 17.5px 10px;
     font-size: 15px !important;
   }
   .sign {
     font-size: 12px !important;
   }
   .side-bar {
-    top: 75px;
+    top: 65px;
   }
   .heading {
     font-size: 40px !important;

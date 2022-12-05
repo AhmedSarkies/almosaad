@@ -1,7 +1,7 @@
 $(() => {
   // Start Loader
   $(this).on("load", function () {
-    $(".loader-container").addClass("loading");
+    // $(".loader-container").addClass("loading");
   });
   // End Loader
   // Start Sticky Header
@@ -18,36 +18,28 @@ $(() => {
     if (event.target.classList.contains("fa-bars")) {
       $(".menu-btn").toggleClass("active");
       $(".side-bar").toggleClass("active");
-    } else if (
-      event.target.classList.contains("side-bar") ||
-      event.target.classList.contains("search-btn")
-    ) {
+    } else if (event.target.classList.contains("drop")) {
       return;
-    } else if (!event.target.classList.contains("fa-bars")) {
+    } else if (!event.target.classList.contains("drop")) {
       $(".menu-btn").removeClass("active");
       $(".side-bar").removeClass("active");
     }
   });
   //   End Menu
+  // Start Dropdown Menu In Sidebar
+  $(".dropdown-menu-sidebar").on("click", function () {
+    $("li.dropdown-menu-sidebar").next().slideToggle(200);
+    $("li.dropdown-menu-sidebar .fa-angle-left").toggleClass("active");
+  });
+  $(".dropdown-menu-follow").on("click", function () {
+    $("li.dropdown-menu-follow").next().slideToggle(200);
+    $("li.dropdown-menu-follow .fa-angle-left").toggleClass("active");
+  });
+  // End Dropdown Menu In Sidebar
   // Start Question
   $(`.question`).click(function () {
     $(this).next().slideToggle();
     $(this).parent().toggleClass(`active`);
   });
   // End Question
-  //   Start Dropdown Menu
-  $(`.dropdown`).on(`mouseover`, function () {
-    if ($(`.dropdown`)) {
-      $(`.dropdown .profile + .dropdown-menu`).addClass(
-        `d-flex justify-content-center align-content-end flex-column text-end show`
-      );
-    } else return;
-  });
-  $(`.dropdown`).on(`mouseleave`, function () {
-    if ($(`.dropdown`)) {
-      $(`.dropdown .profile + .dropdown-menu`).removeClass(
-        `d-flex justify-content-center align-content-end flex-column text-end show`
-      );
-    }
-  });
 });

@@ -2,6 +2,9 @@
   --main-color: #669c1e;
   --secondary-color: #82ae46;
 }
+.test {
+  border: 1px solid;
+}
 body {
   font-family: "Cairo", sans-serif;
 }
@@ -372,17 +375,84 @@ header .nav-item,
 
 /* Start Footer In All Pages */
 footer {
-  position: relative;
-  margin-top: 100px;
-  padding: 10px;
   background-color: var(--main-color);
-  font-weight: 700;
-  z-index: 99999;
+  margin-top: 100px;
+  font-weight: 900;
+  font-size: 16px !important;
 }
 footer a:hover {
   background-color: var(--secondary-color);
 }
 /* End Footer In All Pages */
+
+/* Start Profile */
+.profile {
+  height: 250px;
+  color: var(--main-color);
+  font-weight: 900;
+}
+.profile .profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+/* End Profile */
+/* Start Tab */
+.tab-buttons .sign {
+  width: 220px;
+  height: 40px;
+  background-color: var(--main-color);
+  color: #fff !important;
+  font-size: 16px !important;
+  font-weight: 900 !important;
+  box-shadow: 0 0 3px #00000060;
+}
+.tab-buttons .sign.call-me {
+  width: 120px !important;
+}
+.tab-buttons .sign:hover {
+  box-shadow: none;
+}
+.nav-tabs {
+  --bs-nav-tabs-border-width: 0 !important;
+  --bs-nav-tabs-border-radius: 0 !important;
+}
+.tab .nav-tabs .nav-item.active,
+.tab .nav-tabs .nav-item:hover {
+  border-radius: 0;
+  background-color: #eee !important;
+  color: #000 !important;
+  border-radius: 0 !important;
+}
+.tab div:has(#profile-tab.active) .tab-buttons-flex .edit {
+  display: none !important;
+}
+.tab .tab-content,
+.nav-link.active {
+  background-color: #eee !important;
+}
+.tab-content textarea,
+.tab-content textarea:focus {
+  border: 0 !important;
+  outline: none;
+  padding: 15px;
+  font-weight: 900;
+  font-size: 16px;
+  resize: none;
+}
+.statistics .calculated {
+  font-size: 12px;
+}
+.business-exhibition .business-img {
+  cursor: pointer;
+  box-shadow: none;
+  transition: all 0.5s ease-in-out;
+}
+.business-exhibition .business-img:hover {
+  box-shadow: 0 0 5px #00000060;
+  transition: all 0.5s ease-in-out;
+}
+/* End Tab */
 
 /* Start Media */
 @media (max-width: 1400px) {
@@ -419,6 +489,14 @@ footer a:hover {
   }
   .landing .container .search-wrap .search-box .btn {
     width: 60%;
+    box-shadow: 0 0 5px #00000060;
+    transition: all 0.3s ease-in-out;
+  }
+  .landing .container .search-wrap .search-box .btn:hover {
+    background-color: #fff;
+    color: var(--main-color);
+    box-shadow: none;
+    transition: all 0.3s ease-in-out;
   }
   .heading {
     font-size: 30px !important;
@@ -438,6 +516,9 @@ footer a:hover {
   .start-project-btn {
     width: 45%;
   }
+  footer {
+    font-size: 14px !important;
+  }
 }
 @media (max-width: 400px) {
   .brand img {
@@ -456,6 +537,12 @@ footer a:hover {
   }
   .start-project-btn {
     width: 60%;
+  }
+  .nav-tabs .nav-link {
+    font-size: 12px;
+  }
+  footer {
+    font-size: 12px !important;
   }
 }
 /* End Media */

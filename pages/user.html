@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>المساعد</title>
+    <link rel="stylesheet" href="../style/normalize.css" />
+    <link rel="stylesheet" href="../style/bootstrap.min.css" />
+    <link rel="stylesheet" href="../style/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style/style.css" />
+  </head>
+  <body>
+    <!-- Start Loader -->
+    <div class="loader-container">
+      Loading
+      <div class="loader load-top"></div>
+      <div class="loader load-left"></div>
+    </div>
+    <!-- End Loader -->
+    <!-- Start Header -->
+    <header class="navbar p-0 pe-3 ps-3 ps-xl-5">
+      <div
+        class="col-12 d-flex justify-content-between align-items-center text-center p-0"
+      >
+        <div class="menu-btn drop text-light p-0 col-0" href="#">
+          <i class="fa-solid fa-bars drop"></i>
+        </div>
+        <a
+          class="logo d-md-flex d-none text-decoration-none text-light ms-5 me-xxl-3 me-2 col-0"
+          href="index.html"
+          >المساعد</a
+        >
+        <a class="brand d-md-none d-flex col-0" href="#">
+          <img src="../images/Vector-Smart-Object.png" alt="" />
+        </a>
+        <ul
+          class="navbar-nav p-0 me-xl-3 me-0 d-flex justify-content-between justify-content-md-center justify-content-sm-center align-items-center text-center flex-lg-row-reverse col-md-5 col-sm-4 col-0"
+          dir="ltr"
+        >
+          <li
+            class="nav-item d-flex justify-content-center nav-p-12 me-xl-5 me-lg-0 col-xl-4 col-lg-5 col-6 d-lg-flex d-none"
+          >
+            <a class="nav-link text-light" href="index.html"
+              >أضف عملك <i class="fa-solid fa-plus"></i
+            ></a>
+          </li>
+          <li
+            class="nav-item d-flex justify-content-center nav-p-12 col-xl-4 col-lg-5 col-6 d-lg-flex d-none"
+          >
+            <a class="nav-link text-light" href="#"
+              >ابحث عن عمال <i class="fa-brands fa-searchengin"></i
+            ></a>
+          </li>
+          <li
+            class="nav-item d-flex justify-content-center nav-p-12 col-xl-4 col-lg-5 col-6 d-xl-flex d-none"
+          >
+            <a class="nav-link text-light" href="#"
+              >تصفح الأعمال <i class="fa-solid fa-boxes-stacked"></i
+            ></a>
+          </li>
+        </ul>
+        <ul
+          class="navbar-nav nav-sign d-flex justify-content-center align-items-center text-center flex-lg-row-reverse col-xl-4"
+          dir="ltr"
+        >
+          <li class="nav-item p-0 col-xl-4 col-12">
+            <a class="nav-link bg-light sign" href="#">تسجيل الدخول</a>
+          </li>
+          <li class="nav-item p-0 me-2 d-xl-flex d-none col-4">
+            <a class="nav-link bg-light sign" href="#">تسجيل في الموقع</a>
+          </li>
+        </ul>
+        <a class="brand d-md-flex d-none col-0" href="#">
+          <img src="../images/Vector-Smart-Object.png" alt="" />
+        </a>
+      </div>
+    </header>
+    <!-- End Header -->
+    <!-- Start Sidebar -->
+    <div class="side-bar drop">
+      <form action="" class="drop">
+        <input
+          class="search-btn form-control drop rounded-0"
+          type="search"
+          name=""
+          id=""
+          placeholder="ابحث عن ..."
+          dir="rtl"
+        />
+      </form>
+      <hr />
+      <ul class="navbar-nav p-0" dir="rtl">
+        <li class="nav-item p-2">
+          <a class="nav-link fw-bold" href="#">تسجيل الدخول</a>
+        </li>
+        <li class="nav-item p-2">
+          <a class="nav-link fw-bold" href="#">تسجيل في الموقع</a>
+        </li>
+        <li class="nav-item p-2" dir="ltr">
+          <a class="nav-link fw-bold" href="index.html"
+            >أضف عملك <i class="fa-solid fa-plus"></i
+          ></a>
+        </li>
+        <li class="nav-item p-2" dir="ltr">
+          <a class="nav-link fw-bold" href="index.html"
+            >ابحث عن عمال <i class="fa-brands fa-searchengin"></i
+          ></a>
+        </li>
+        <li class="nav-item p-2" dir="ltr">
+          <a class="nav-link fw-bold" href="index.html"
+            >تصفح الأعمال <i class="fa-solid fa-boxes-stacked"></i
+          ></a>
+        </li>
+        <li class="nav-item dropdown-menu-sidebar drop p-2" dir="rtl">
+          <div
+            class="nav-link drop d-flex justify-content-between align-items-center ps-3 fw-bold"
+          >
+            <div class="drop">
+              <i class="fa-solid fa-link drop"></i>
+              <span class="drop">المساعد</span>
+            </div>
+            <i class="fa-solid fa-angle-left drop"></i>
+          </div>
+        </li>
+        <ul class="nav-item-menu list-unstyled p-0">
+          <li class="nav-item p-2">
+            <a class="nav-link fw-bold" href="#">المساعد للمؤسسات</a>
+          </li>
+          <li class="nav-item p-2">
+            <a class="nav-link fw-bold" href="#">عن المساعد</a>
+          </li>
+          <li class="nav-item p-2">
+            <a class="nav-link fw-bold" href="#">الأسئلة الشائعة</a>
+          </li>
+          <li class="nav-item p-2">
+            <a class="nav-link fw-bold" href="#">ضمان حقوقك</a>
+          </li>
+          <li class="nav-item p-2">
+            <a class="nav-link fw-bold" href="#">شروط الاستخدام</a>
+          </li>
+          <li class="nav-item p-2">
+            <a class="nav-link fw-bold" href="#">بيان الخصوصية</a>
+          </li>
+          <li class="nav-item p-2">
+            <a class="nav-link fw-bold" href="#" target="_blank">
+              مركز المساعدة
+            </a>
+          </li>
+        </ul>
+        <li class="nav-item dropdown-menu-follow drop p-2" dir="rtl">
+          <div
+            class="nav-link drop d-flex justify-content-between align-items-center ps-3 fw-bold"
+          >
+            <div class="drop">
+              <i class="fa-solid fa-hashtag drop"></i>
+              <span class="drop">تابعنا</span>
+            </div>
+            <i class="fa-solid fa-angle-left drop"></i>
+          </div>
+        </li>
+        <ul class="nav-item-menu list-unstyled p-0">
+          <li class="nav-item p-2">
+            <a class="nav-link fw-bold" href="#" target="_blank">
+              مدونة المساعد
+            </a>
+          </li>
+          <li class="nav-item p-2">
+            <a class="nav-link fw-bold" href="#" target="_blank"> توتير </a>
+          </li>
+          <li class="nav-item p-2">
+            <a class="nav-link fw-bold" href="#" target="_blank"> فيسبوك </a>
+          </li>
+        </ul>
+      </ul>
+    </div>
+    <!-- End Sidebar -->
+    <!-- Start Profile -->
+    <div
+      class="profile container d-flex justify-content-end align-items-center flex-column mb-4"
+      dir="rtl"
+    >
+      <img class="profile-img" src="../images/profile.jpg" alt="" />
+      <p class="mt-2 mb-1">اسم المستخدم</p>
+      <div class="text-black-50 mt-0">
+        <i class="fa-solid fa-user"></i>
+        الوظيفة
+      </div>
+    </div>
+    <!-- End Profile -->
+    <!-- Start Tab -->
+    <div class="tab">
+      <div
+        class="d-flex flex-md-row flex-column flex-column-reverse justify-content-between"
+        dir="rtl"
+      >
+        <div class="nav nav-tabs p-0 mt-3" id="myTab" role="tablist">
+          <div class="nav-item" role="presentation">
+            <button
+              class="nav-link text-black fw-bolder active"
+              id="home-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#home-tab-pane"
+              type="button"
+              role="tab"
+              aria-controls="home-tab-pane"
+              aria-selected="true"
+            >
+              <i class="fa-solid fa-user"></i>
+              الملف الشخصي
+            </button>
+          </div>
+          <div class="nav-item" role="presentation">
+            <button
+              class="nav-link text-black fw-bolder"
+              id="profile-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#profile-tab-pane"
+              type="button"
+              role="tab"
+              aria-controls="profile-tab-pane"
+              aria-selected="false"
+            >
+              <i class="fa-solid fa-briefcase"></i>
+              معرض الأعمال
+            </button>
+          </div>
+        </div>
+        <div
+          class="tab-buttons tab-buttons-flex d-flex flex-sm-row flex-column justify-content-center align-items-center pb-3 ms-sm-5 ms-0"
+        >
+          <button class="btn sign edit ms-sm-3 ms-0 mb-sm-0 mb-3">
+            <i class="fa-solid fa-file-pen ms-2"></i>
+            تعديل الملف الشخصي
+          </button>
+          <button class="btn sign call-me">
+            <i class="fa-solid fa-paper-plane ms-2"></i>
+            كلمني
+          </button>
+        </div>
+      </div>
+      <div
+        class="tab-content tab-content m-0 p-xl-5 p-4 pe-4"
+        id="myTabContent"
+        dir="rtl"
+      >
+        <div
+          class="tab-pane fade show active row p-0"
+          id="home-tab-pane"
+          role="tabpanel"
+          aria-labelledby="home-tab"
+          tabindex="0"
+        >
+          <div class="row d-flex justify-content-around">
+            <div class="write-about col-xl-7 col-12">
+              <div class="bg-white mb-4">
+                <p class="pt-2 pb-0 p-4 fw-bolder">نبذة عنى</p>
+                <hr class="mb-0 mt-0" />
+                <textarea class="w-100 h-100" name="about-me" id=""></textarea>
+              </div>
+              <div class="bg-white">
+                <p class="pt-2 pb-0 p-4 fw-bolder">مهاراتى</p>
+                <hr class="mb-0 mt-0" />
+                <textarea
+                  class="w-100 h-100 border-0"
+                  name="about-me"
+                  id=""
+                ></textarea>
+              </div>
+            </div>
+            <div class="statistics mt-xl-0 mt-4 col-xl-4 col-12">
+              <div class="bg-white">
+                <p class="pt-2 pb-0 p-4 fw-bolder">إحصائيات</p>
+                <hr class="mb-0 mt-0" />
+                <div
+                  class="d-flex justify-content-between align-items-center pe-3 ps-3 p-4 fw-bolder"
+                >
+                  <div>التقييمات</div>
+                  <div dir="ltr">
+                    <i class="fa-solid fa-star"></i>
+                    3.7
+                  </div>
+                </div>
+                <div
+                  class="d-flex justify-content-between align-items-center pe-3 ps-3 p-0 fw-bolder"
+                >
+                  <p>عدد المهام التى تم تنفيذها</p>
+                  <p class="calculated bg-secondary text-white pt-2 pb-2 p-4">
+                    لم يحسب بعد
+                  </p>
+                </div>
+                <div
+                  class="d-flex justify-content-between align-items-center pe-3 ps-3 p-0 fw-bolder"
+                >
+                  <p>عدد المهام الحالية</p>
+                  <p class="calculated bg-secondary text-white pt-2 pb-2 p-4">
+                    لم يحسب بعد
+                  </p>
+                </div>
+                <div
+                  class="d-flex justify-content-between align-items-center pe-3 ps-3 p-0 fw-bolder"
+                >
+                  <p>معدل التسليم بالموعد</p>
+                  <p class="calculated bg-secondary text-white pt-2 pb-2 p-4">
+                    لم يحسب بعد
+                  </p>
+                </div>
+                <hr class="mb-0 mt-0" />
+                <div
+                  class="d-flex justify-content-between align-items-center pe-3 ps-3 pt-2 pb-0 fw-bolder"
+                >
+                  <p>تاريخ التسجيل</p>
+                  <p>2022 / 12 / 4</p>
+                </div>
+                <div
+                  class="d-flex justify-content-between align-items-center pe-3 ps-3 p-0 fw-bolder"
+                >
+                  <p>اخر تواجد</p>
+                  <p>منذ يوم</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="profile-tab-pane"
+          role="tabpanel"
+          aria-labelledby="profile-tab"
+          tabindex="0"
+        >
+          <div class="row d-flex justify-content-center align-items-center">
+            <div
+              class="business-exhibition d-flex flex-column justify-content-center align-items-center col-xl-3 col-lg-4 col-md-5 col-12"
+            >
+              <div class="business-img bg-white rounded-2 p-5 mb-1">
+                <img class="w-100 h-100" src="../images/gallery.png" alt="" />
+              </div>
+              <div class="fw-bolder mb-2">
+                <i class="fa-solid fa-eye"></i>
+                2 مشاهدة
+              </div>
+            </div>
+            <div
+              class="business-exhibition d-flex flex-column justify-content-center align-items-center col-xl-3 col-lg-4 col-md-5 col-12"
+            >
+              <div class="business-img bg-white rounded-2 p-5 mb-1">
+                <img class="w-100 h-100" src="../images/gallery.png" alt="" />
+              </div>
+              <div class="fw-bolder mb-2">
+                <i class="fa-solid fa-eye"></i>
+                2 مشاهدة
+              </div>
+            </div>
+            <div
+              class="business-exhibition d-flex flex-column justify-content-center align-items-center col-xl-3 col-lg-4 col-md-5 col-12"
+            >
+              <div class="business-img bg-white rounded-2 p-5 mb-1">
+                <img class="w-100 h-100" src="../images/gallery.png" alt="" />
+              </div>
+              <div class="fw-bolder mb-2">
+                <i class="fa-solid fa-eye"></i>
+                2 مشاهدة
+              </div>
+            </div>
+            <div
+              class="business-exhibition d-flex flex-column justify-content-center align-items-center col-xl-3 col-lg-4 col-md-5 col-12"
+            >
+              <div class="business-img bg-white rounded-2 p-5 mb-1">
+                <img class="w-100 h-100" src="../images/gallery.png" alt="" />
+              </div>
+              <div class="fw-bolder mb-2">
+                <i class="fa-solid fa-eye"></i>
+                2 مشاهدة
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Tab -->
+    <!-- Start Up Footer -->
+    <div class="up-footer"></div>
+    <!-- End Up Footer -->
+    <!-- Start Footer -->
+    <footer
+      class="d-flex justify-content-center align-items-center text-center col-12 p-0 pb-xl-0 pb-3"
+      dir="rtl"
+    >
+      <div
+        class="container d-flex flex-xl-row flex-column justify-content-between align-items-center text-light p-0"
+      >
+        <div
+          class="col-xxl-5 col-xl-6 col-lg-7 col-12 d-flex justify-content-between"
+        >
+          <a class="text-decoration-none text-light text-center p-2" href="#"
+            >مركز المساعدة</a
+          >
+          <a class="text-decoration-none text-light text-center p-2" href="#"
+            >سياسة الخصوصية</a
+          >
+          <a class="text-decoration-none text-light text-center p-2" href="#"
+            >شروط الاستخدام</a
+          >
+          <a class="text-decoration-none text-light text-center p-2" href="#"
+            >الاسئلة الشائعة</a
+          >
+        </div>
+        <div class="col-xl-4 col-12 text-center mt-xl-0 mt-3">
+          &copy; 2022 المساعد. جميع الحقوق محفوظة.
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/all.min.js"></script>
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

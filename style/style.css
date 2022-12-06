@@ -1,5 +1,5 @@
 * {
-  --main-color: #669c1e;
+  --main-color: #7fc225;
   --secondary-color: #82ae46;
 }
 .test {
@@ -10,15 +10,15 @@ body {
 }
 /* Start Loader In All Pages */
 .loader-container {
-  background-color: #fff;
-  width: 100%;
-  height: 100%;
   display: none;
   position: absolute;
   top: -100%;
-  z-index: -9;
+  z-index: -10;
 }
 .loader-container.loading {
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
   position: fixed;
   top: 0;
   display: flex;
@@ -395,6 +395,7 @@ footer a:hover {
   width: 150px;
   height: 150px;
   border-radius: 50%;
+  box-shadow: 0 0 5px #00000060;
 }
 /* End Profile */
 /* Start Tab */
@@ -444,16 +445,163 @@ footer a:hover {
   font-size: 12px;
 }
 .business-exhibition .business-img {
-  cursor: pointer;
   box-shadow: none;
   transition: all 0.5s ease-in-out;
 }
-.business-exhibition .business-img:hover {
+.business-exhibition:hover .business-img {
   box-shadow: 0 0 5px #00000060;
   transition: all 0.5s ease-in-out;
 }
 /* End Tab */
-
+/* Start Up Footer */
+.up-footer h2,
+a {
+  color: var(--main-color);
+  font-weight: 900;
+}
+.up-footer a:hover {
+  background-color: var(--secondary-color) !important;
+  color: #fff !important;
+}
+.up-footer a:has(svg):hover {
+  background-color: transparent !important;
+}
+/* End Up Footer */
+/* Start Dark Mode */
+.darkmode-label {
+  width: 75px;
+  height: 38px;
+  position: relative;
+  display: block;
+  background-color: #ebebeb;
+  border-radius: 30px;
+  box-shadow: inset 0 5px 15px rgba(0, 0, 0, 0.4),
+    inset 0 -5px 15px rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.darkmode-label::after {
+  content: "";
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  top: 5px;
+  left: 4px;
+  display: block;
+  background: linear-gradient(180deg, #ffcc89, #d8860b);
+  border-radius: 50%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+.darkmode-toggle {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+.darkmode-toggle:checked + .darkmode-label {
+  background: #242424;
+}
+.darkmode-toggle:checked + .darkmode-label::after {
+  left: 71px;
+  transform: translateX(-100%);
+  background: linear-gradient(180deg, #777, #3a3a3a);
+}
+.darkmode-label:active:after {
+  width: 45px;
+  border-radius: 25px;
+  transition: 0.2s;
+}
+.darkmode-label svg {
+  position: absolute;
+  width: 20px;
+  top: 9px;
+  z-index: 20;
+}
+.darkmode-label svg.sun {
+  left: 8px;
+  fill: #fff;
+  transition: all 0.3s ease-in-out;
+}
+.darkmode-label svg.moon {
+  left: 47px;
+  fill: #7e7e7e;
+  transition: all 0.3s ease-in-out;
+}
+.darkmode-toggle:checked.active + .darkmode-label svg.sun {
+  fill: #7e7e7e;
+}
+.darkmode-toggle:checked.active + .darkmode-label svg.moon {
+  fill: #fff;
+}
+*:has(.darkmode-toggle.active:checked),
+*:has(.darkmode-toggle.active:checked) .side-bar,
+*:has(.darkmode-toggle.active:checked) .drop:not(span, svg),
+*:has(.darkmode-toggle.active:checked) .nav-item,
+*:has(.darkmode-toggle.active:checked) .start-project,
+*:has(.darkmode-toggle.active:checked) .search-input,
+*:has(.darkmode-toggle.active:checked) footer {
+  background: #242424 !important;
+}
+*:has(.darkmode-toggle.active:checked) .logo,
+*:has(.darkmode-toggle.active:checked) .up-footer h2,
+*:has(.darkmode-toggle.active:checked) .up-footer svg {
+  color: var(--main-color) !important;
+  fill: #fff !important;
+}
+*:has(.darkmode-toggle.active:checked) .why-us,
+*:has(.darkmode-toggle.active:checked) .questions,
+*:has(.darkmode-toggle.active:checked) footer {
+  background-color: #191919 !important;
+}
+*:has(.darkmode-toggle.active:checked) h1,
+*:has(.darkmode-toggle.active:checked) h2,
+*:has(.darkmode-toggle.active:checked) .search-input,
+*:has(.darkmode-toggle.active:checked) [type="search"],
+*:has(.darkmode-toggle.active:checked) .how-work span,
+*:has(.darkmode-toggle.active:checked) .tab .nav-tabs .nav-item button,
+*:has(.darkmode-toggle.active:checked) p,
+*:has(.darkmode-toggle.active:checked) .write-about textarea,
+*:has(.darkmode-toggle.active:checked) .statistics div div,
+*:has(.darkmode-toggle.active:checked) .business-exhibition,
+*:has(.darkmode-toggle.active:checked) .up-footer a {
+  color: #fff !important;
+}
+*:has(.darkmode-toggle.active:checked) .profile .job,
+*:has(.darkmode-toggle.active:checked) .how-work p {
+  color: #ffffff80 !important;
+}
+*:has(.darkmode-toggle.active:checked) .profile .profile-img {
+  box-shadow: 0 0 5px #ffffff60;
+}
+*:has(.darkmode-toggle.active:checked) .write-about div,
+*:has(.darkmode-toggle.active:checked) .write-about textarea,
+*:has(.darkmode-toggle.active:checked) .statistics div,
+*:has(.darkmode-toggle.active:checked) .business-exhibition .business-img {
+  background-color: #303030 !important;
+}
+*:has(.darkmode-toggle.active:checked)
+  .business-exhibition:hover
+  .business-img {
+  box-shadow: 0 0 5px #ffffff40;
+}
+*:has(.darkmode-toggle.active:checked) .menu-btn,
+*:has(.darkmode-toggle.active:checked) .menu-btn:hover,
+*:has(.darkmode-toggle.active:checked) .menu-btn.active,
+*:has(.darkmode-toggle.active:checked) .side-bar .nav-item:hover,
+*:has(.darkmode-toggle.active:checked) .side-bar .nav-item-menu .nav-item:hover,
+*:has(.darkmode-toggle.active:checked) .nav-item:hover,
+*:has(.darkmode-toggle.active:checked) .tab-content,
+*:has(.darkmode-toggle.active:checked) .tab .nav-tabs .nav-item .active,
+*:has(.darkmode-toggle.active:checked) .tab .nav-tabs .nav-item:hover,
+*:has(.darkmode-toggle.active:checked) .up-footer a:hover,
+*:has(.darkmode-toggle.active:checked) footer a:hover {
+  background-color: #3a3a3a !important;
+  color: var(--main-color) !important;
+}
+*:has(.darkmode-toggle.active:checked) .up-footer a:has(svg):hover {
+  background-color: transparent !important;
+}
+/* End Dark Mode */
 /* Start Media */
 @media (max-width: 1400px) {
   header .nav-item,
@@ -518,6 +666,58 @@ footer a:hover {
   }
   footer {
     font-size: 14px !important;
+  }
+  .darkmode-label {
+    width: 70px;
+    height: 32px;
+  }
+  .darkmode-label::after {
+    width: 23px;
+    height: 23px;
+    top: 4.5px;
+  }
+  .darkmode-toggle:checked + .darkmode-label::after {
+    left: 65px;
+  }
+  .darkmode-label:active:after {
+    width: 28px;
+  }
+  .darkmode-label svg {
+    width: 16px;
+    top: 7.5px;
+  }
+  .darkmode-label svg.sun {
+    left: 7.5px;
+  }
+  .darkmode-label svg.moon {
+    left: 45px;
+  }
+}
+@media (max-width: 768px) {
+  .darkmode-label {
+    width: 60px;
+    height: 28px;
+  }
+  .darkmode-label::after {
+    width: 20px;
+    height: 20px;
+    top: 4px;
+  }
+  .darkmode-toggle:checked + .darkmode-label::after {
+    left: 56px;
+  }
+  .darkmode-label:active:after {
+    width: 30px;
+  }
+  .darkmode-label svg {
+    width: 15px;
+    top: 6.5px;
+  }
+  .darkmode-label svg.sun {
+    left: 6px;
+  }
+  .darkmode-label svg.moon {
+    left: 38px;
   }
 }
 @media (max-width: 400px) {

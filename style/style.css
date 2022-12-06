@@ -694,6 +694,9 @@ a {
   }
 }
 @media (max-width: 768px) {
+  .landing img {
+    top: -20px;
+  }
   .darkmode-label {
     width: 60px;
     height: 28px;

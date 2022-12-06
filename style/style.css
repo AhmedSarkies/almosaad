@@ -700,7 +700,8 @@ a {
 }
 @media (max-width: 768px) {
   .landing img {
-    top: -20px;
+    position: absolute;
+    top: 0;
   }
   .darkmode-label {
     width: 60px;

@@ -1,3 +1,16 @@
+//   Start Menu
+document.addEventListener("click", function (event) {
+  if (event.target.classList.contains("fa-bars")) {
+    $(".menu-btn").toggleClass("active");
+    $(".side-bar").toggleClass("active");
+  } else if (event.target.classList.contains("drop")) {
+    return;
+  } else if (!event.target.classList.contains("drop")) {
+    $(".menu-btn").removeClass("active");
+    $(".side-bar").removeClass("active");
+  }
+});
+//   End Menu
 $(() => {
   // Start Loader
   $(this).on("load", function () {
@@ -13,19 +26,11 @@ $(() => {
     }
   });
   // End Sticky Header
-  //   Start Menu
-  document.addEventListener("click", function (event) {
-    if (event.target.classList.contains("fa-bars")) {
-      $(".menu-btn").toggleClass("active");
-      $(".side-bar").toggleClass("active");
-    } else if (event.target.classList.contains("drop")) {
-      return;
-    } else if (!event.target.classList.contains("drop")) {
-      $(".menu-btn").removeClass("active");
-      $(".side-bar").removeClass("active");
-    }
+  // Start Dark Mode
+  $(".darkmode-label").on("click", function () {
+    $(".darkmode-toggle").toggleClass("active");
   });
-  //   End Menu
+  // End Dark Mode
   // Start Dropdown Menu In Sidebar
   $(".dropdown-menu-sidebar").on("click", function () {
     $("li.dropdown-menu-sidebar").next().slideToggle(200);

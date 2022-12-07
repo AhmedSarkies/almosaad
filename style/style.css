@@ -80,7 +80,7 @@ header {
   background-color: var(--main-color);
   box-shadow: none;
   font-weight: 600;
-  max-height: 65px;
+  max-height: 71px;
   z-index: 99999;
 }
 .header-sticky {
@@ -124,8 +124,8 @@ header .nav-item,
   font-size: 35px;
 }
 .brand img {
-  width: 65px;
-  height: 65px;
+  width: 55px;
+  height: auto;
 }
 .nav-item:hover {
   background-color: var(--secondary-color);
@@ -191,7 +191,6 @@ header .nav-item,
 .landing {
   z-index: -1;
   height: 100vh;
-  margin-top: -8px;
 }
 .landing .overlay {
   width: 100%;
@@ -699,10 +698,6 @@ a {
   }
 }
 @media (max-width: 768px) {
-  .landing img {
-    position: absolute;
-    top: 0;
-  }
   .darkmode-label {
     width: 60px;
     height: 28px;

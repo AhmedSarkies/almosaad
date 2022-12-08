@@ -531,78 +531,76 @@ a {
   fill: #7e7e7e;
   transition: all 0.3s ease-in-out;
 }
-.darkmode-toggle:checked.active + .darkmode-label svg.sun {
+.darkmode-toggle.dark:checked + .darkmode-label svg.sun {
   fill: #7e7e7e;
 }
-.darkmode-toggle:checked.active + .darkmode-label svg.moon {
+.darkmode-toggle.dark:checked + .darkmode-label svg.moon {
   fill: #fff;
 }
-*:has(.darkmode-toggle.active:checked),
-*:has(.darkmode-toggle.active:checked) .side-bar,
-*:has(.darkmode-toggle.active:checked) .drop:not(span, svg),
-*:has(.darkmode-toggle.active:checked) .nav-item,
-*:has(.darkmode-toggle.active:checked) .start-project,
-*:has(.darkmode-toggle.active:checked) .search-input,
-*:has(.darkmode-toggle.active:checked) footer {
+*:has(.darkmode-toggle.dark:checked),
+*:has(.darkmode-toggle.dark:checked) .side-bar,
+*:has(.darkmode-toggle.dark:checked) .drop:not(span, svg),
+*:has(.darkmode-toggle.dark:checked) .nav-item,
+*:has(.darkmode-toggle.dark:checked) .start-project,
+*:has(.darkmode-toggle.dark:checked) .search-input,
+*:has(.darkmode-toggle.dark:checked) footer {
   background: #242424 !important;
 }
-*:has(.darkmode-toggle.active:checked) .logo,
-*:has(.darkmode-toggle.active:checked) .up-footer h2,
-*:has(.darkmode-toggle.active:checked) .up-footer svg {
+*:has(.darkmode-toggle.dark:checked) .logo,
+*:has(.darkmode-toggle.dark:checked) .up-footer h2,
+*:has(.darkmode-toggle.dark:checked) .up-footer svg {
   color: var(--main-color) !important;
   fill: #fff !important;
 }
-*:has(.darkmode-toggle.active:checked) .why-us,
-*:has(.darkmode-toggle.active:checked) .questions,
-*:has(.darkmode-toggle.active:checked) footer {
+*:has(.darkmode-toggle.dark:checked) .why-us,
+*:has(.darkmode-toggle.dark:checked) .questions,
+*:has(.darkmode-toggle.dark:checked) footer {
   background-color: #191919 !important;
 }
-*:has(.darkmode-toggle.active:checked) h1,
-*:has(.darkmode-toggle.active:checked) h2,
-*:has(.darkmode-toggle.active:checked) .search-input,
-*:has(.darkmode-toggle.active:checked) [type="search"],
-*:has(.darkmode-toggle.active:checked) .how-work span,
-*:has(.darkmode-toggle.active:checked) .tab .nav-tabs .nav-item button,
-*:has(.darkmode-toggle.active:checked) p,
-*:has(.darkmode-toggle.active:checked) .write-about textarea,
-*:has(.darkmode-toggle.active:checked) .statistics div div,
-*:has(.darkmode-toggle.active:checked) .business-exhibition,
-*:has(.darkmode-toggle.active:checked) .up-footer a {
+*:has(.darkmode-toggle.dark:checked) h1,
+*:has(.darkmode-toggle.dark:checked) h2,
+*:has(.darkmode-toggle.dark:checked) .search-input,
+*:has(.darkmode-toggle.dark:checked) [type="search"],
+*:has(.darkmode-toggle.dark:checked) .how-work span,
+*:has(.darkmode-toggle.dark:checked) .tab .nav-tabs .nav-item button,
+*:has(.darkmode-toggle.dark:checked) p,
+*:has(.darkmode-toggle.dark:checked) .write-about textarea,
+*:has(.darkmode-toggle.dark:checked) .statistics div div,
+*:has(.darkmode-toggle.dark:checked) .business-exhibition,
+*:has(.darkmode-toggle.dark:checked) .up-footer a {
   color: #fff !important;
 }
-*:has(.darkmode-toggle.active:checked) .profile .job,
-*:has(.darkmode-toggle.active:checked) .how-work p {
+*:has(.darkmode-toggle.dark:checked) .profile .job,
+*:has(.darkmode-toggle.dark:checked) .how-work p {
   color: #ffffff80 !important;
 }
-*:has(.darkmode-toggle.active:checked) .profile .profile-img {
+*:has(.darkmode-toggle.dark:checked) .profile .profile-img {
   box-shadow: 0 0 5px #ffffff60;
 }
-*:has(.darkmode-toggle.active:checked) .write-about div,
-*:has(.darkmode-toggle.active:checked) .write-about textarea,
-*:has(.darkmode-toggle.active:checked) .statistics div,
-*:has(.darkmode-toggle.active:checked) .business-exhibition .business-img {
+*:has(.darkmode-toggle.dark:checked) .write-about div,
+*:has(.darkmode-toggle.dark:checked) .write-about textarea,
+*:has(.darkmode-toggle.dark:checked) .statistics div,
+*:has(.darkmode-toggle.dark:checked) .business-exhibition .business-img {
   background-color: #303030 !important;
 }
-*:has(.darkmode-toggle.active:checked)
-  .business-exhibition:hover
-  .business-img {
+*:has(.darkmode-toggle.dark:checked) .business-exhibition:hover .business-img {
   box-shadow: 0 0 5px #ffffff40;
 }
-*:has(.darkmode-toggle.active:checked) .menu-btn,
-*:has(.darkmode-toggle.active:checked) .menu-btn:hover,
-*:has(.darkmode-toggle.active:checked) .menu-btn.active,
-*:has(.darkmode-toggle.active:checked) .side-bar .nav-item:hover,
-*:has(.darkmode-toggle.active:checked) .side-bar .nav-item-menu .nav-item:hover,
-*:has(.darkmode-toggle.active:checked) .nav-item:hover,
-*:has(.darkmode-toggle.active:checked) .tab-content,
-*:has(.darkmode-toggle.active:checked) .tab .nav-tabs .nav-item .active,
-*:has(.darkmode-toggle.active:checked) .tab .nav-tabs .nav-item:hover,
-*:has(.darkmode-toggle.active:checked) .up-footer a:hover,
-*:has(.darkmode-toggle.active:checked) footer a:hover {
+*:has(.darkmode-toggle.dark:checked) .menu-btn,
+*:has(.darkmode-toggle.dark:checked) .menu-btn:hover,
+*:has(.darkmode-toggle.dark:checked) .menu-btn.active,
+*:has(.darkmode-toggle.dark:checked) .side-bar .nav-item:hover,
+*:has(.darkmode-toggle.dark:checked) .side-bar .nav-item-menu .nav-item:hover,
+*:has(.darkmode-toggle.dark:checked) .nav-item:hover,
+*:has(.darkmode-toggle.dark:checked) .tab-content,
+*:has(.darkmode-toggle.dark:checked) .tab .nav-tabs .nav-item .active,
+*:has(.darkmode-toggle.dark:checked) .tab .nav-tabs .nav-item:hover,
+*:has(.darkmode-toggle.dark:checked) .up-footer a:hover,
+*:has(.darkmode-toggle.dark:checked) footer a:hover {
   background-color: #3a3a3a !important;
   color: var(--main-color) !important;
 }
-*:has(.darkmode-toggle.active:checked) .up-footer a:has(svg):hover {
+*:has(.darkmode-toggle.dark:checked) .up-footer a:has(svg):hover {
   background-color: transparent !important;
 }
 /* End Dark Mode */

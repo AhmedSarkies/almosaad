@@ -14,7 +14,7 @@ document.addEventListener("click", function (event) {
 $(() => {
   // Start Loader
   $(window).on("load", function () {
-    $(".loader-container").addClass("loading");
+    // $(".loader-container").addClass("loading");
   });
   // End Loader
   // Start Sticky Header

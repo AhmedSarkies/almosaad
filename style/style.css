@@ -556,7 +556,6 @@ a {
   fill: #fff;
 }
 *:has(.darkmode-toggle.dark:checked),
-*:has(.darkmode-toggle.dark:checked) .landing,
 *:has(.darkmode-toggle.dark:checked) .loader-container.loading,
 *:has(.darkmode-toggle.dark:checked) .landing .overlay-opacity-60,
 *:has(.darkmode-toggle.dark:checked) .side-bar,

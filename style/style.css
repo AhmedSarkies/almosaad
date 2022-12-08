@@ -158,7 +158,7 @@ header .nav-item,
   width: 300px;
   height: 100%;
   position: fixed;
-  top: 72px;
+  top: 71px;
   right: -100%;
   overflow-y: auto;
   transition-property: right;
@@ -203,8 +203,10 @@ header .nav-item,
 
 /* Start Landing */
 .landing {
-  z-index: -1;
+  position: relative;
+  background-color: var(--main-color);
   height: 100vh;
+  z-index: -1;
 }
 .landing .overlay {
   width: 100%;
@@ -213,7 +215,7 @@ header .nav-item,
 }
 .landing .overlay .landing-img {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   object-fit: cover;
 }
 .landing .overlay-opacity-60 {
@@ -221,7 +223,7 @@ header .nav-item,
   background-color: #000;
   opacity: 0.6;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   z-index: 1;
 }
 .landing .introduction-text {

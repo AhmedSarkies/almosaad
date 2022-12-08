@@ -218,12 +218,12 @@ header .nav-item,
   background-color: #000;
   opacity: 0.6;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   z-index: 1;
 }
 .landing .overlay .landing-img {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   object-fit: cover;
 }
 .landing .introduction-text {
@@ -579,7 +579,7 @@ a {
   background-color: #191919 !important;
 }
 *:has(.darkmode-toggle.dark:checked) .landing {
-    position: inherit;
+  position: inherit;
 }
 *:has(.darkmode-toggle.dark:checked) .loader-container.loading {
   animation: text-color-dark 1s ease-in-out infinite alternate;

@@ -92,12 +92,12 @@ header {
 }
 header .nav-item,
 .side-bar .nav-item {
-  font-size: 16px !important;
+  font-size: 17px !important;
 }
 .menu-btn .fa-bars {
   cursor: pointer;
-  padding: 13px 16px;
-  font-size: 35px !important;
+  padding: 16.5px;
+  font-size: 36px !important;
 }
 .menu-btn:hover,
 .menu-btn.active {
@@ -135,7 +135,7 @@ header .nav-item,
   border-radius: 8px;
 }
 .nav-p-12 {
-  padding: 12px;
+  padding: 15px;
 }
 /* End Header In All Pages */
 /* End Sidebar In All Pages */
@@ -147,7 +147,7 @@ header .nav-item,
   width: 300px;
   height: 100%;
   position: fixed;
-  top: 65px;
+  top: 72px;
   right: -100%;
   overflow-y: auto;
   transition-property: right;
@@ -157,6 +157,9 @@ header .nav-item,
   right: 0;
   box-shadow: 0 20px 20px #00000050;
   transition: 0.4s ease-in-out;
+}
+.side-bar hr {
+  color: #000;
 }
 .side-bar form input,
 .side-bar form input::placeholder,
@@ -379,6 +382,8 @@ header .nav-item,
 
 /* Start Footer In All Pages */
 footer {
+  position: relative;
+  z-index: 99999999;
   background-color: var(--main-color);
   margin-top: 100px;
   font-weight: 900;
@@ -559,6 +564,7 @@ a {
 }
 *:has(.darkmode-toggle.dark:checked) h1,
 *:has(.darkmode-toggle.dark:checked) h2,
+*:has(.darkmode-toggle.dark:checked) .side-bar hr,
 *:has(.darkmode-toggle.dark:checked) .search-input,
 *:has(.darkmode-toggle.dark:checked) [type="search"],
 *:has(.darkmode-toggle.dark:checked) .how-work span,
@@ -606,15 +612,8 @@ a {
 /* End Dark Mode */
 /* Start Media */
 @media (max-width: 1400px) {
-  header .nav-item,
-  .side-bar .nav-item {
-    font-size: 15px !important;
-  }
   .sign {
     font-size: 12px !important;
-  }
-  .side-bar {
-    top: 65px;
   }
   .heading {
     font-size: 40px !important;
@@ -696,6 +695,10 @@ a {
   }
 }
 @media (max-width: 768px) {
+  .side-bar {
+    right: -100%;
+    width: 100%;
+  }
   .darkmode-label {
     width: 60px;
     height: 28px;
@@ -725,11 +728,6 @@ a {
 @media (max-width: 400px) {
   .brand img {
     display: none !important;
-  }
-  .side-bar {
-    top: 63px;
-    right: -100%;
-    width: 100%;
   }
   .landing .container .search-wrap .search-box .btn {
     width: 80%;

@@ -42,6 +42,17 @@ $(() => {
     $(this).parent().toggleClass(`active`);
   });
   // End Question
+  // Start Create Account
+  $(`.create-account-form #term`).on("click", function () {
+    if ($(`.create-account-form #term[type="checkbox"]`).attr(`checked`)) {
+      $(`.create-account-form #term[type="checkbox"]`).removeAttr(`checked`);
+      $(`.create-account-form #term[type="checkbox"]`).removeClass(`checked`);
+    } else {
+      $(`.create-account-form #term[type="checkbox"]`).attr(`checked`, true);
+      $(`.create-account-form #term[type="checkbox"]`).addClass(`checked`);
+    }
+  });
+  // End Create Account
   // Start Dark Mode
   const darkMode = $(`.darkmode-toggle`);
   $(window).on(`load`, function () {

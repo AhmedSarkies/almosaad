@@ -579,7 +579,7 @@ a {
   background-color: #191919 !important;
 }
 *:has(.darkmode-toggle.dark:checked) .landing {
-  z-index: 99999999;
+  z-index: -99999999;
 }
 *:has(.darkmode-toggle.dark:checked) .loader-container.loading {
   animation: text-color-dark 1s ease-in-out infinite alternate;

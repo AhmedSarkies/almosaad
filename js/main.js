@@ -13,7 +13,7 @@ document.addEventListener("click", function (event) {
 //   End Menu
 $(() => {
   // Start Loader
-  $(this).on("load", function () {
+  $(window).on("load", function () {
     $(".loader-container").addClass("loading");
   });
   // End Loader
@@ -27,8 +27,28 @@ $(() => {
   });
   // End Sticky Header
   // Start Dark Mode
+  const darkMode = $(".darkmode-toggle");
+  $(window).on("load", function () {
+    if (localStorage.getItem("theme") === "dark") {
+      darkMode.addClass(localStorage.getItem("theme"));
+      darkMode.removeClass(`light`);
+      darkMode.attr("checked", true);
+    } else {
+      darkMode.addClass(localStorage.getItem("theme"));
+      darkMode.removeClass(`dark`);
+      darkMode.removeAttr("checked");
+    }
+  });
   $(".darkmode-label").on("click", function () {
-    $(".darkmode-toggle").toggleClass("active");
+    var isChecked = darkMode.is(":checked");
+    localStorage.setItem("theme", "light");
+    darkMode.addClass(localStorage.getItem("theme"));
+    darkMode.removeClass(`dark`);
+    if (!isChecked == true) {
+      localStorage.setItem("theme", "dark");
+      darkMode.addClass(localStorage.getItem("theme"));
+      darkMode.removeClass(`light`);
+    }
   });
   // End Dark Mode
   // Start Dropdown Menu In Sidebar

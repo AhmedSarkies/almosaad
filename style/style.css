@@ -578,9 +578,6 @@ a {
 *:has(.darkmode-toggle.dark:checked) footer {
   background-color: #191919 !important;
 }
-*:has(.darkmode-toggle.dark:checked) .landing {
-  position: inherit;
-}
 *:has(.darkmode-toggle.dark:checked) .loader-container.loading {
   animation: text-color-dark 1s ease-in-out infinite alternate;
 }

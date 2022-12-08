@@ -72,6 +72,17 @@ body {
     color: rgba(0, 0, 0, 0.1);
   }
 }
+@keyframes text-color-dark {
+  0% {
+    color: rgba(255, 255, 255, 1);
+  }
+  50% {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  100% {
+    color: rgba(255, 255, 255, 0.1);
+  }
+}
 /* End Loader In All Pages */
 
 /* Start Header In All Pages */
@@ -543,6 +554,7 @@ a {
   fill: #fff;
 }
 *:has(.darkmode-toggle.dark:checked),
+*:has(.darkmode-toggle.dark:checked) .loader-container.loading,
 *:has(.darkmode-toggle.dark:checked) .side-bar,
 *:has(.darkmode-toggle.dark:checked) .drop:not(span, svg),
 *:has(.darkmode-toggle.dark:checked) .nav-item,
@@ -561,6 +573,9 @@ a {
 *:has(.darkmode-toggle.dark:checked) .questions,
 *:has(.darkmode-toggle.dark:checked) footer {
   background-color: #191919 !important;
+}
+*:has(.darkmode-toggle.dark:checked) .loader-container.loading {
+  animation: text-color-dark 1s ease-in-out infinite alternate;
 }
 *:has(.darkmode-toggle.dark:checked) h1,
 *:has(.darkmode-toggle.dark:checked) h2,

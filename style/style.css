@@ -556,6 +556,7 @@ a {
   fill: #fff;
 }
 *:has(.darkmode-toggle.dark:checked),
+*:has(.darkmode-toggle.dark:checked) .landing,
 *:has(.darkmode-toggle.dark:checked) .loader-container.loading,
 *:has(.darkmode-toggle.dark:checked) .landing .overlay-opacity-60,
 *:has(.darkmode-toggle.dark:checked) .side-bar,
@@ -577,9 +578,9 @@ a {
 *:has(.darkmode-toggle.dark:checked) footer {
   background-color: #191919 !important;
 }
-*:has(.darkmode-toggle.dark:checked) .landing {
+/* *:has(.darkmode-toggle.dark:checked) .landing {
   position: static;
-}
+} */
 *:has(.darkmode-toggle.dark:checked) .loader-container.loading {
   animation: text-color-dark 1s ease-in-out infinite alternate;
 }

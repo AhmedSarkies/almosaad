@@ -2,9 +2,9 @@
   --main-color: #7fc225;
   --secondary-color: #82ae46;
 }
-.test {
+/* .test {
   border: 1px solid;
-}
+} */
 body {
   font-family: "Cairo", sans-serif;
 }

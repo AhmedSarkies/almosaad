@@ -206,7 +206,7 @@ header .nav-item,
   background-color: var(--main-color);
   height: 100vh;
   position: relative;
-  z-index: -1;
+  z-index: 0;
 }
 .landing .overlay {
   width: 100%;
@@ -555,10 +555,19 @@ a {
 .darkmode-toggle.dark:checked + .darkmode-label svg.moon {
   fill: #fff;
 }
+*:has(.darkmode-toggle.dark:checked) .sign {
+  background-color: var(--main-color) !important;
+  color: #fff !important;
+  transition: all 0.4s ease-in-out;
+}
+*:has(.darkmode-toggle.dark:checked) .sign:hover {
+  background-color: #fff !important;
+  color: var(--main-color) !important;
+  transition: all 0.4s ease-in-out;
+}
 *:has(.darkmode-toggle.dark:checked),
 *:has(.darkmode-toggle.dark:checked) .landing,
 *:has(.darkmode-toggle.dark:checked) .loader-container.loading,
-*:has(.darkmode-toggle.dark:checked) .landing .overlay-opacity-60,
 *:has(.darkmode-toggle.dark:checked) .side-bar,
 *:has(.darkmode-toggle.dark:checked) .drop:not(span, svg),
 *:has(.darkmode-toggle.dark:checked) .nav-item,
@@ -577,10 +586,6 @@ a {
 *:has(.darkmode-toggle.dark:checked) .questions,
 *:has(.darkmode-toggle.dark:checked) footer {
   background-color: #191919 !important;
-}
-*:has(.darkmode-toggle.dark:checked) .landing {
-  position: initial;
-  z-index: -99999999;
 }
 *:has(.darkmode-toggle.dark:checked) .loader-container.loading {
   animation: text-color-dark 1s ease-in-out infinite alternate;

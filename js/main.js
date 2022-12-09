@@ -5,8 +5,8 @@ $(() => {
   });
   // End Loader
   // Start Sticky Header
-  $(this).scroll(function () {
-    if ($(this).scrollTop() > 0) {
+  $(window).scroll(function () {
+    if ($(window).scrollTop() > 0) {
       $(`header`).addClass(`header-sticky`);
     } else {
       $(`header`).removeClass(`header-sticky`);
@@ -14,11 +14,14 @@ $(() => {
   });
   // End Sticky Header
   //   Start Side Bar
-  $(document).on(`click`, function (event) {
+  $(window).on(`click`, function (event) {
     if ($(event.target).hasClass(`fa-bars`)) {
       $(`.menu-btn`).toggleClass(`active`);
       $(`.side-bar`).toggleClass(`active`);
-    } else if ($(event.target).hasClass(`drop`)) {
+    } else if (
+      $(event.target).hasClass(`drop`) ||
+      $(event.target.tagName === (`svg.sun` || `svg.moon`))
+    ) {
       return;
     } else if (!$(event.target).hasClass(`drop`)) {
       $(`.menu-btn`).removeClass(`active`);

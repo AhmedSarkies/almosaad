@@ -55,33 +55,58 @@ $(() => {
   });
   // End Create Account
   // Start Dark Mode
-  const darkMode = $(`.darkmode-toggle`);
-  $(`.darkmode-label`).on(`click`, function () {
-    if (darkMode.prop("checked") === true) {
-      localStorage.setItem(`check`, `false`);
-      localStorage.setItem(`theme`, `light`);
-      darkMode.removeClass(`dark`);
-      darkMode.addClass(localStorage.getItem(`theme`));
-    } else {
-      localStorage.setItem(`check`, `true`);
-      localStorage.setItem(`theme`, `dark`);
-      darkMode.removeClass(`light`);
-      darkMode.addClass(localStorage.getItem(`theme`));
-    }
-  });
-  $(this).on(`load`, function () {
-    if (
-      localStorage.getItem(`theme`) === `dark` &&
-      localStorage.getItem(`check`) === `true`
-    ) {
-      darkMode.attr(`checked`, true);
-      darkMode.removeClass(`light`);
-      darkMode.addClass(localStorage.getItem(`theme`));
-    } else {
-      darkMode.removeAttr(`checked`);
-      darkMode.removeClass(`dark`);
-      darkMode.addClass(localStorage.getItem(`theme`));
-    }
-  });
+  // const darkMode = $(`.darkmode-toggle`);
+  // $(`.darkmode-label`).on(`click`, function () {
+  //   if (darkMode.prop("checked") === true) {
+  //     localStorage.setItem(`check`, `false`);
+  //     localStorage.setItem(`theme`, `light`);
+  //     darkMode.removeClass(`dark`);
+  //     darkMode.addClass(localStorage.getItem(`theme`));
+  //   } else {
+  //     localStorage.setItem(`check`, `true`);
+  //     localStorage.setItem(`theme`, `dark`);
+  //     darkMode.removeClass(`light`);
+  //     darkMode.addClass(localStorage.getItem(`theme`));
+  //   }
+  // });
+  // $(this).on(`load`, function () {
+  //   if (
+  //     localStorage.getItem(`theme`) === `dark` &&
+  //     localStorage.getItem(`check`) === `true`
+  //   ) {
+  //     darkMode.attr(`checked`, true);
+  //     darkMode.removeClass(`light`);
+  //     darkMode.addClass(localStorage.getItem(`theme`));
+  //   } else {
+  //     darkMode.removeAttr(`checked`);
+  //     darkMode.removeClass(`dark`);
+  //     darkMode.addClass(localStorage.getItem(`theme`));
+  //   }
+  // });
   // End Dark Mode
+
+  const darkMode = $(`.darkmode-toggle`);
+  $(window).on(`load`, function () {
+    if (localStorage.getItem(`theme`) === `dark`) {
+      darkMode.addClass(localStorage.getItem(`theme`));
+      darkMode.removeClass(`light`);
+      darkMode.attr(`checked`, true);
+    } else {
+      darkMode.addClass(localStorage.getItem(`theme`));
+      darkMode.removeClass(`dark`);
+      darkMode.removeAttr(`checked`);
+    }
+  });
+  $(`.darkmode-label`).on(`click`, function () {
+    var isChecked = darkMode.is(`:checked`);
+    localStorage.setItem(`theme`, `light`);
+    darkMode.addClass(localStorage.getItem(`theme`));
+    darkMode.removeClass(`dark`);
+    if (!isChecked == true) {
+      localStorage.setItem(`theme`, `dark`);
+      darkMode.addClass(localStorage.getItem(`theme`));
+      darkMode.removeClass(`light`);
+    }
+  });
+
 });

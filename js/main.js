@@ -1,7 +1,7 @@
 $(() => {
   // Start Loader
   $(window).on(`load`, function () {
-    $(`.loader-container`).addClass(`loading`);
+    // $(`.loader-container`).addClass(`loading`);
   });
   // End Loader
   // Start Sticky Header
@@ -20,7 +20,8 @@ $(() => {
       $(`.side-bar`).toggleClass(`active`);
     } else if (
       $(event.target).hasClass(`drop`) ||
-      $(event.target.tagName === (`svg.sun` || `svg.moon`))
+      $(event.target).hasClass(`sun`) ||
+      $(event.target).hasClass(`moon`)
     ) {
       return;
     } else if (!$(event.target).hasClass(`drop`)) {

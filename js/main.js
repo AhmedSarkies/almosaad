@@ -43,13 +43,14 @@ $(() => {
   });
   // End Question
   // Start Create Account
+  const checkTerm = $(`.create-account-form #term[type="checkbox"]`);
   $(`.create-account-form #term`).on("click", function () {
-    if ($(`.create-account-form #term[type="checkbox"]`).attr(`checked`)) {
-      $(`.create-account-form #term[type="checkbox"]`).removeAttr(`checked`);
-      $(`.create-account-form #term[type="checkbox"]`).removeClass(`checked`);
+    if (checkTerm.attr(`checked`)) {
+      checkTerm.removeAttr(`checked`);
+      checkTerm.removeClass(`checked`);
     } else {
-      $(`.create-account-form #term[type="checkbox"]`).attr(`checked`, true);
-      $(`.create-account-form #term[type="checkbox"]`).addClass(`checked`);
+      checkTerm.attr(`checked`, true);
+      checkTerm.addClass(`checked`);
     }
   });
   // End Create Account
@@ -68,13 +69,14 @@ $(() => {
   });
   $(`.darkmode-label`).on(`click`, function () {
     var isChecked = darkMode.is(`:checked`);
-    localStorage.setItem(`theme`, `light`);
-    darkMode.addClass(localStorage.getItem(`theme`));
     darkMode.removeClass(`dark`);
     if (!isChecked == true) {
       localStorage.setItem(`theme`, `dark`);
       darkMode.addClass(localStorage.getItem(`theme`));
       darkMode.removeClass(`light`);
+    } else {
+      localStorage.setItem(`theme`, `light`);
+      darkMode.addClass(localStorage.getItem(`theme`));
     }
   });
   // End Dark Mode

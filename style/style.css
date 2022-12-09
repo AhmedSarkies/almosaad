@@ -520,7 +520,7 @@ footer a:hover {
   rotate: 35deg;
   position: absolute;
   left: 4.5px;
-  top: 2px;
+  top: 2.5px;
 }
 .create-account-form .check-term #term a {
   color: var(--main-color);
@@ -822,7 +822,6 @@ a {
   .create-account-form input[type="checkbox"].checked::after {
     width: 10px;
     height: 15px;
-    border-color: transparent var(--main-color) var(--main-color) transparent;
     left: 4px;
     top: 4px;
   }

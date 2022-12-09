@@ -57,22 +57,27 @@ $(() => {
   // Start Dark Mode
   const darkMode = $(`.darkmode-toggle`);
   $(window).on(`load`, function () {
-    if (localStorage.getItem(`theme`) === `dark` && !darkMode.prop('checked')) {
+    if (
+      localStorage.getItem(`theme`) === `dark` &&
+      localStorage.getItem(`check`) === `true`
+    ) {
+      darkMode.attr(`checked`, true);
       darkMode.removeClass(`light`);
       darkMode.addClass(localStorage.getItem(`theme`));
-      darkMode.attr(`checked`, true);
     } else {
+      darkMode.removeAttr(`checked`);
       darkMode.removeClass(`dark`);
       darkMode.addClass(localStorage.getItem(`theme`));
-      darkMode.removeAttr(`checked`);
     }
   });
   $(`.darkmode-label`).on(`click`, function () {
-    if (darkMode.prop('checked') === true) {
+    if (darkMode.prop("checked") === true) {
+      localStorage.setItem(`check`, `false`);
       localStorage.setItem(`theme`, `light`);
       darkMode.removeClass(`dark`);
       darkMode.addClass(localStorage.getItem(`theme`));
     } else {
+      localStorage.setItem(`check`, `true`);
       localStorage.setItem(`theme`, `dark`);
       darkMode.removeClass(`light`);
       darkMode.addClass(localStorage.getItem(`theme`));

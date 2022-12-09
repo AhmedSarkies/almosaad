@@ -69,14 +69,14 @@ $(() => {
   });
   $(`.darkmode-label`).on(`click`, function () {
     var isChecked = darkMode.is(`:checked`);
-    darkMode.removeClass(`dark`);
-    if (!isChecked == true) {
+    if (isChecked == true) {
+      localStorage.setItem(`theme`, `light`);
+      darkMode.addClass(localStorage.getItem(`theme`));
+      darkMode.removeClass(`dark`);
+    } else {
       localStorage.setItem(`theme`, `dark`);
       darkMode.addClass(localStorage.getItem(`theme`));
       darkMode.removeClass(`light`);
-    } else {
-      localStorage.setItem(`theme`, `light`);
-      darkMode.addClass(localStorage.getItem(`theme`));
     }
   });
   // End Dark Mode

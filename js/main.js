@@ -70,13 +70,13 @@ $(() => {
   $(`.darkmode-label`).on(`click`, function () {
     var isChecked = darkMode.is(`:checked`);
     if (isChecked == true) {
+      darkMode.removeClass(`dark`);
       localStorage.setItem(`theme`, `light`);
       darkMode.addClass(localStorage.getItem(`theme`));
-      darkMode.removeClass(`dark`);
     } else {
+      darkMode.removeClass(`light`);
       localStorage.setItem(`theme`, `dark`);
       darkMode.addClass(localStorage.getItem(`theme`));
-      darkMode.removeClass(`light`);
     }
   });
   // End Dark Mode

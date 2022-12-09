@@ -809,6 +809,9 @@ a {
     left: 45px;
   }
 }
+.nav-item.nav-link {
+  padding: 23px 15px;
+}
 @media (max-width: 768px) {
   .side-bar {
     right: -100%;

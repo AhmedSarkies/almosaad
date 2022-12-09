@@ -817,13 +817,13 @@ a {
   .create-account-form input[type="checkbox"]::before {
     width: 18px;
     height: 18px;
-    top: 5px;
+    top: 0px;
   }
   .create-account-form input[type="checkbox"].checked::after {
     width: 10px;
     height: 15px;
     left: 4px;
-    top: 4px;
+    top: -0.5px;
   }
   .create-account-form .check-term label {
     font-size: 14px;

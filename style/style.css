@@ -41,17 +41,15 @@ body {
   height: 90px;
   border: 10px solid transparent;
   border-radius: 50%;
-  animation: loader var(--duration) var(--timing) infinite;
+  animation: loader var(--duration) ease-in-out infinite;
 }
 .load-top {
   border-top-color: var(--main-color);
   --duration: 2s;
-  --timing: ease-in-out;
 }
 .load-left {
   border-left-color: var(--main-color);
   --duration: 2.5s;
-  --timing: ease-in;
 }
 @keyframes loader {
   0% {

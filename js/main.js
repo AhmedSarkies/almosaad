@@ -5,13 +5,14 @@ $(window).on(`load`, function () {
   $(`.loader-container`).addClass(`loading`);
   // End Loader
   // Start Dark Mode
-  darkMode.attr(`checked`, true);
-  darkMode.removeClass(`light`);
-  darkMode.addClass(localStorage.getItem(`theme`));
   if (
-    localStorage.getItem(`theme`) === `light` &&
-    localStorage.getItem(`check`) === `false`
+    localStorage.getItem(`theme`) === `dark` &&
+    localStorage.getItem(`check`) === `true`
   ) {
+    darkMode.attr(`checked`, true);
+    darkMode.removeClass(`light`);
+    darkMode.addClass(localStorage.getItem(`theme`));
+  } else {
     darkMode.removeAttr(`checked`);
     darkMode.removeClass(`dark`);
     darkMode.addClass(localStorage.getItem(`theme`));

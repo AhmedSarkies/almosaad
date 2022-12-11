@@ -1,9 +1,37 @@
 $(() => {
-  // Start Loader
+  // Start Loader & Dark Mode
+  const darkMode = $(`.darkmode-toggle`);
   $(window).on(`load`, function () {
+    // Start Loader
     $(`.loader-container`).addClass(`loading`);
+    // End Loader
+    // Start Dark Mode
+    darkMode.attr(`checked`, true);
+    darkMode.removeClass(`light`);
+    darkMode.addClass(localStorage.getItem(`theme`));
+    if (
+      localStorage.getItem(`theme`) === `light` &&
+      localStorage.getItem(`check`) === `false`
+    ) {
+      darkMode.removeAttr(`checked`);
+      darkMode.removeClass(`dark`);
+      darkMode.addClass(localStorage.getItem(`theme`));
+    }
   });
-  // End Loader
+  $(`.darkmode-label`).on(`click`, function () {
+    localStorage.setItem(`check`, `true`);
+    localStorage.setItem(`theme`, `dark`);
+    darkMode.removeClass(`light`);
+    darkMode.addClass(localStorage.getItem(`theme`));
+    if (darkMode.prop("checked") === true) {
+      localStorage.setItem(`check`, `false`);
+      localStorage.setItem(`theme`, `light`);
+      darkMode.removeClass(`dark`);
+      darkMode.addClass(localStorage.getItem(`theme`));
+    }
+  });
+  // End Dark Mode
+  // End Loader & Dark Mode
   // Start Sticky Header
   $(window).scroll(function () {
     if ($(window).scrollTop() > 0) {
@@ -58,32 +86,4 @@ $(() => {
     }
   });
   // End Create Account
-  // Start Dark Mode
-  const darkMode = $(`.darkmode-toggle`);
-  $(window).on(`load`, function () {
-    darkMode.attr(`checked`, true);
-    darkMode.removeClass(`light`);
-    darkMode.addClass(localStorage.getItem(`theme`));
-    if (
-      localStorage.getItem(`theme`) === `light` &&
-      localStorage.getItem(`check`) === `false`
-    ) {
-      darkMode.removeAttr(`checked`);
-      darkMode.removeClass(`dark`);
-      darkMode.addClass(localStorage.getItem(`theme`));
-    }
-  });
-  $(`.darkmode-label`).on(`click`, function () {
-    localStorage.setItem(`check`, `true`);
-    localStorage.setItem(`theme`, `dark`);
-    darkMode.removeClass(`light`);
-    darkMode.addClass(localStorage.getItem(`theme`));
-    if (darkMode.prop("checked") === true) {
-      localStorage.setItem(`check`, `false`);
-      localStorage.setItem(`theme`, `light`);
-      darkMode.removeClass(`dark`);
-      darkMode.addClass(localStorage.getItem(`theme`));
-    }
-  });
-  // End Dark Mode
 });

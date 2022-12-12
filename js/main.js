@@ -2,7 +2,7 @@
 const darkMode = $(`.darkmode-toggle`);
 $(window).on(`load`, function () {
   // Start Loader
-  $(`.loader-container`).addClass(`loading`);
+  // $(`.loader-container`).addClass(`loading`);
   // End Loader
   // Start Dark Mode
   if (
@@ -32,6 +32,7 @@ $(`.darkmode-label`).on(`click`, function () {
 });
 // End Dark Mode
 // End Loader & Dark Mode
+
 $(() => {
   "use strict";
   // Start Sticky Header

@@ -519,6 +519,7 @@ footer a:hover {
   position: absolute;
   left: 4.5px;
   top: 2.5px;
+  cursor: pointer;
 }
 .create-account-form .check-term #term a {
   color: var(--main-color);
@@ -551,6 +552,81 @@ a {
   background-color: transparent !important;
 }
 /* End Up Footer */
+/* Start Filter */
+.search-about-worker {
+  background-color: #ebebeb;
+}
+.search-about-worker .heading {
+  font-size: 30px !important;
+}
+.search-about-worker p {
+  font-size: 20px !important;
+}
+.search-about-worker .heading,
+.search-about-worker p {
+  color: #34540a;
+}
+.search-about-worker .rating-filter .rating,
+.search-about-worker .rating-filter .rating > input {
+  border: none;
+  display: none;
+}
+.search-about-worker .rating-filter .rating > label::before {
+  content: '\f005';
+  font-family: FontAwesome;
+  font-size: 22px;
+  margin: 5px;
+  cursor: pointer;
+}
+.search-about-worker .rating-filter .rating > .half {
+  position: relative;
+}
+.search-about-worker .rating-filter .rating > .half::before {
+  content: '\f089';
+  position: absolute;
+  top: -5px;
+  left: 0px;
+  cursor: pointer;
+}
+.search-about-worker .rating-filter .rating > label {
+  color: #fff;
+  cursor: pointer;
+}
+.search-about-worker .rating-filter .rating > input:checked ~ label,
+.search-about-worker .rating-filter .rating:not(:checked) > label:hover,
+.search-about-worker .rating-filter .rating:not(:checked) > label:hover ~ label {
+  color: #ff9c1a;
+  transition: color 0.2s ease-in-out;
+}
+.search-about-worker .rating-filter .rating > input:checked + label:hover,
+.search-about-worker .rating-filter .rating > input:checked ~ label:hover,
+.search-about-worker .rating-filter .rating > label:hover ~ input:checked ~ label,
+.search-about-worker .rating-filter .rating > input:checked ~ label:hover ~ label {
+  color: #ff9c1a;
+  transition: color 0.2s ease-in-out;
+}
+/* End Filter */
+/* Start Search About Worker Section */
+.workers .worker {
+  border-radius: 7px 7px 0 0;
+}
+.workers .worker .user-card-avatar {
+  position: relative;
+}
+.workers .worker .user-card-avatar a img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.workers .worker .user-card-avatar svg {
+  color: green;
+  position: absolute;
+  right: 70px;
+  top: 5px;
+  box-shadow: 0 0 5px green;
+  border-radius: 50%;
+}
+/* End Search About Worker Section */
 /* Start Dark Mode */
 .darkmode-label {
   width: 75px;
@@ -725,6 +801,9 @@ a {
 /* End Dark Mode */
 /* Start Media */
 @media (max-width: 1400px) {
+  .container {
+    max-width: 90% !important 
+  }
   .sign {
     font-size: 12px !important;
   }
@@ -742,6 +821,9 @@ a {
   }
 }
 @media (max-width: 991px) {
+  .container {
+    max-width: 90% !important 
+  }
   .landing .container .search-wrap .search-box {
     display: flex;
     justify-content: center;
@@ -811,6 +893,9 @@ a {
   padding: 23px 15px;
 }
 @media (max-width: 768px) {
+  .container {
+    max-width: 90% !important 
+  }
   .side-bar {
     right: -100%;
     width: 100%;
@@ -828,6 +913,10 @@ a {
   }
   .create-account-form .check-term label {
     font-size: 14px;
+  }
+  .search-about-worker .heading,
+  .heading {
+    font-size: 26px !important;
   }
   .darkmode-label {
     width: 60px;
@@ -855,7 +944,15 @@ a {
     left: 38px;
   }
 }
+@media (max-width: 576px) {
+  .container {
+    max-width: 90% !important 
+  }
+}
 @media (max-width: 400px) {
+  .container {
+    max-width: 90% !important 
+  }
   .brand img {
     display: none !important;
   }

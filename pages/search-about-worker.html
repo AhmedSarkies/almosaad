@@ -291,139 +291,422 @@
     </div>
     <!-- End Sidebar -->
     <!-- Start Search About Worker Section-->
-    <div
-      class="search-about-worker d-flex justify-content-between p-4 pb-3"
-      dir="rtl"
-    >
-      <div class="filter container col-xl-2 col-lg-3 col-12">
+    <div class="search-about-section pb-5" dir="rtl">
+      <div class="d-flex justify-content-between align-items-center p-5 pb-4">
         <h1 class="heading fw-bolder">ابحث عن عمال</h1>
-        <form class="filter-search">
-          <p class="fw-bolder m-0">البحث</p>
-          <div class="search-filter text-end m-0 mb-3">
-            <input
-              class="col-12"
-              type="text"
-              name=""
-              id="searchFilter"
-              placeholder=""
-            />
-          </div>
-          <p class="fw-bolder mb-2">التخصص</p>
-          <div
-            class="check-filter d-flex flex-column justify-content-start align-items-start fw-bold m-2"
-          >
-            <div class="carpentry col-12">
-              <input class="ms-1" type="checkbox" name="" id="carpentryID" />
-              <label for="carpentryID">نجارة</label>
-            </div>
-            <div class="electricity">
-              <input class="ms-1" type="checkbox" name="" id="electricityID" />
-              <label for="electricityID">كهرباء</label>
-            </div>
-            <div class="paint">
-              <input class="ms-1" type="checkbox" name="" id="paintID" />
-              <label for="paintID">دهان ونقاشة</label>
-            </div>
-            <div class="conditioning">
-              <input class="ms-1" type="checkbox" name="" id="conditioningID" />
-              <label for="conditioningID">تكييف وتبريد</label>
-            </div>
-            <div class="decor">
-              <input class="ms-1" type="checkbox" name="" id="decorID" />
-              <label for="decorID">ديكور</label>
-            </div>
-            <div class="blacksmith">
-              <input class="ms-1" type="checkbox" name="" id="blacksmithID" />
-              <label for="blacksmithID">حدادة</label>
-            </div>
-            <div class="building">
-              <input class="ms-1" type="checkbox" name="" id="buildingID" />
-              <label for="buildingID">بناء</label>
-            </div>
-            <div class="plumbing">
-              <input class="ms-1" type="checkbox" name="" id="plumbingID" />
-              <label for="plumbingID">سباكة</label>
-            </div>
-          </div>
-          <p class="fw-bolder m-0">المهارات</p>
-          <div class="skill-filter text-end m-0 mb-3">
-            <input
-              class="col-12"
-              type="text"
-              name=""
-              id="skillFilter"
-              placeholder=""
-            />
-          </div>
-          <div class="m-0 mb-3 p-0">
-            <p class="fw-bolder m-0">التقييم</p>
-            <div class="rating-filter m-1">
-              <fieldset class="rating d-flex">
-                <input type="radio" name="rating" id="star5" value="5" /><label
-                  for="star5"
-                  class="full"
-                ></label>
-                <input
-                  type="radio"
-                  name="rating"
-                  id="star4.5"
-                  value="4.5"
-                /><label for="star4.5" class="half"></label>
-                <input type="radio" name="rating" id="star4" value="4" /><label
-                  for="star4"
-                  class="full"
-                ></label>
-                <input
-                  type="radio"
-                  name="rating"
-                  id="star3.5"
-                  value="3.5"
-                /><label for="star3.5" class="half"></label>
-                <input type="radio" name="rating" id="star3" value="3" /><label
-                  for="star3"
-                  class="full"
-                ></label>
-                <input
-                  type="radio"
-                  name="rating"
-                  id="star2.5"
-                  value="2.5"
-                /><label for="star2.5" class="half"></label>
-                <input type="radio" name="rating" id="star2" value="2" /><label
-                  for="star2"
-                  class="full"
-                ></label>
-                <input
-                  type="radio"
-                  name="rating"
-                  id="star1.5"
-                  value="1.5"
-                /><label for="star1.5" class="half"></label>
-                <input type="radio" name="rating" id="star1" value="1" /><label
-                  for="star1"
-                  class="full"
-                ></label>
-                <input
-                  type="radio"
-                  name="rating"
-                  id="star0.5"
-                  value="0.5"
-                /><label for="star0.5" class="half"></label>
-              </fieldset>
-            </div>
-          </div>
-        </form>
+        <button class="d-xl-none d-block filter-btn" dir="ltr"><i class="fa-solid fa-sliders"></i></button>
       </div>
-      <table class="workers container col-xl-10 col-lg-9 col-12 p-5">
-        <tr class="worker bg-white test">
-          <td class="p-3">
-            <figure class="user-card-avatar test">
-              <a href="#"><img src="../images/profile.jpg" alt=""></a>
-              <i class="fa-solid fa-circle"></i>
-            </figure>
-          </td>
-        </tr>
-      </table>
+      <div
+        class="search-about-worker d-flex justify-content-sm-around justify-content-between align-items-start pb-3"
+        dir="rtl"
+      >
+        <div class="filter col-xl-2 col-12 p-xl-0 p-5">
+          <form class="filter-search">
+            <div class="side-filter d-xl-none d-flex justify-content-between align-items-center col-12">
+              <div class="back d-flex justify-content-between align-items-center">
+                <i class="fa-solid fa-chevron-right"></i>
+                عودة
+              </div>
+              <button class="submit">
+                عرض النتائج
+              </button>
+            </div>
+            <hr class="d-xl-none d-block">
+            <p class="fw-bolder mb-2">البحث</p>
+            <div class="search-filter text-end m-0 mb-3">
+              <input
+                class="col-12"
+                type="text"
+                name=""
+                id="searchFilter"
+                placeholder=""
+              />
+            </div>
+            <p class="fw-bolder mb-2">التخصص</p>
+            <div
+              class="check-filter d-flex flex-column justify-content-start align-items-start fw-bold m-2"
+            >
+              <div class="carpentry col-12">
+                <input class="ms-1" type="checkbox" name="" id="carpentryID" />
+                <label for="carpentryID">نجارة</label>
+              </div>
+              <div class="electricity">
+                <input
+                  class="ms-1"
+                  type="checkbox"
+                  name=""
+                  id="electricityID"
+                />
+                <label for="electricityID">كهرباء</label>
+              </div>
+              <div class="paint">
+                <input class="ms-1" type="checkbox" name="" id="paintID" />
+                <label for="paintID">دهان ونقاشة</label>
+              </div>
+              <div class="conditioning">
+                <input
+                  class="ms-1"
+                  type="checkbox"
+                  name=""
+                  id="conditioningID"
+                />
+                <label for="conditioningID">تكييف وتبريد</label>
+              </div>
+              <div class="decor">
+                <input class="ms-1" type="checkbox" name="" id="decorID" />
+                <label for="decorID">ديكور</label>
+              </div>
+              <div class="blacksmith">
+                <input class="ms-1" type="checkbox" name="" id="blacksmithID" />
+                <label for="blacksmithID">حدادة</label>
+              </div>
+              <div class="building">
+                <input class="ms-1" type="checkbox" name="" id="buildingID" />
+                <label for="buildingID">بناء</label>
+              </div>
+              <div class="plumbing">
+                <input class="ms-1" type="checkbox" name="" id="plumbingID" />
+                <label for="plumbingID">سباكة</label>
+              </div>
+            </div>
+            <p class="fw-bolder mb-2">المهارات</p>
+            <div class="skill-filter text-end m-0 mb-3">
+              <input
+                class="col-12"
+                type="text"
+                name=""
+                id="skillFilter"
+                placeholder=""
+              />
+            </div>
+            <div class="m-0 mb-3 p-0">
+              <p class="fw-bolder m-0">التقييم</p>
+              <div class="rating-filter m-1">
+                <fieldset class="rating d-flex">
+                  <input
+                    type="radio"
+                    name="rating"
+                    id="star5"
+                    value="5"
+                  /><label for="star5" class="full"></label>
+                  <input
+                    type="radio"
+                    name="rating"
+                    id="star4.5"
+                    value="4.5"
+                  /><label for="star4.5" class="half"></label>
+                  <input
+                    type="radio"
+                    name="rating"
+                    id="star4"
+                    value="4"
+                  /><label for="star4" class="full"></label>
+                  <input
+                    type="radio"
+                    name="rating"
+                    id="star3.5"
+                    value="3.5"
+                  /><label for="star3.5" class="half"></label>
+                  <input
+                    type="radio"
+                    name="rating"
+                    id="star3"
+                    value="3"
+                  /><label for="star3" class="full"></label>
+                  <input
+                    type="radio"
+                    name="rating"
+                    id="star2.5"
+                    value="2.5"
+                  /><label for="star2.5" class="half"></label>
+                  <input
+                    type="radio"
+                    name="rating"
+                    id="star2"
+                    value="2"
+                  /><label for="star2" class="full"></label>
+                  <input
+                    type="radio"
+                    name="rating"
+                    id="star1.5"
+                    value="1.5"
+                  /><label for="star1.5" class="half"></label>
+                  <input
+                    type="radio"
+                    name="rating"
+                    id="star1"
+                    value="1"
+                  /><label for="star1" class="full"></label>
+                  <input
+                    type="radio"
+                    name="rating"
+                    id="star0.5"
+                    value="0.5"
+                  /><label for="star0.5" class="half"></label>
+                </fieldset>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="workers bg-white p-0 col-xl-9 col-11">
+          <div class="card worker pt-3 pb-3 p-0">
+            <div class="row flex-nowrap justify-content-around col-12 m-0 p-0 ps-4 pe-3">
+              <a
+                class="user-card-avatar d-flex align-items-center justify-content-center"
+                href="#"
+              >
+                <img
+                  src="../images/profile.jpg"
+                  class="user-img-avatar"
+                  alt=""
+                />
+                <i class="fa-solid fa-circle"></i>
+              </a>
+              <div class="user-body p-0 col-10">
+                <div class="card-body p-0">
+                  <div
+                    class="d-flex align-items-center justify-content-between"
+                  >
+                    <div class="card-top-title-job col-md-8 col-12 d-flex me-3">
+                      <a class="card-title text-decoration-none user-name" href="#">محمد إبراهيم</a>
+                      <div
+                        class="d-flex justify-content-center align-items-center text-black-50 fw-bolder me-4"
+                      >
+                        <div class="ms-3">
+                          <i class="fa-solid fa-star text-warning"></i>
+                          <span> 3.7 </span>
+                        </div>
+                        <div>
+                          <i class="fa-solid fa-briefcase"></i>
+                          <span> كهربائى </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-buttons d-md-flex d-none">
+                      <a class="btn sign call-me" href="#">
+                        <i class="fa-solid fa-paper-plane ms-2"></i>
+                        كلمني
+                      </a>
+                    </div>
+                  </div>
+                  <a class="text-decoration-none mt-3" href="#">
+                    <p class="card-text me-4">
+                      هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم
+                      توليد هذا النص من مولد النص العربى،
+                    </p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card worker pt-3 pb-3 p-0">
+            <div class="row flex-nowrap justify-content-around col-12 m-0 p-0 ps-4 pe-3">
+              <a
+                class="user-card-avatar d-flex align-items-center justify-content-center"
+                href="#"
+              >
+                <img
+                  src="../images/profile.jpg"
+                  class="user-img-avatar"
+                  alt=""
+                />
+                <i class="fa-solid fa-circle"></i>
+              </a>
+              <div class="user-body p-0 col-10">
+                <div class="card-body p-0">
+                  <div
+                    class="d-flex align-items-center justify-content-between"
+                  >
+                    <div class="card-top-title-job col-md-8 col-12 d-flex me-3">
+                      <a class="card-title text-decoration-none user-name" href="#">محمد إبراهيم</a>
+                      <div
+                        class="d-flex justify-content-center align-items-center text-black-50 fw-bolder me-4"
+                      >
+                        <div class="ms-3">
+                          <i class="fa-solid fa-star text-warning"></i>
+                          <span> 3.7 </span>
+                        </div>
+                        <div>
+                          <i class="fa-solid fa-briefcase"></i>
+                          <span> كهربائى </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-buttons d-md-flex d-none">
+                      <a class="btn sign call-me" href="#">
+                        <i class="fa-solid fa-paper-plane ms-2"></i>
+                        كلمني
+                      </a>
+                    </div>
+                  </div>
+                  <a class="text-decoration-none mt-3" href="#">
+                    <p class="card-text me-4">
+                      هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم
+                      توليد هذا النص من مولد النص العربى،
+                    </p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card worker pt-3 pb-3 p-0">
+            <div class="row flex-nowrap justify-content-around col-12 m-0 p-0 ps-4 pe-3">
+              <a
+                class="user-card-avatar d-flex align-items-center justify-content-center"
+                href="#"
+              >
+                <img
+                  src="../images/profile.jpg"
+                  class="user-img-avatar"
+                  alt=""
+                />
+                <i class="fa-solid fa-circle"></i>
+              </a>
+              <div class="user-body p-0 col-10">
+                <div class="card-body p-0">
+                  <div
+                    class="d-flex align-items-center justify-content-between"
+                  >
+                    <div class="card-top-title-job col-md-8 col-12 d-flex me-3">
+                      <a class="card-title text-decoration-none user-name" href="#">محمد إبراهيم</a>
+                      <div
+                        class="d-flex justify-content-center align-items-center text-black-50 fw-bolder me-4"
+                      >
+                        <div class="ms-3">
+                          <i class="fa-solid fa-star text-warning"></i>
+                          <span> 3.7 </span>
+                        </div>
+                        <div>
+                          <i class="fa-solid fa-briefcase"></i>
+                          <span> كهربائى </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-buttons d-md-flex d-none">
+                      <a class="btn sign call-me" href="#">
+                        <i class="fa-solid fa-paper-plane ms-2"></i>
+                        كلمني
+                      </a>
+                    </div>
+                  </div>
+                  <a class="text-decoration-none mt-3" href="#">
+                    <p class="card-text me-4">
+                      هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم
+                      توليد هذا النص من مولد النص العربى،
+                    </p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card worker pt-3 pb-3 p-0">
+            <div class="row flex-nowrap justify-content-around col-12 m-0 p-0 ps-4 pe-3">
+              <a
+                class="user-card-avatar d-flex align-items-center justify-content-center"
+                href="#"
+              >
+                <img
+                  src="../images/profile.jpg"
+                  class="user-img-avatar"
+                  alt=""
+                />
+                <i class="fa-solid fa-circle"></i>
+              </a>
+              <div class="user-body p-0 col-10">
+                <div class="card-body p-0">
+                  <div
+                    class="d-flex align-items-center justify-content-between"
+                  >
+                    <div class="card-top-title-job col-md-8 col-12 d-flex me-3">
+                      <a class="card-title text-decoration-none user-name" href="#">محمد إبراهيم</a>
+                      <div
+                        class="d-flex justify-content-center align-items-center text-black-50 fw-bolder me-4"
+                      >
+                        <div class="ms-3">
+                          <i class="fa-solid fa-star text-warning"></i>
+                          <span> 3.7 </span>
+                        </div>
+                        <div>
+                          <i class="fa-solid fa-briefcase"></i>
+                          <span> كهربائى </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-buttons d-md-flex d-none">
+                      <a class="btn sign call-me" href="#">
+                        <i class="fa-solid fa-paper-plane ms-2"></i>
+                        كلمني
+                      </a>
+                    </div>
+                  </div>
+                  <a class="text-decoration-none mt-3" href="#">
+                    <p class="card-text me-4">
+                      هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم
+                      توليد هذا النص من مولد النص العربى،
+                    </p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card worker pt-3 pb-3 p-0">
+            <div class="row flex-nowrap justify-content-around col-12 m-0 p-0 ps-4 pe-3">
+              <a
+                class="user-card-avatar d-flex align-items-center justify-content-center"
+                href="#"
+              >
+                <img
+                  src="../images/profile.jpg"
+                  class="user-img-avatar"
+                  alt=""
+                />
+                <i class="fa-solid fa-circle"></i>
+              </a>
+              <div class="user-body p-0 col-10">
+                <div class="card-body p-0">
+                  <div
+                    class="d-flex align-items-center justify-content-between"
+                  >
+                    <div class="card-top-title-job col-md-8 col-12 d-flex me-3">
+                      <a class="card-title text-decoration-none user-name" href="#">محمد إبراهيم</a>
+                      <div
+                        class="d-flex justify-content-center align-items-center text-black-50 fw-bolder me-4"
+                      >
+                        <div class="ms-3">
+                          <i class="fa-solid fa-star text-warning"></i>
+                          <span> 3.7 </span>
+                        </div>
+                        <div>
+                          <i class="fa-solid fa-briefcase"></i>
+                          <span> كهربائى </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-buttons d-md-flex d-none">
+                      <a class="btn sign call-me" href="#">
+                        <i class="fa-solid fa-paper-plane ms-2"></i>
+                        كلمني
+                      </a>
+                    </div>
+                  </div>
+                  <a class="text-decoration-none mt-3" href="#">
+                    <p class="card-text me-4">
+                      هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم
+                      توليد هذا النص من مولد النص العربى،
+                    </p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="see-more">
+            <a class="d-flex justify-content-start align-items-center text-black-50 text-decoration-none fw-bolder fs-4 me-4 m-2" href="#">
+              <i class="fa-solid fa-angles-right ms-2"></i>
+              أعرض المزيد
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- End Search About Worker Section-->
     <!-- Start Up Footer -->

@@ -552,80 +552,131 @@ a {
   background-color: transparent !important;
 }
 /* End Up Footer */
+/* Start Search About Worker Section */
 /* Start Filter */
-.search-about-worker {
+.search-about-section {
   background-color: #ebebeb;
 }
-.search-about-worker .heading {
+.search-about-section .heading {
   font-size: 30px !important;
 }
-.search-about-worker p {
+.search-about-section p {
   font-size: 20px !important;
 }
-.search-about-worker .heading,
-.search-about-worker p {
+.search-about-section .heading,
+.search-about-section p {
   color: #34540a;
 }
-.search-about-worker .rating-filter .rating,
-.search-about-worker .rating-filter .rating > input {
+.search-about-section .filter .search-filter input,
+.search-about-section .filter .skill-filter input {
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.search-about-section .filter .check-filter input,
+.search-about-section .filter .check-filter label {
+  cursor: pointer;
+}
+.search-about-section .rating-filter .rating,
+.search-about-section .rating-filter .rating > input {
   border: none;
   display: none;
 }
-.search-about-worker .rating-filter .rating > label::before {
-  content: '\f005';
+.search-about-section .rating-filter .rating > label::before {
+  content: "\f005";
   font-family: FontAwesome;
   font-size: 22px;
   margin: 5px;
   cursor: pointer;
 }
-.search-about-worker .rating-filter .rating > .half {
+.search-about-section .rating-filter .rating > .half {
   position: relative;
 }
-.search-about-worker .rating-filter .rating > .half::before {
-  content: '\f089';
+.search-about-section .rating-filter .rating > .half::before {
+  content: "\f089";
   position: absolute;
   top: -5px;
   left: 0px;
   cursor: pointer;
 }
-.search-about-worker .rating-filter .rating > label {
+.search-about-section .rating-filter .rating > label {
   color: #fff;
   cursor: pointer;
 }
-.search-about-worker .rating-filter .rating > input:checked ~ label,
-.search-about-worker .rating-filter .rating:not(:checked) > label:hover,
-.search-about-worker .rating-filter .rating:not(:checked) > label:hover ~ label {
+.search-about-section .rating-filter .rating > input:checked ~ label,
+.search-about-section .rating-filter .rating:not(:checked) > label:hover,
+.search-about-section
+  .rating-filter
+  .rating:not(:checked)
+  > label:hover
+  ~ label {
   color: #ff9c1a;
   transition: color 0.2s ease-in-out;
 }
-.search-about-worker .rating-filter .rating > input:checked + label:hover,
-.search-about-worker .rating-filter .rating > input:checked ~ label:hover,
-.search-about-worker .rating-filter .rating > label:hover ~ input:checked ~ label,
-.search-about-worker .rating-filter .rating > input:checked ~ label:hover ~ label {
+.search-about-section .rating-filter .rating > input:checked + label:hover,
+.search-about-section .rating-filter .rating > input:checked ~ label:hover,
+.search-about-section
+  .rating-filter
+  .rating
+  > label:hover
+  ~ input:checked
+  ~ label,
+.search-about-section
+  .rating-filter
+  .rating
+  > input:checked
+  ~ label:hover
+  ~ label {
   color: #ff9c1a;
   transition: color 0.2s ease-in-out;
 }
 /* End Filter */
-/* Start Search About Worker Section */
+/* Start Workers */
+.workers {
+  border-radius: 15px;
+}
 .workers .worker {
-  border-radius: 7px 7px 0 0;
+  border-radius: 0;
+}
+.workers .worker:first-of-type {
+  border-radius: 15px 15px 0 0;
+}
+.workers .worker:last-of-type {
+  border-radius: 0 0 15px 15px;
 }
 .workers .worker .user-card-avatar {
   position: relative;
 }
-.workers .worker .user-card-avatar a img {
-  width: 100px;
-  height: 100px;
+.workers .worker .user-card-avatar,
+.workers .worker .user-card-avatar .user-img-avatar {
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
 }
 .workers .worker .user-card-avatar svg {
   color: green;
+  box-shadow: 0 0 7px green;
   position: absolute;
-  right: 70px;
-  top: 5px;
-  box-shadow: 0 0 5px green;
+  right: 110px;
+  top: 10px;
   border-radius: 50%;
 }
+.workers .worker .user-body .user-name {
+  margin-right: 10px;
+  color: var(--main-color);
+  font-weight: 700;
+  font-size: 26px;
+}
+.workers .worker .user-body .card-text {
+  margin-top: 15px;
+  color: #000;
+  font-size: 12px !important;
+  font-weight: 900;
+}
+/* End Workers */
 /* End Search About Worker Section */
 /* Start Dark Mode */
 .darkmode-label {
@@ -693,6 +744,7 @@ a {
 .darkmode-toggle.dark:checked + .darkmode-label svg.moon {
   fill: #fff;
 }
+*:has(.darkmode-toggle.dark:checked) .search-about-section .filter-btn,
 *:has(.darkmode-toggle.dark:checked) .sign {
   background-color: var(--main-color) !important;
   color: #fff !important;
@@ -733,16 +785,20 @@ a {
   background-color: #303030;
   box-shadow: 0 0 10px #303030;
 }
+*:has(.darkmode-toggle.dark:checked) .filter .filter-search input,
 *:has(.darkmode-toggle.dark:checked) .create-account-form input {
   background-color: #242424;
   color: #fff;
 }
+*:has(.darkmode-toggle.dark:checked) .filter .check-filter label,
 *:has(.darkmode-toggle.dark:checked) .create-account-form label {
   color: #fff;
 }
 *:has(.darkmode-toggle.dark:checked) .create-account-form .sign-div .sign {
   border: 0;
 }
+*:has(.darkmode-toggle.dark:checked) .search-about-section .workers,
+*:has(.darkmode-toggle.dark:checked) .search-about-section .workers .worker,
 *:has(.darkmode-toggle.dark:checked) .why-us,
 *:has(.darkmode-toggle.dark:checked) .questions,
 *:has(.darkmode-toggle.dark:checked) footer {
@@ -762,6 +818,8 @@ a {
 *:has(.darkmode-toggle.dark:checked) .write-about textarea,
 *:has(.darkmode-toggle.dark:checked) .statistics div div,
 *:has(.darkmode-toggle.dark:checked) .business-exhibition,
+*:has(.darkmode-toggle.dark:checked) .side-filter .submit,
+*:has(.darkmode-toggle.dark:checked) .side-filter .back,
 *:has(.darkmode-toggle.dark:checked) .up-footer a {
   color: #fff !important;
 }
@@ -772,6 +830,9 @@ a {
 *:has(.darkmode-toggle.dark:checked) .profile .profile-img {
   box-shadow: 0 0 5px #ffffff60;
 }
+*:has(.darkmode-toggle.dark:checked) .search-about-section,
+*:has(.darkmode-toggle.dark:checked) .filter,
+*:has(.darkmode-toggle.dark:checked) .side-filter,
 *:has(.darkmode-toggle.dark:checked) .write-about div,
 *:has(.darkmode-toggle.dark:checked) .write-about textarea,
 *:has(.darkmode-toggle.dark:checked) .statistics div,
@@ -798,11 +859,18 @@ a {
 *:has(.darkmode-toggle.dark:checked) .up-footer a:has(svg):hover {
   background-color: transparent !important;
 }
+*:has(.darkmode-toggle.dark:checked) .search-about-section .workers .card {
+  border-color: #303030 !important;
+}
+*:has(.darkmode-toggle.dark:checked) .search-about-section .workers .worker .card-top-title-job div,
+*:has(.darkmode-toggle.dark:checked) .search-about-section .see-more a {
+  color: #ffffff90 !important;
+}
 /* End Dark Mode */
 /* Start Media */
 @media (max-width: 1400px) {
   .container {
-    max-width: 90% !important 
+    max-width: 90% !important;
   }
   .sign {
     font-size: 12px !important;
@@ -819,10 +887,72 @@ a {
   .heading {
     font-size: 35px !important;
   }
+  .search-about-section .heading {
+    font-size: 28px !important;
+  }
+  .workers .worker .user-card-avatar,
+  .workers .worker .user-card-avatar .user-img-avatar {
+    width: 90px;
+    height: 90px;
+  }
+  .workers .worker .user-card-avatar svg {
+    right: 75px;
+    top: 8px;
+  }
+  .workers .worker .user-body .user-name {
+    font-size: 20px;
+  }
+  body {
+    position: relative;
+  }
+  .filter-btn {
+    border: 0.25px solid #34540a;
+    border-radius: 5px;
+    color: #34540a;
+    font-weight: 100;
+    box-shadow: 0 0 5px #00000050;
+    transition: all 0.3s ease-in-out;
+  }
+  .filter-btn:hover {
+    box-shadow: none;
+    transition: all 0.3s ease-in-out;
+  }
+  .filter {
+    display: none;
+    position: absolute;
+    z-index: 9999999999;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 100%;
+    transition: all 0.5s ease-in-out;
+  }
+  .filter.active {
+    display: block;
+    left: 0;
+    transition: all 0.5s ease-in-out;
+  }
+  .search-about-section .rating-filter .rating > label {
+    color: #8b7d77;
+  }
+  .search-about-section .filter .filter-search .back {
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .search-about-section .filter .filter-search .submit {
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .search-about-section .see-more a {
+    font-size: 24px !important;
+  }
 }
 @media (max-width: 991px) {
   .container {
-    max-width: 90% !important 
+    max-width: 90% !important;
   }
   .landing .container .search-wrap .search-box {
     display: flex;
@@ -863,6 +993,15 @@ a {
   footer {
     font-size: 14px !important;
   }
+  .search-about-section .heading {
+    font-size: 26px !important;
+  }
+  .workers .worker .user-body .user-name {
+    font-size: 18px;
+  }
+  .search-about-section .see-more a {
+    font-size: 22px !important;
+  }
   .darkmode-label {
     width: 70px;
     height: 32px;
@@ -894,7 +1033,7 @@ a {
 }
 @media (max-width: 768px) {
   .container {
-    max-width: 90% !important 
+    max-width: 90% !important;
   }
   .side-bar {
     right: -100%;
@@ -914,9 +1053,14 @@ a {
   .create-account-form .check-term label {
     font-size: 14px;
   }
-  .search-about-worker .heading,
   .heading {
     font-size: 26px !important;
+  }
+  .search-about-section .heading {
+    font-size: 24px !important;
+  }
+  .search-about-section .see-more a {
+    font-size: 20px !important;
   }
   .darkmode-label {
     width: 60px;
@@ -946,12 +1090,43 @@ a {
 }
 @media (max-width: 576px) {
   .container {
-    max-width: 90% !important 
+    max-width: 90% !important;
+  }
+  .search-about-section .heading {
+    font-size: 22px !important;
+  }
+  .workers .worker .card-body .card-top-title-job,
+  .workers .worker .card-body .card-top-title-job div {
+    display: block !important;
+  }
+  .workers .worker .user-body .user-name {
+    font-size: 14px;
+  }
+  .workers .worker .user-body .user-name + div {
+    font-size: 12px;
+  }
+  .workers .worker .user-card-avatar,
+  .workers .worker .user-card-avatar .user-img-avatar {
+    width: 60px;
+    height: 60px;
+  }
+  .workers .worker .user-card-avatar svg {
+    width: 12px;
+    height: 12px;
+    right: 45px;
+    top: 5px;
+  }
+  .workers .worker .user-body .card-text {
+    font-size: 10px;
+    font-weight: 500;
+  }
+  .search-about-section .see-more a {
+    font-size: 18px !important;
   }
 }
 @media (max-width: 400px) {
   .container {
-    max-width: 90% !important 
+    max-width: 90% !important;
   }
   .brand img {
     display: none !important;
@@ -973,6 +1148,9 @@ a {
   }
   footer {
     font-size: 12px !important;
+  }
+  .search-about-section .see-more a {
+    font-size: 16px !important;
   }
 }
 /* End Media */

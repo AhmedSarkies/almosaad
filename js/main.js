@@ -2,7 +2,7 @@
 const darkMode = $(`.darkmode-toggle`);
 $(window).on(`load`, function () {
   // Start Loader
-  // $(`.loader-container`).addClass(`loading`);
+  $(`.loader-container`).addClass(`loading`);
   // End Loader
   // Start Dark Mode
   if (
@@ -89,4 +89,12 @@ $(() => {
     }
   });
   // End Create Account
+  // Start Side Filter
+  $(`.filter-btn`).on(`click`, function () {
+    $(`.filter`).addClass(`active`);
+  });
+  $(`.back`).on(`click`, function () {
+    $(`.filter`).removeClass(`active`);
+  });
+  // End Side Filter
 });

@@ -7,6 +7,7 @@
 }
 body {
   font-family: "Cairo", sans-serif;
+  position: relative;
 }
 /* Start Loader In All Pages */
 .loader-container {
@@ -554,6 +555,7 @@ a {
 /* End Up Footer */
 /* Start Search About Worker Section */
 /* Start Filter */
+.add-work,
 .search-about-section {
   background-color: #ebebeb;
 }
@@ -678,6 +680,103 @@ a {
 }
 /* End Workers */
 /* End Search About Worker Section */
+/* Start Add Work */
+.add-work-section {
+  background-color: #fff;
+}
+.add-work button {
+  background-color: var(--main-color);
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  color: #fff;
+  font-weight: bolder;
+  box-shadow: 0 0 5px #00000040;
+  scale: 1;
+  transition: all 0.2s ease-in-out;
+}
+.add-work button:hover {
+  scale: 0.99;
+  box-shadow: none;
+  transition: all 0.2s ease-in-out;
+}
+.add-work button .work-plus,
+.add-work button .work-warning {
+  fill: #fff;
+  width: 22px;
+  transition: all 0.4s ease-in-out;
+}
+.add-work-section input,
+.add-work-section textarea {
+  outline: none;
+  border: 1px solid #00000050;
+  font-size: 16px;
+  padding: 15px;
+  border-radius: 10px;
+}
+.add-work-section input {
+  height: 35px;
+}
+.add-work-section textarea {
+  min-height: 75px;
+  max-height: 150px;
+  resize: none;
+}
+.add-work-section label {
+  color: #477a03;
+  font-size: 18px;
+  font-weight: 900;
+}
+.add-work-section label svg {
+  font-size: 7px;
+  color: #f00 !important;
+}
+.add-work-section small {
+  font-size: 14px;
+}
+.add-work .how-add-work-section h2,
+.add-work .how-add-work-section p {
+  color: #34540a;
+}
+.add-work .how-add-work-section h2 {
+  font-size: 24px;
+  font-weight: 900;
+}
+.add-work .how-add-work-section p {
+  font-size: 16px;
+  font-weight: 600;
+}
+/* End Add Work */
+/* Start Open Alert Video Overlay */
+.popup-overlay,
+.container-video {
+  display: none;
+}
+.popup-overlay.active {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #00000050;
+  z-index: 999999999;
+}
+.container-video.active {
+  display: block;
+  position: fixed;
+  background-color: #fff;
+  border-radius: 20px;
+  width: 60%;
+  height: 60%;
+  margin: 40px auto;
+  z-index: 9999999999;
+}
+.container-video iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+/* End Open Alert Video Overlay */
 /* Start Dark Mode */
 .darkmode-label {
   width: 75px;
@@ -772,14 +871,24 @@ a {
 *:has(.darkmode-toggle.dark:checked) .nav-item,
 *:has(.darkmode-toggle.dark:checked) .start-project,
 *:has(.darkmode-toggle.dark:checked) .search-input,
+*:has(.darkmode-toggle.dark:checked) .container-video.active,
+*:has(.darkmode-toggle.dark:checked) .add-work-section,
 *:has(.darkmode-toggle.dark:checked) footer {
   background: #242424 !important;
 }
 *:has(.darkmode-toggle.dark:checked) .logo,
+*:has(.darkmode-toggle.dark:checked) .add-work-section label,
+*:has(.darkmode-toggle.dark:checked) .add-work .how-add-work-section h2,
+*:has(.darkmode-toggle.dark:checked) .add-work .how-add-work-section p,
+*:has(.darkmode-toggle.dark:checked) .up-footer h2,
 *:has(.darkmode-toggle.dark:checked) .up-footer h2,
 *:has(.darkmode-toggle.dark:checked) .up-footer svg {
   color: var(--main-color) !important;
   fill: #fff !important;
+}
+*:has(.darkmode-toggle.dark:checked) .add-work .how-add-work-section h2,
+*:has(.darkmode-toggle.dark:checked) .add-work .how-add-work-section p {
+  opacity: 0.8;
 }
 *:has(.darkmode-toggle.dark:checked) .create-account-form {
   background-color: #303030;
@@ -794,6 +903,11 @@ a {
 *:has(.darkmode-toggle.dark:checked) .create-account-form label {
   color: #fff;
 }
+*:has(.darkmode-toggle.dark:checked) .add-work-section input,
+*:has(.darkmode-toggle.dark:checked) .add-work-section textarea {
+  border-color: #303030;
+  color: #fff;
+}
 *:has(.darkmode-toggle.dark:checked) .create-account-form .sign-div .sign {
   border: 0;
 }
@@ -801,6 +915,8 @@ a {
 *:has(.darkmode-toggle.dark:checked) .search-about-section .workers .worker,
 *:has(.darkmode-toggle.dark:checked) .why-us,
 *:has(.darkmode-toggle.dark:checked) .questions,
+*:has(.darkmode-toggle.dark:checked) .add-work-section input,
+*:has(.darkmode-toggle.dark:checked) .add-work-section textarea,
 *:has(.darkmode-toggle.dark:checked) footer {
   background-color: #191919 !important;
 }
@@ -823,6 +939,7 @@ a {
 *:has(.darkmode-toggle.dark:checked) .up-footer a {
   color: #fff !important;
 }
+*:has(.darkmode-toggle.dark:checked) .add-work-section small,
 *:has(.darkmode-toggle.dark:checked) .profile .job,
 *:has(.darkmode-toggle.dark:checked) .how-work p {
   color: #ffffff80 !important;
@@ -830,6 +947,7 @@ a {
 *:has(.darkmode-toggle.dark:checked) .profile .profile-img {
   box-shadow: 0 0 5px #ffffff60;
 }
+*:has(.darkmode-toggle.dark:checked) .add-work,
 *:has(.darkmode-toggle.dark:checked) .search-about-section,
 *:has(.darkmode-toggle.dark:checked) .filter,
 *:has(.darkmode-toggle.dark:checked) .side-filter,
@@ -862,7 +980,28 @@ a {
 *:has(.darkmode-toggle.dark:checked) .search-about-section .workers .card {
   border-color: #303030 !important;
 }
-*:has(.darkmode-toggle.dark:checked) .search-about-section .workers .worker .card-top-title-job div,
+*:has(.darkmode-toggle.dark:checked) .add-work button {
+  scale: 1;
+  box-shadow: none;
+  transition: all 0.4s ease-in-out;
+}
+*:has(.darkmode-toggle.dark:checked) .add-work button:hover {
+  scale: 1;
+  background-color: #fff !important;
+  color: var(--main-color) !important;
+  transition: all 0.4s ease-in-out;
+}
+*:has(.darkmode-toggle.dark:checked) .add-work button:hover svg {
+  stroke: var(--main-color) !important;
+  fill: var(--main-color) !important;
+  transition: all 0.4s ease-in-out;
+}
+*:has(.darkmode-toggle.dark:checked)
+  .search-about-section
+  .workers
+  .worker
+  .card-top-title-job
+  div,
 *:has(.darkmode-toggle.dark:checked) .search-about-section .see-more a {
   color: #ffffff90 !important;
 }
@@ -877,6 +1016,31 @@ a {
   }
   .heading {
     font-size: 40px !important;
+  }
+  .container-video.active {
+    width: 80%;
+  }
+  .add-work-section input,
+  .add-work-section textarea {
+    font-size: 14px;
+  }
+  .add-work-section input {
+    height: 30px;
+  }
+  .add-work-section textarea {
+    max-height: 130px;
+  }
+  .add-work-section label {
+    font-size: 16px;
+  }
+  .add-work-section small {
+    font-size: 13px;
+  }
+  .add-work .how-add-work-section h2 {
+    font-size: 22px;
+  }
+  .add-work .how-add-work-section p {
+    font-size: 15px;
   }
 }
 @media (max-width: 1200px) {
@@ -949,6 +1113,21 @@ a {
   .search-about-section .see-more a {
     font-size: 24px !important;
   }
+  .add-work-section textarea {
+    max-height: 110px;
+  }
+  .add-work-section label {
+    font-size: 15px;
+  }
+  .add-work-section small {
+    font-size: 12px;
+  }
+  .add-work .how-add-work-section h2 {
+    font-size: 20px;
+  }
+  .add-work .how-add-work-section p {
+    font-size: 14px;
+  }
 }
 @media (max-width: 991px) {
   .container {
@@ -1001,6 +1180,20 @@ a {
   }
   .search-about-section .see-more a {
     font-size: 22px !important;
+  }
+  .add-work button {
+    padding: 7px;
+    font-size: 14px;
+  }
+  .add-work button .work-plus,
+  .add-work button .work-warning {
+    width: 20px;
+  }
+  .add-work-section textarea {
+    max-height: 90px;
+  }
+  .add-work-section label {
+    font-size: 14px;
   }
   .darkmode-label {
     width: 70px;
@@ -1061,6 +1254,17 @@ a {
   }
   .search-about-section .see-more a {
     font-size: 20px !important;
+  }
+  .add-work button {
+    padding: 5px;
+    font-size: 13px;
+  }
+  .add-work button .work-plus,
+  .add-work button .work-warning {
+    width: 18px;
+  }
+  .add-work-section textarea {
+    max-height: 75px;
   }
   .darkmode-label {
     width: 60px;
@@ -1123,6 +1327,10 @@ a {
   .search-about-section .see-more a {
     font-size: 18px !important;
   }
+  .add-work button .work-plus,
+  .add-work button .work-warning {
+    width: 16px;
+  }
 }
 @media (max-width: 400px) {
   .container {
@@ -1151,6 +1359,16 @@ a {
   }
   .search-about-section .see-more a {
     font-size: 16px !important;
+  }
+  .container-video.active {
+    height: 45%;
+  }
+  .add-work button {
+    font-size: 10px;
+  }
+  .add-work button .work-plus,
+  .add-work button .work-warning {
+    width: 14px;
   }
 }
 /* End Media */

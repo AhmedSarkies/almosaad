@@ -23,7 +23,7 @@ $(`.darkmode-label`).on(`click`, function () {
   localStorage.setItem(`theme`, `dark`);
   darkMode.removeClass(`light`);
   darkMode.addClass(localStorage.getItem(`theme`));
-  if (darkMode.prop("checked") === true) {
+  if (darkMode.prop(`checked`) === true) {
     localStorage.setItem(`check`, `false`);
     localStorage.setItem(`theme`, `light`);
     darkMode.removeClass(`dark`);
@@ -34,7 +34,7 @@ $(`.darkmode-label`).on(`click`, function () {
 // End Loader & Dark Mode
 
 $(() => {
-  "use strict";
+  `use strict`;
   // Start Sticky Header
   $(window).scroll(function () {
     if ($(window).scrollTop() > 0) {
@@ -78,8 +78,8 @@ $(() => {
   });
   // End Question
   // Start Create Account
-  const checkTerm = $(`.create-account-form #term[type="checkbox"]`);
-  $(`.create-account-form #term`).on("click", function () {
+  const checkTerm = $(`.create-account-form #term[type='checkbox']`);
+  $(`.create-account-form #term`).on(`click`, function () {
     if (checkTerm.attr(`checked`)) {
       checkTerm.removeAttr(`checked`);
       checkTerm.removeClass(`checked`);
@@ -97,4 +97,14 @@ $(() => {
     $(`.filter`).removeClass(`active`);
   });
   // End Side Filter
+  // Start Add Work
+  $(`.work-warning-btn`).on(`click`, function () {
+    $(`.popup-overlay`).addClass(`active`);
+    $(`.container-video`).addClass(`active`);
+  });
+  $(`.popup-overlay`).on(`click`, function () {
+    $(`.popup-overlay`).removeClass(`active`);
+    $(`.container-video`).removeClass(`active`);
+  });
+  // End Add Work
 });

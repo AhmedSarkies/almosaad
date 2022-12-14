@@ -684,7 +684,8 @@ a {
 .add-work-section {
   background-color: #fff;
 }
-.add-work button {
+.add-work button,
+.add-work div.work-warning-btn {
   background-color: var(--main-color);
   border: none;
   border-radius: 10px;
@@ -693,15 +694,17 @@ a {
   font-weight: bolder;
   box-shadow: 0 0 5px #00000040;
   scale: 1;
+  cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
-.add-work button:hover {
+.add-work button:hover,
+.add-work div.work-warning-btn:hover {
   scale: 0.99;
   box-shadow: none;
   transition: all 0.2s ease-in-out;
 }
 .add-work button .work-plus,
-.add-work button .work-warning {
+.add-work div .work-warning {
   fill: #fff;
   width: 22px;
   transition: all 0.4s ease-in-out;
@@ -1181,12 +1184,13 @@ a {
   .search-about-section .see-more a {
     font-size: 22px !important;
   }
-  .add-work button {
+  .add-work button,
+  .add-work .work-warning-btn {
     padding: 7px;
     font-size: 14px;
   }
   .add-work button .work-plus,
-  .add-work button .work-warning {
+  .add-work div .work-warning {
     width: 20px;
   }
   .add-work-section textarea {
@@ -1255,12 +1259,13 @@ a {
   .search-about-section .see-more a {
     font-size: 20px !important;
   }
-  .add-work button {
+  .add-work button,
+  .add-work .work-warning-btn {
     padding: 5px;
     font-size: 13px;
   }
   .add-work button .work-plus,
-  .add-work button .work-warning {
+  .add-work div .work-warning {
     width: 18px;
   }
   .add-work-section textarea {
@@ -1328,7 +1333,7 @@ a {
     font-size: 18px !important;
   }
   .add-work button .work-plus,
-  .add-work button .work-warning {
+  .add-work div .work-warning {
     width: 16px;
   }
 }
@@ -1363,11 +1368,12 @@ a {
   .container-video.active {
     height: 45%;
   }
-  .add-work button {
+  .add-work button,
+  .add-work .work-warning-btn {
     font-size: 10px;
   }
   .add-work button .work-plus,
-  .add-work button .work-warning {
+  .add-work div .work-warning {
     width: 14px;
   }
 }

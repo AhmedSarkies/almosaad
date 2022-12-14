@@ -101,10 +101,20 @@ $(() => {
   $(`.work-warning-btn`).on(`click`, function () {
     $(`.popup-overlay`).addClass(`active`);
     $(`.container-video`).addClass(`active`);
+    $(`.container-video iframe`).attr({
+      src: `https://www.youtube.com/embed/YMzSi5ugXUE`,
+      title: `صلاة الفجر |الشيخ عبد الرشيد صوفي | سورة الحديد برواية السوسي عن أبي عمرو HD`,
+      frameborder: `0`,
+      allow: `accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture`,
+      allowfullscreen: true,
+    });
   });
   $(`.popup-overlay`).on(`click`, function () {
     $(`.popup-overlay`).removeClass(`active`);
     $(`.container-video`).removeClass(`active`);
+    $(`.container-video iframe`).removeAttr(
+      `src title frameborder allow allowfullscreen`
+    );
   });
   // End Add Work
 });

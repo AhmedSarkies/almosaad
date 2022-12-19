@@ -1186,7 +1186,6 @@ a {
   }
   .add-work button,
   .add-work .work-warning-btn {
-    padding: 7px;
     font-size: 14px;
   }
   .add-work button .work-plus,
@@ -1258,11 +1257,6 @@ a {
   }
   .search-about-section .see-more a {
     font-size: 20px !important;
-  }
-  .add-work button,
-  .add-work .work-warning-btn {
-    padding: 5px;
-    font-size: 13px;
   }
   .add-work button .work-plus,
   .add-work div .work-warning {
@@ -1367,10 +1361,6 @@ a {
   }
   .container-video.active {
     height: 45%;
-  }
-  .add-work button,
-  .add-work .work-warning-btn {
-    font-size: 10px;
   }
   .add-work button .work-plus,
   .add-work div .work-warning {

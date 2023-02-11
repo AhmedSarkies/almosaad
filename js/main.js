@@ -35,6 +35,18 @@ $(`.darkmode-label`).on(`click`, function () {
 
 $(() => {
   `use strict`;
+  const pressedKey = (e) => {
+    if (e.originalEvent.key === "Escape") {
+      $(`.filter`).removeClass(`active`);
+      $(`.menu-btn`).removeClass(`active`);
+      $(`.side-bar`).removeClass(`active`);
+      $(`.popup-overlay`).removeClass(`active`);
+      $(`.container-video`).removeClass(`active`);
+      $(`.container-video iframe`).removeAttr(
+        `src title frameborder allow allowfullscreen`
+      );
+    }
+  };
   // Start Sticky Header
   $(window).scroll(function () {
     if ($(window).scrollTop() > 0) {
@@ -96,6 +108,7 @@ $(() => {
   $(`.back`).on(`click`, function () {
     $(`.filter`).removeClass(`active`);
   });
+  $(document).on(`keydown`, pressedKey);
   // End Side Filter
   // Start Add Work
   $(`.work-warning-btn`).on(`click`, function () {
@@ -109,12 +122,14 @@ $(() => {
       allowfullscreen: true,
     });
   });
-  $(`.popup-overlay`).on(`click`, function () {
-    $(`.popup-overlay`).removeClass(`active`);
-    $(`.container-video`).removeClass(`active`);
-    $(`.container-video iframe`).removeAttr(
-      `src title frameborder allow allowfullscreen`
-    );
+  $(`.popup-overlay`).on(`click`, function (e) {
+    if (!$(e.target).hasClass(`container-video`)) {
+      $(`.popup-overlay`).removeClass(`active`);
+      $(`.container-video`).removeClass(`active`);
+      $(`.container-video iframe`).removeAttr(
+        `src title frameborder allow allowfullscreen`
+      );
+    }
   });
   // End Add Work
 });

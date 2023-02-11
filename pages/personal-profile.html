@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ملفي الشخصي</title>
+    <link rel="icon" href="../images/brand.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../style/normalize.css" />
+    <link rel="stylesheet" href="../style/bootstrap.min.css" />
+    <link rel="stylesheet" href="../style/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style/style.css" />
+  </head>
+  <body>
+    <!-- Start Loader -->
+    <div class="loader-container">
+      Loading
+      <div class="loader load-top"></div>
+      <div class="loader load-left"></div>
+    </div>
+    <!-- End Loader -->
+    <!-- Start Header -->
+    <header class="navbar p-0 pe-0 ps-2 ps-xl-5">
+      <div
+        class="col-12 d-flex justify-content-between align-items-center text-center p-0"
+      >
+        <div class="menu-btn drop text-light p-0 col-0" href="#">
+          <i class="fa-solid fa-bars drop"></i>
+        </div>
+        <a
+          class="logo d-md-flex d-none text-decoration-none text-light ms-5 me-xxl-3 me-2 col-0"
+          href="../index.html"
+          >المساعد</a
+        >
+        <a class="brand d-md-none d-flex col-0" href="../index.html">
+          <img src="../images/brand.png" alt="" />
+        </a>
+        <div
+          class="navbar-nav p-0 me-xl-3 me-0 d-flex justify-content-between justify-content-md-center justify-content-sm-center align-items-center text-center flex-lg-row-reverse col-md-5 col-sm-4 col-0"
+          dir="ltr"
+        >
+          <a
+            class="nav-item nav-link d-flex text-white align-items-center justify-content-center nav-p-12 me-xl-5 me-lg-0 col-xl-4 col-lg-5 col-6 d-lg-flex d-none"
+            href="./add-work.html"
+          >
+            أضف عملك <i class="fa-solid fa-plus ms-1"></i>
+          </a>
+          <a
+            class="nav-item nav-link text-light d-flex align-items-center justify-content-center col-xl-4 col-lg-5 col-6 d-xl-flex d-none"
+            href="./search-about-worker.html"
+          >
+            ابحث عن عمال <i class="fa-brands fa-searchengin ms-1"></i>
+          </a>
+          <a
+            class="nav-item nav-link text-light d-flex align-items-center justify-content-center col-xl-4 col-lg-5 col-6 d-lg-flex d-none"
+            href="./browse-business.html"
+          >
+            تصفح الأعمال <i class="fa-solid fa-boxes-stacked ms-1"></i
+          ></a>
+          <div
+            class="darkmode drop d-flex justify-content-center ms-md-5 ms-0 me-md-3 me-0"
+          >
+            <input
+              class="darkmode-toggle drop"
+              type="checkbox"
+              name=""
+              id="darkmode-toggle"
+            />
+            <label class="darkmode-label drop" for="darkmode-toggle">
+              <svg
+                version="1.1"
+                class="sun drop"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                enable-background="new 0 0 512 512"
+              >
+                <g>
+                  <g>
+                    <path
+                      class="drop"
+                      d="m256,105.5c-83.9,0-152.2,68.3-152.2,152.2 0,83.9 68.3,152.2 152.2,152.2 83.9,0 152.2-68.3 152.2-152.2 0-84-68.3-152.2-152.2-152.2zm0,263.5c-61.4,0-111.4-50-111.4-111.4 0-61.4 50-111.4 111.4-111.4 61.4,0 111.4,50 111.4,111.4 0,61.4-50,111.4-111.4,111.4z"
+                    />
+                    <path
+                      class="drop"
+                      d="m256,74.8c11.3,0 20.4-9.1 20.4-20.4v-23c0-11.3-9.1-20.4-20.4-20.4-11.3,0-20.4,9.1-20.4,20.4v23c2.84217e-14,11.3 9.1,20.4 20.4,20.4z"
+                    />
+                    <path
+                      class="drop"
+                      d="m256,437.2c-11.3,0-20.4,9.1-20.4,20.4v22.9c0,11.3 9.1,20.4 20.4,20.4 11.3,0 20.4-9.1 20.4-20.4v-22.9c0-11.2-9.1-20.4-20.4-20.4z"
+                    />
+                    <path
+                      class="drop"
+                      d="m480.6,235.6h-23c-11.3,0-20.4,9.1-20.4,20.4 0,11.3 9.1,20.4 20.4,20.4h23c11.3,0 20.4-9.1 20.4-20.4 0-11.3-9.1-20.4-20.4-20.4z"
+                    />
+                    <path
+                      class="drop"
+                      d="m54.4,235.6h-23c-11.3,0-20.4,9.1-20.4,20.4 0,11.3 9.1,20.4 20.4,20.4h22.9c11.3,0 20.4-9.1 20.4-20.4 0.1-11.3-9.1-20.4-20.3-20.4z"
+                    />
+                    <path
+                      class="drop"
+                      d="M400.4,82.8L384.1,99c-8,8-8,20.9,0,28.9s20.9,8,28.9,0l16.2-16.2c8-8,8-20.9,0-28.9S408.3,74.8,400.4,82.8z"
+                    />
+                    <path
+                      class="drop"
+                      d="m99,384.1l-16.2,16.2c-8,8-8,20.9 0,28.9 8,8 20.9,8 28.9,0l16.2-16.2c8-8 8-20.9 0-28.9s-20.9-7.9-28.9,0z"
+                    />
+                    <path
+                      class="drop"
+                      d="m413,384.1c-8-8-20.9-8-28.9,0-8,8-8,20.9 0,28.9l16.2,16.2c8,8 20.9,8 28.9,0 8-8 8-20.9 0-28.9l-16.2-16.2z"
+                    />
+                    <path
+                      class="drop"
+                      d="m99,127.9c8,8 20.9,8 28.9,0 8-8 8-20.9 0-28.9l-16.2-16.2c-8-8-20.9-8-28.9,0-8,8-8,20.9 0,28.9l16.2,16.2z"
+                    />
+                  </g>
+                </g>
+              </svg>
+              <svg
+                version="1.1"
+                class="moon drop"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                enable-background="new 0 0 512 512"
+              >
+                <g>
+                  <g>
+                    <path
+                      class="drop"
+                      d="m275.4,500.7c-135,0-244.7-109.8-244.7-244.7 1.06581e-14-134.9 109.8-244.7 244.7-244.7 8.2,0 16.4,0.4 24.6,1.2 7.2,0.7 13.5,5.2 16.5,11.7s2.4,14.2-1.6,20.2c-23,33.8-35.2,73.3-35.2,114.2 0,105 78.7,192.2 183.2,202.6 7.2,0.7 13.5,5.2 16.5,11.7 3.1,6.5 2.4,14.2-1.6,20.2-45.8,67.4-121.4,107.6-202.4,107.6zm-12.5-448c-106.5,6.5-191.2,95.2-191.2,203.3 1.42109e-14,112.3 91.4,203.7 203.7,203.7 56.4,0 109.6-23.4 147.8-63.7-46.2-11.7-88.1-36.8-120.8-72.6-41.1-45.2-63.8-103.6-63.8-164.6 0.1-37.1 8.4-73.2 24.3-106.1z"
+                    />
+                  </g>
+                </g>
+              </svg>
+            </label>
+          </div>
+        </div>
+        <ul
+          class="navbar-nav nav-sign d-flex justify-content-center align-items-center text-center flex-lg-row-reverse col-xl-4"
+          dir="ltr"
+        >
+          <li class="nav-item p-0 col-xl-4 col-12">
+            <a class="nav-link bg-light sign" href="./pages/user.html"
+              >تسجيل الدخول</a
+            >
+          </li>
+          <li class="nav-item p-0 me-2 d-xl-flex d-none col-4">
+            <a class="nav-link bg-light sign" href="./create-account.html"
+              >تسجيل في الموقع</a
+            >
+          </li>
+        </ul>
+        <a class="brand d-md-flex d-none col-0" href="../index.html">
+          <img src="../images/brand.png" alt="" />
+        </a>
+      </div>
+    </header>
+    <!-- End Header -->
+    <!-- Start Sidebar -->
+    <div class="side-bar drop">
+      <form action="" class="drop">
+        <input
+          class="search-btn form-control drop rounded-0"
+          type="search"
+          name=""
+          id=""
+          placeholder="ابحث عن ..."
+          dir="rtl"
+        />
+      </form>
+      <hr class="mt-3 m-0" />
+      <div class="navbar-nav p-0" dir="rtl">
+        <a
+          class="nav-item nav-link fw-bolder pt-4 pb-4 p-3"
+          href="./pages/user.html"
+          >تسجيل الدخول</a
+        >
+        <a
+          class="nav-item nav-link fw-bolder pt-4 pb-4 p-3"
+          href="./create-account.html"
+          >تسجيل في الموقع
+        </a>
+        <a class="nav-item nav-link w-100 fw-bolder" href="./add-work.html">
+          <i class="fa-solid fa-plus ms-1"></i>أضف عملك
+        </a>
+        <a
+          class="nav-item nav-link w-100 fw-bolder"
+          href="./search-about-worker.html"
+        >
+          <i class="fa-brands fa-searchengin ms-1"></i>
+          ابحث عن عمال
+        </a>
+        <a
+          class="nav-item nav-link w-100 fw-bolder"
+          href="./browse-business.html"
+        >
+          <i class="fa-solid fa-boxes-stacked ms-1"></i>
+          تصفح الأعمال
+        </a>
+        <li
+          class="nav-item dropdown-menu-sidebar drop pt-4 pb-4 p-3 d-flex justify-content-between align-items-center fw-bold"
+        >
+          <span class="drop">
+            <i class="fa-solid fa-link drop"></i>
+            المساعد</span
+          >
+          <i class="fa-solid fa-angle-left drop"></i>
+        </li>
+        <div class="nav-item-menu p-0">
+          <a
+            class="nav-item nav-link fw-bolder pt-4 pb-4 p-3"
+            href="#"
+            target="_blank"
+            >المساعد للمؤسسات</a
+          >
+          <a
+            class="nav-item nav-link fw-bolder pt-4 pb-4 p-3"
+            href="#"
+            target="_blank"
+            >عن المساعد</a
+          >
+          <a
+            class="nav-item nav-link fw-bolder pt-4 pb-4 p-3"
+            href="#"
+            target="_blank"
+            >الأسئلة الشائعة</a
+          >
+          <a
+            class="nav-item nav-link fw-bolder pt-4 pb-4 p-3"
+            href="#"
+            target="_blank"
+          >
+            ضمان حقوقك</a
+          >
+          <a
+            class="nav-item nav-link fw-bolder pt-4 pb-4 p-3"
+            href="#"
+            target="_blank"
+          >
+            شروط الاستخدام</a
+          >
+          <a
+            class="nav-item nav-link fw-bolder pt-4 pb-4 p-3"
+            href="#"
+            target="_blank"
+            >بيان الخصوصية
+          </a>
+          <a
+            class="nav-item nav-link fw-bolder pt-4 pb-4 p-3"
+            href="#"
+            target="_blank"
+          >
+            مركز المساعدة
+          </a>
+        </div>
+        <li
+          class="nav-item dropdown-menu-follow drop pt-4 pb-4 p-3 d-flex justify-content-between align-items-center fw-bold"
+          dir="rtl"
+        >
+          <span class="drop">
+            <i class="fa-solid fa-hashtag drop"></i>
+            تابعنا</span
+          >
+          <i class="fa-solid fa-angle-left drop"></i>
+        </li>
+        <div class="nav-item-menu p-0">
+          <a
+            class="nav-item nav-link fw-bolder pt-4 pb-4 p-3"
+            href="#"
+            target="_blank"
+          >
+            مدونة المساعد
+          </a>
+          <a
+            class="nav-item nav-link fw-bolder pt-4 pb-4 p-3"
+            href="#"
+            target="_blank"
+          >
+            توتير
+          </a>
+          <a
+            class="nav-item nav-link fw-bolder pt-4 pb-4 p-3"
+            href="#"
+            target="_blank"
+          >
+            فيسبوك
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- End Sidebar -->
+    <!-- Start Personal Profile -->
+    <div class="personal-profile pb-5" dir="rtl">
+      <div class="container-fluid p-5 pb-4">
+        <h1 class="heading fw-bolder">ملفي الشخصي</h1>
+      </div>
+      <div class="container-fluid p-sm-3 p-0">
+        <div
+          class="d-lg-flex d-block justify-content-lg-between justify-content-center align-items-start"
+          dir="rtl"
+        >
+          <div
+            class="personal-profile-section bg-white text-center pt-4 pb-0 p-0 me-lg-4 me-0 mb-lg-0 mb-4 col-lg-3 col-12"
+          >
+            <div class="user-personal-profile pb-2">
+              <img
+                class="personal-profile-img"
+                src="../images/profile.jpg"
+                alt=""
+              />
+              <p class="user-name mt-3 mb-2">اسم المستخدم</p>
+              <hr />
+              <a class="text-decoration-none" href="edit-profile.html">
+                <i class="fa-solid fa-user-pen ms-1"></i>
+                <span>تعديل الملف الشخصي</span>
+              </a>
+            </div>
+            <div class="settings-personal-profile text-end">
+              <hr />
+              <h5 class="p-3 pb-2 pt-0 fw-bold">إعدادات</h5>
+              <div
+                class="d-flex justify-content-end flex-column align-items-start"
+              >
+                <a
+                  class="text-decoration-none me-0 p-3 w-100 active"
+                  href="personal-profile.html"
+                  ><i class="fa-solid fa-user"></i> ملفك الشخصي</a
+                >
+                <a class="text-decoration-none me-0 p-3 w-100" href="#"
+                  ><i class="fa-solid fa-bell"></i> تنبيهاتي</a
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="personal-profile-form-section bg-white text-center p-5 pb-3 ms-lg-5 ms-0 col-lg-8 col-12"
+          >
+            <form action="#">
+              <label class="file-input text-end p-2 pe-3 rounded-4 w-100">
+                <input
+                  type="file"
+                  class="file w-100"
+                  id="file"
+                  name="file"
+                  accept="image/*"
+                />
+                <label for="file">إضافة صورة</label>
+              </label>
+              <div class="job-name col-12 text-end mt-3">
+                <label
+                  class="d-flex justify-content-start align-items-start mb-2"
+                  for="jobName"
+                  >المسمى الوظيفي<i class="fa-solid fa-star-of-life"></i
+                ></label>
+                <input
+                  class="col-12 p-2 pe-3 rounded-3"
+                  type="text"
+                  name=""
+                  id="jobName"
+                  placeholder=""
+                />
+                <small class="text-black-50"
+                  >أدرج عنوانا موجزا يصف مهنتك بشكل دقيق.</small
+                >
+              </div>
+              <div class="job-details col-12 text-end mt-3">
+                <label
+                  class="d-flex justify-content-start align-items-start mb-2"
+                  for="jobDetails"
+                  >النبذة التعريفية
+                </label>
+                <textarea
+                  class="col-12 p-2 pe-3 rounded-3"
+                  name=""
+                  id="jobDetails"
+                  placeholder=""
+                  rows="3"
+                ></textarea>
+              </div>
+              <div class="job-skills col-12 text-end mt-3">
+                <label
+                  class="d-flex justify-content-start align-items-start mb-2"
+                  for="jobSkills"
+                  >المهارات</label
+                >
+                <input
+                  class="col-12 p-2 pe-3 rounded-3"
+                  type="text"
+                  name=""
+                  id="jobSkills"
+                  placeholder=""
+                />
+                <small class="text-black-50"
+                  >أضف المهارات ذات الصلة بمجال تخصصك</small
+                >
+              </div>
+              <div class="text-start">
+                <button class="save">حفظ</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Personal Profile -->
+    <!-- Start Up Footer -->
+    <div class="up-footer p-3">
+      <div class="row flex-row-reverse justify-content-center">
+        <div
+          class="col-md-4 col-sm-6 col-12 d-flex align-items-center text-center flex-column mt-3"
+        >
+          <h2>المساعد</h2>
+          <a
+            class="text-decoration-none col-xl-5 col-9 text-black text-center m-2 p-2"
+            href="#"
+            >عن المساعد</a
+          >
+          <a
+            class="text-decoration-none col-xl-5 col-9 text-black text-center m-2 p-2"
+            href="#"
+            >الاسئلة الشائعة</a
+          >
+          <a
+            class="text-decoration-none col-xl-5 col-9 text-black text-center m-2 p-2"
+            href="#"
+            >ضمان حقوقك</a
+          >
+          <a
+            class="text-decoration-none col-xl-5 col-9 text-black text-center m-2 p-2"
+            href="#"
+            >شروط الاستخدام</a
+          >
+          <a
+            class="text-decoration-none col-xl-5 col-9 text-black text-center m-2 p-2"
+            href="#"
+            >بيان الخصوصية</a
+          >
+        </div>
+        <div
+          class="col-md-4 col-sm-6 col-12 d-flex align-items-center text-center flex-column mt-3"
+        >
+          <h2>مهام</h2>
+          <a
+            class="text-decoration-none col-xl-5 col-9 text-black text-center m-2 p-2"
+            href="#"
+            >مهام نجارة</a
+          >
+          <a
+            class="text-decoration-none col-xl-5 col-9 text-black text-center m-2 p-2"
+            href="#"
+            >مهام سباكة</a
+          >
+          <a
+            class="text-decoration-none col-xl-5 col-9 text-black text-center m-2 p-2"
+            href="#"
+            >مهام ديكور</a
+          >
+          <a
+            class="text-decoration-none col-xl-5 col-9 text-black text-center m-2 p-2"
+            href="#"
+            >مهام نجارة</a
+          >
+          <a
+            class="text-decoration-none col-xl-5 col-9 text-black text-center m-2 p-2"
+            href="#"
+            >مهام كهرباء</a
+          >
+          <a
+            class="text-decoration-none col-xl-5 col-9 text-black text-center m-2 p-2"
+            href="#"
+            >مهام تكييف</a
+          >
+        </div>
+        <div
+          class="col-md-4 col-sm-6 col-12 d-flex text-center flex-column mt-3"
+        >
+          <h2>وسائل التواصل</h2>
+          <div class="d-flex justify-content-center mt-2 mb-5">
+            <a
+              class="text-decoration-none text-black text-center m-2 p-0"
+              href="#"
+            >
+              <svg
+                version="1.1"
+                id="Capa_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                width="36px"
+                viewBox="0 0 29.94 29.94"
+                style="enable-background: new 0 0 29.94 29.94"
+                xml:space="preserve"
+              >
+                <g>
+                  <path
+                    d="M27.56,0.684H2.383C1.065,0.684,0,1.748,0,3.064v23.813c0,1.312,1.065,2.379,2.383,2.379H27.56
+                      c1.312,0,2.38-1.066,2.38-2.379V3.064C29.939,1.748,28.871,0.684,27.56,0.684z M20.125,9.167c-0.619-0.362-1.11-0.648-1.727-0.648
+                      c-0.604,0-1.12,0.151-1.384,0.405c-0.264,0.252-0.395,0.74-0.395,1.461v1.067h3.229l-0.699,2.968h-2.53v9.862h-4.056V14.42H10.67
+                      v-2.968h1.895v-1.133c0-1.193,0.143-1.907,0.425-2.496c0.281-0.587,0.826-1.241,1.584-1.611c0.757-0.369,1.877-0.555,3.036-0.555
+                      c1.188,0,2.116,0.396,3.254,0.715L20.125,9.167z"
+                  />
+                </g>
+              </svg>
+            </a>
+            <a
+              class="text-decoration-none text-black text-center m-2 p-0"
+              href="#"
+            >
+              <svg
+                version="1.1"
+                id="Layer_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                height="36px"
+                viewBox="0 0 504.4 504.4"
+                style="enable-background: new 0 0 504.4 504.4"
+                xml:space="preserve"
+              >
+                <g>
+                  <g>
+                    <path
+                      d="M254.8,119.4c-71.6,0-129.6,57.6-129.6,128.8c0,28,9.2,54.4,24.8,75.6l-16.4,48l50-16c20.4,13.6,45.2,21.2,71.6,21.2
+        c71.6,0,130-57.6,130-128.8C384.8,177,326.4,119.4,254.8,119.4z M330.8,301.4c-3.2,8.8-18.8,17.2-25.6,18s-6.8,5.6-45.6-9.2
+        c-38.4-15.2-62.8-54-64.8-56.8c-2-2.4-15.6-20.4-15.6-38.8c0-18.4,9.6-27.6,13.2-31.2c3.6-3.6,7.6-4.8,10-4.8
+        c2.4,0,5.2,0.4,7.2,0.4c2.4,0,5.2-1.2,8.4,6.4c3.2,7.6,10.8,26,11.6,28s1.6,4,0.4,6.4c-1.2,2.4-2,4-3.6,6.4c-2,2-4,4.8-5.6,6.4
+        c-2,2-4,4-1.6,7.6c2.4,3.6,10,16,21.2,26c14.4,12.8,26.8,16.8,30.4,18.8c3.6,2,6,1.6,8-0.8c2.4-2.4,9.6-10.8,12-14.8
+        c2.4-3.6,5.2-3.2,8.4-2c3.6,1.2,22,10.4,26,12.4c3.6,2,6.4,2.8,7.2,4.4C333.6,285,333.6,292.6,330.8,301.4z"
+                    />
+                  </g>
+                </g>
+                <g>
+                  <g>
+                    <path
+                      d="M377.6,0.2H126.4C56.8,0.2,0,57,0,126.6v251.6c0,69.2,56.8,126,126.4,126H378c69.6,0,126.4-56.8,126.4-126.4V126.6
+        C504,57,447.2,0.2,377.6,0.2z M254.8,401.4c-27.2,0-52.4-6.8-74.8-19.2l-85.6,27.2l28-82c-14-23.2-22-50.4-22-79.2
+        c0-84.8,69.2-153.2,154.4-153.2s154.4,68.4,154.4,153.2S340,401.4,254.8,401.4z"
+                    />
+                  </g>
+                </g>
+              </svg>
+            </a>
+          </div>
+          <h2>وسائل الدفع</h2>
+          <div class="d-flex justify-content-center mt-2">
+            <a
+              class="text-decoration-none text-black text-center m-2 p-0"
+              href="#"
+              ><svg
+                width="36px"
+                height="36px"
+                viewBox="0 -6 36 36"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="m33.6 24h-31.2c-1.325 0-2.4-1.075-2.4-2.4v-19.2c0-1.325 1.075-2.4 2.4-2.4h31.2c1.325 0 2.4 1.075 2.4 2.4v19.2c0 1.325-1.075 2.4-2.4 2.4zm-15.76-9.238-.359 2.25c.79.338 1.709.535 2.674.535.077 0 .153-.001.229-.004h-.011c.088.005.19.008.294.008 1.109 0 2.137-.348 2.981-.941l-.017.011c.766-.568 1.258-1.469 1.258-2.485 0-.005 0-.01 0-.015v.001c0-1.1-.736-2.014-2.187-2.72-.426-.208-.79-.426-1.132-.672l.023.016c-.198-.13-.33-.345-.343-.592v-.002c.016-.26.165-.482.379-.6l.004-.002c.282-.164.62-.261.982-.261.042 0 .084.001.126.004h-.006.08c.023 0 .05-.001.077-.001.644 0 1.255.139 1.806.388l-.028-.011.234.125.359-2.171c-.675-.267-1.458-.422-2.277-.422-.016 0-.033 0-.049 0h.003c-.064-.003-.139-.005-.214-.005-1.096 0-2.112.347-2.943.937l.016-.011c-.752.536-1.237 1.404-1.237 2.386v.005c-.01 1.058.752 1.972 2.266 2.72.4.175.745.389 1.054.646l-.007-.006c.175.148.288.365.297.608v.002.002c0 .319-.19.593-.464.716l-.005.002c-.3.158-.656.25-1.034.25-.015 0-.031 0-.046 0h.002c-.022 0-.049 0-.075 0-.857 0-1.669-.19-2.397-.53l.035.015-.343-.172zm10.125 1.141h3.315q.08.343.313 1.5h2.407l-2.094-10.031h-2c-.035-.003-.076-.005-.118-.005-.562 0-1.043.348-1.239.84l-.003.009-3.84 9.187h2.72l.546-1.499zm-13.074-8.531-1.626 10.031h2.594l1.625-10.031zm-9.969 2.047 2.11 7.968h2.734l4.075-10.015h-2.746l-2.534 6.844-.266-1.391-.904-4.609c-.091-.489-.514-.855-1.023-.855-.052 0-.104.004-.154.011l.006-.001h-4.187l-.031.203c3.224.819 5.342 2.586 6.296 5.25-.309-.792-.76-1.467-1.326-2.024l-.001-.001c-.567-.582-1.248-1.049-2.007-1.368l-.04-.015zm25.937 4.421h-2.16q.219-.578 1.032-2.8l.046-.141c.042-.104.094-.24.16-.406s.11-.302.14-.406l.188.859.593 2.89z"
+                />
+              </svg>
+            </a>
+            <a
+              class="text-decoration-none text-black text-center m-2 p-0"
+              href="#"
+              ><svg
+                width="36px"
+                height="36px"
+                viewBox="0 -6 36 36"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="m33.6 24h-31.2c-1.325 0-2.4-1.075-2.4-2.4v-19.2c0-1.325 1.075-2.4 2.4-2.4h31.2c1.325 0 2.4 1.075 2.4 2.4v19.2c0 1.325-1.075 2.4-2.4 2.4zm-19.568-13.675c-.058.001-.109.028-.142.07-.038.039-.062.092-.063.15 0 .021.098.32.308.933l.454 1.326.211.618q.355 1.04.371 1.106c-.451.556-.879 1.176-1.259 1.828l-.038.07c-.001.008-.002.016-.002.025 0 .1.081.182.182.182.009 0 .018-.001.027-.002h-.001 1.218c.12-.001.224-.064.283-.159l.001-.001 4.032-5.819c.02-.027.033-.06.033-.097 0-.005 0-.01-.001-.015v.001c-.002-.059-.025-.111-.063-.15-.033-.042-.084-.069-.141-.07h-1.219c-.12.001-.225.064-.284.159l-.001.001-1.68 2.466-.695-2.372c-.037-.147-.168-.254-.323-.254-.009 0-.017 0-.026.001h.001zm13.978-.111c-.008 0-.017 0-.026 0-.758 0-1.439.329-1.909.851l-.002.002c-.495.513-.8 1.212-.8 1.982v.027-.001c-.002.029-.002.064-.002.098 0 .537.209 1.026.549 1.389l-.001-.001c.354.344.838.556 1.371.556.032 0 .065-.001.097-.002h-.005c.337-.004.657-.073.949-.197l-.016.006c.295-.111.545-.284.742-.504l.002-.002c-.01.057-.021.105-.034.151l.002-.01c-.017.056-.028.121-.032.188v.002c0 .168.069.253.206.253h1.091c.009.001.018.001.029.001.17 0 .309-.133.319-.3v-.001l.648-4.127c.002-.012.004-.026.004-.04 0-.052-.019-.1-.051-.137-.036-.049-.093-.08-.157-.08-.001 0-.002 0-.003 0h-1.2c-.147 0-.24.175-.27.522-.307-.391-.779-.639-1.31-.639-.067 0-.134.004-.199.012l.008-.001zm-17.963 0c-.008 0-.018 0-.028 0-.757 0-1.438.329-1.906.851l-.002.002c-.495.513-.8 1.212-.8 1.982v.027-.001c-.001.029-.002.062-.002.096 0 .538.209 1.027.55 1.39l-.001-.001c.354.344.838.556 1.372.556.032 0 .064-.001.096-.002h-.005c.332-.005.647-.074.934-.197l-.016.006c.299-.114.553-.286.758-.505l.001-.001c-.037.098-.06.212-.063.33v.002c0 .168.07.253.206.253h1.09c.009.001.018.001.029.001.17 0 .309-.133.319-.3v-.001l.649-4.127c.002-.011.003-.023.003-.036 0-.053-.019-.102-.051-.139-.036-.049-.093-.08-.157-.08-.001 0-.002 0-.003 0h-1.2c-.147 0-.24.175-.269.522-.312-.39-.788-.638-1.322-.638-.064 0-.126.004-.188.01l.008-.001zm22.565-2.214c-.005 0-.01-.001-.016-.001-.1 0-.182.077-.19.174v.001l-1.028 6.578c-.004.015-.007.032-.007.049 0 .051.021.098.054.132.037.044.092.071.154.071h.006 1.044c.01.001.021.002.032.002.166 0 .3-.134.3-.3 0-.001 0-.001 0-.002l1.026-6.465c.001-.007.001-.014.001-.022 0-.059-.02-.114-.053-.158v.001c-.035-.037-.085-.061-.14-.061-.005 0-.01 0-.015.001h.001zm-11.67 0c-.012-.002-.026-.003-.04-.003-.168 0-.305.135-.308.302l-1.027 6.452c-.002.011-.003.023-.003.036 0 .053.019.101.05.138.035.049.092.08.156.08h.004 1.297.004c.123 0 .225-.088.248-.204v-.002l.285-1.834c.009-.083.05-.155.111-.205h.001c.066-.054.148-.09.237-.103h.003c.081-.015.174-.023.269-.024h.001c.084 0 .184.005.3.016s.19.016.222.016c.048.003.104.004.16.004.763 0 1.457-.293 1.976-.773l-.002.002c.482-.512.779-1.204.779-1.965 0-.057-.002-.113-.005-.17v.008c.003-.038.005-.082.005-.127 0-.5-.24-.943-.61-1.223l-.004-.003c-.416-.265-.923-.422-1.467-.422-.045 0-.089.001-.133.003h.006zm-17.982 0c-.01-.001-.021-.002-.032-.002-.166 0-.3.134-.3.3v.002l-1.028 6.452c-.002.011-.003.024-.003.037 0 .052.019.1.05.137.035.049.092.08.156.08h.004 1.2c.012.002.026.003.04.003.168 0 .305-.135.308-.302l.285-1.739c.009-.083.05-.155.11-.205h.001c.066-.054.148-.09.237-.103h.003c.08-.015.173-.023.268-.024h.001c.084 0 .184.005.3.016s.19.016.222.016c.048.003.103.004.159.004.763 0 1.457-.293 1.977-.773l-.002.002c.482-.512.779-1.205.779-1.966 0-.057-.002-.113-.005-.169v.008c.003-.038.005-.082.005-.127 0-.5-.24-.943-.61-1.223l-.004-.003c-.416-.265-.923-.423-1.467-.423-.042 0-.084.001-.126.003h.006zm24.984 5.835c-.014.001-.031.001-.048.001-.266 0-.509-.096-.698-.255l.002.001c-.176-.163-.286-.395-.286-.653 0-.015 0-.03.001-.045v.002c0-.009 0-.019 0-.029 0-.374.151-.713.396-.959.241-.247.577-.4.949-.4h.033-.002c.01 0 .022-.001.034-.001.269 0 .514.099.702.262l-.001-.001c.181.168.294.408.294.674 0 .016 0 .032-.001.048v-.002.024c0 .369-.153.703-.4.94-.243.242-.579.391-.949.391-.008 0-.017 0-.025 0h.001zm-17.979 0c-.015.001-.032.001-.05.001-.262 0-.503-.096-.687-.255l.001.001c-.171-.164-.278-.395-.278-.651 0-.016 0-.032.001-.047v.002c0-.009 0-.019 0-.029 0-.374.151-.713.396-.959.241-.247.576-.4.948-.4h.035-.002c.01 0 .022-.001.034-.001.269 0 .514.099.702.262l-.001-.001c.181.168.293.408.293.673 0 .016 0 .033-.001.049v-.002.035c0 .369-.153.701-.4.938-.247.237-.583.384-.954.384-.012 0-.024 0-.036 0h.002zm11.907-2.56.269-1.691c.008-.098.09-.174.189-.174.006 0 .012 0 .017.001h-.001.285c.018 0 .04-.001.061-.001.173 0 .344.012.511.035l-.019-.002c.155.028.29.098.396.198.118.112.191.269.191.444 0 .013 0 .026-.001.038v-.002c.005.038.008.081.008.126 0 .31-.137.587-.354.775l-.001.001c-.266.153-.585.244-.925.244-.042 0-.083-.001-.125-.004h.006l-.505.016zm-17.979 0 .269-1.691c.008-.098.089-.174.188-.174.006 0 .012 0 .018.001h-.001.3c.038-.003.082-.005.126-.005.288 0 .561.069.801.191l-.01-.005c.189.121.253.378.19.766-.011.305-.17.57-.408.726l-.003.002c-.344.129-.742.204-1.158.204-.11 0-.219-.005-.326-.016z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Up Footer -->
+    <!-- Start Footer -->
+    <footer
+      class="d-flex justify-content-center align-items-center text-center col-12 p-0 pb-xl-0 pb-3"
+      dir="rtl"
+    >
+      <div
+        class="container d-flex flex-xl-row flex-column justify-content-between align-items-center text-light p-0"
+      >
+        <div
+          class="col-xxl-5 col-xl-6 col-lg-7 col-12 d-flex justify-content-between"
+        >
+          <a class="text-decoration-none text-light text-center p-2" href="#"
+            >مركز المساعدة</a
+          >
+          <a class="text-decoration-none text-light text-center p-2" href="#"
+            >سياسة الخصوصية</a
+          >
+          <a class="text-decoration-none text-light text-center p-2" href="#"
+            >شروط الاستخدام</a
+          >
+          <a class="text-decoration-none text-light text-center p-2" href="#"
+            >الاسئلة الشائعة</a
+          >
+        </div>
+        <div class="col-xl-4 col-12 text-center mt-xl-0 mt-3">
+          &copy; 2022 المساعد. جميع الحقوق محفوظة.
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/all.min.js"></script>
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

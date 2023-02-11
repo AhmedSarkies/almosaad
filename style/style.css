@@ -411,7 +411,9 @@ footer a:hover {
   color: var(--main-color);
   font-weight: 900;
 }
-.profile .profile-img {
+.profile .profile-img,
+.edit-profile .edit-profile-img,
+.personal-profile .personal-profile-img {
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -479,6 +481,8 @@ footer a:hover {
   border-radius: 7px;
   box-shadow: 0 0 10px #f2f2f2;
 }
+.personal-profile .job-name label svg,
+.edit-profile .job-name label svg,
 .create-account-form label svg {
   font-size: 7px;
   color: #f00 !important;
@@ -780,6 +784,81 @@ a {
   border-radius: 20px;
 }
 /* End Open Alert Video Overlay */
+/* Start Personal Profile & Edit Profile */
+.personal-profile,
+.edit-profile {
+  background-color: #ebebeb;
+}
+.settings-personal-profile a:hover,
+.settings-edit-profile a:hover {
+  background-color: #dadada;
+  color: var(--main-color);
+}
+.settings-personal-profile a:hover.active,
+.settings-personal-profile a.active,
+.settings-edit-profile a:hover.active,
+.settings-edit-profile a.active {
+  background-color: var(--main-color) !important;
+  color: #fff;
+}
+.edit-profile .user-personal-profile a,
+.personal-profile .user-edit-profile a {
+  color: #000;
+}
+.personal-profile .user-personal-profile hr {
+  border: 1.6px solid #000 !important;
+  opacity: 0.6 !important;
+}
+.personal-profile .settings-personal-profile hr,
+.edit-profile .settings-edit-profile hr {
+  border: 15px solid #ebebeb !important;
+  opacity: 1 !important;
+}
+.edit-profile .heading,
+.personal-profile .heading {
+  color: var(--main-color);
+}
+.personal-profile form .file-input,
+.edit-profile form .file-input {
+  border: 1px solid #00000080;
+  cursor: pointer;
+}
+.personal-profile form .file-input input.file[type="file"],
+.edit-profile form .file-input input.file[type="file"] {
+  display: none;
+}
+.personal-profile form .file-input label,
+.edit-profile form .file-input label {
+  color: #fff;
+  background-color: var(--main-color);
+  padding: 5px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.personal-profile .file-input,
+.personal-profile input,
+.personal-profile textarea,
+.edit-profile .file-input,
+.edit-profile input,
+.edit-profile textarea {
+  border: 1px solid #00000080 !important;
+  outline: none !important;
+}
+.personal-profile .save,
+.edit-profile .save {
+  background-color: var(--main-color);
+  color: #fff;
+  font-weight: bold;
+  padding: 7px 20px;
+  border: 0;
+  border-radius: 5px;
+}
+.personal-profile .save:hover,
+.edit-profile .save:hover {
+  background-color: var(--secondary-color);
+  transition: all 0.3s ease-in-out;
+}
+/* End Personal Profile & Edit Profile */
 /* Start Dark Mode */
 .darkmode-label {
   width: 75px;
@@ -893,6 +972,10 @@ a {
 *:has(.darkmode-toggle.dark:checked) .add-work .how-add-work-section p {
   opacity: 0.8;
 }
+*:has(.darkmode-toggle.dark:checked)
+  .personal-profile
+  .personal-profile-section,
+*:has(.darkmode-toggle.dark:checked) .edit-profile .edit-profile-section,
 *:has(.darkmode-toggle.dark:checked) .create-account-form {
   background-color: #303030;
   box-shadow: 0 0 10px #303030;
@@ -902,9 +985,11 @@ a {
   background-color: #242424;
   color: #fff;
 }
+*:has(.darkmode-toggle.dark:checked) .settings-personal-profile,
+*:has(.darkmode-toggle.dark:checked) .settings-edit-profile,
 *:has(.darkmode-toggle.dark:checked) .filter .check-filter label,
 *:has(.darkmode-toggle.dark:checked) .create-account-form label {
-  color: #fff;
+  color: #fff !important;
 }
 *:has(.darkmode-toggle.dark:checked) .add-work-section input,
 *:has(.darkmode-toggle.dark:checked) .add-work-section textarea {
@@ -920,6 +1005,14 @@ a {
 *:has(.darkmode-toggle.dark:checked) .questions,
 *:has(.darkmode-toggle.dark:checked) .add-work-section input,
 *:has(.darkmode-toggle.dark:checked) .add-work-section textarea,
+*:has(.darkmode-toggle.dark:checked)
+  .personal-profile
+  .personal-profile-section,
+*:has(.darkmode-toggle.dark:checked)
+  .personal-profile
+  .personal-profile-form-section,
+*:has(.darkmode-toggle.dark:checked) .edit-profile .edit-profile-section,
+*:has(.darkmode-toggle.dark:checked) .edit-profile .edit-profile-form-section,
 *:has(.darkmode-toggle.dark:checked) footer {
   background-color: #191919 !important;
 }
@@ -939,15 +1032,39 @@ a {
 *:has(.darkmode-toggle.dark:checked) .business-exhibition,
 *:has(.darkmode-toggle.dark:checked) .side-filter .submit,
 *:has(.darkmode-toggle.dark:checked) .side-filter .back,
+*:has(.darkmode-toggle.dark:checked) .personal-profile .user-name,
+*:has(.darkmode-toggle.dark:checked) .personal-profile .user-personal-profile a,
+*:has(.darkmode-toggle.dark:checked)
+  .personal-profile
+  .personal-profile-form-section,
+*:has(.darkmode-toggle.dark:checked) .personal-profile .file-input,
+*:has(.darkmode-toggle.dark:checked) .personal-profile input,
+*:has(.darkmode-toggle.dark:checked) .personal-profile textarea,
+*:has(.darkmode-toggle.dark:checked) .edit-profile .user-name,
+*:has(.darkmode-toggle.dark:checked) .edit-profile .user-edit-profile a,
+*:has(.darkmode-toggle.dark:checked) .edit-profile .edit-profile-form-section,
+*:has(.darkmode-toggle.dark:checked) .edit-profile .file-input,
+*:has(.darkmode-toggle.dark:checked) .edit-profile input,
+*:has(.darkmode-toggle.dark:checked) .edit-profile textarea,
 *:has(.darkmode-toggle.dark:checked) .up-footer a {
   color: #fff !important;
 }
+*:has(.darkmode-toggle.dark:checked)
+  .personal-profile
+  .personal-profile-form-section
+  small,
+*:has(.darkmode-toggle.dark:checked)
+  .edit-profile
+  .edit-profile-form-section
+  small,
 *:has(.darkmode-toggle.dark:checked) .add-work-section small,
 *:has(.darkmode-toggle.dark:checked) .profile .job,
 *:has(.darkmode-toggle.dark:checked) .how-work p {
   color: #ffffff80 !important;
 }
-*:has(.darkmode-toggle.dark:checked) .profile .profile-img {
+*:has(.darkmode-toggle.dark:checked) .profile .profile-img,
+*:has(.darkmode-toggle.dark:checked) .personal-profile .personal-profile-img,
+*:has(.darkmode-toggle.dark:checked) .edit-profile .edit-profile-img {
   box-shadow: 0 0 5px #ffffff60;
 }
 *:has(.darkmode-toggle.dark:checked) .add-work,
@@ -957,6 +1074,14 @@ a {
 *:has(.darkmode-toggle.dark:checked) .write-about div,
 *:has(.darkmode-toggle.dark:checked) .write-about textarea,
 *:has(.darkmode-toggle.dark:checked) .statistics div,
+*:has(.darkmode-toggle.dark:checked) .personal-profile,
+*:has(.darkmode-toggle.dark:checked) .personal-profile .file-input,
+*:has(.darkmode-toggle.dark:checked) .personal-profile input,
+*:has(.darkmode-toggle.dark:checked) .personal-profile textarea,
+*:has(.darkmode-toggle.dark:checked) .edit-profile,
+*:has(.darkmode-toggle.dark:checked) .edit-profile .file-input,
+*:has(.darkmode-toggle.dark:checked) .edit-profile input,
+*:has(.darkmode-toggle.dark:checked) .edit-profile textarea,
 *:has(.darkmode-toggle.dark:checked) .business-exhibition .business-img {
   background-color: #303030 !important;
 }
@@ -1007,6 +1132,45 @@ a {
   div,
 *:has(.darkmode-toggle.dark:checked) .search-about-section .see-more a {
   color: #ffffff90 !important;
+}
+*:has(.darkmode-toggle.dark:checked)
+  .settings-personal-profile
+  a:hover
+  *:has(.darkmode-toggle.dark:checked)
+  .settings-edit-profile
+  a:hover {
+  background-color: #41423d;
+}
+*:has(.darkmode-toggle.dark:checked)
+  .personal-profile
+  .user-personal-profile
+  a:hover,
+*:has(.darkmode-toggle.dark:checked) .edit-profile .user-edit-profile a:hover {
+  color: var(--main-color) !important;
+  transition: all 0.3s ease-in-out;
+}
+*:has(.darkmode-toggle.dark:checked)
+  .personal-profile
+  .settings-personal-profile
+  hr,
+*:has(.darkmode-toggle.dark:checked) .edit-profile .settings-edit-profile hr {
+  border-color: #303030 !important;
+}
+*:has(.darkmode-toggle.dark:checked) .edit-profile .user-personal-profile hr,
+*:has(.darkmode-toggle.dark:checked)
+  .personal-profile
+  .user-personal-profile
+  hr {
+  border-color: #fff !important;
+}
+*:has(.darkmode-toggle.dark:checked) .personal-profile .file-input,
+*:has(.darkmode-toggle.dark:checked) .personal-profile input,
+*:has(.darkmode-toggle.dark:checked) .personal-profile textarea,
+*:has(.darkmode-toggle.dark:checked) .edit-profile .file-input,
+*:has(.darkmode-toggle.dark:checked) .edit-profile input,
+*:has(.darkmode-toggle.dark:checked) .edit-profile textarea {
+  border: 0;
+  outline: none !important;
 }
 /* End Dark Mode */
 /* Start Media */
@@ -1330,6 +1494,11 @@ a {
   .add-work div .work-warning {
     width: 16px;
   }
+  .edit-profile .heading,
+  .personal-profile .heading {
+    text-align: center;
+    font-size: 22px !important;
+  }
 }
 @media (max-width: 400px) {
   .container {
@@ -1365,6 +1534,10 @@ a {
   .add-work button .work-plus,
   .add-work div .work-warning {
     width: 14px;
+  }
+  .edit-profile .heading,
+  .personal-profile .heading {
+    font-size: 20px !important;
   }
 }
 /* End Media */

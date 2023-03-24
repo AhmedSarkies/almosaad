@@ -641,15 +641,23 @@ a {
 }
 /* End Filter */
 /* Start Workers */
-.workers {
+.workers,
+.offers,
+.orders {
   border-radius: 15px;
 }
-.workers .worker {
+.workers .worker,
+.offers .offer,
+.orders .order {
   border-radius: 0;
 }
+.orders .order:first-of-type,
+.offers .offer:first-of-type,
 .workers .worker:first-of-type {
   border-radius: 15px 15px 0 0;
 }
+.orders .order:last-of-type,
+.offers .offer:last-of-type,
 .workers .worker:last-of-type {
   border-radius: 0 0 15px 15px;
 }
@@ -859,6 +867,23 @@ a {
   transition: all 0.3s ease-in-out;
 }
 /* End Personal Profile & Edit Profile */
+/* Start Order */
+.orders .delete,
+.orders .edit,
+.offers .delete,
+.offers .edit {
+  width: 50px;
+}
+.orders .card-orders-head,
+.offers .card-offers-head {
+  color: var(--main-color);
+  font-size: 26px !important;
+}
+.orders .card-orders-text,
+.offers .card-offers-text {
+  font-size: 15px !important;
+}
+/* End Order */
 /* Start Dark Mode */
 .darkmode-label {
   width: 75px;
@@ -958,6 +983,8 @@ a {
 *:has(.darkmode-toggle.dark:checked) footer {
   background: #242424 !important;
 }
+*:has(.darkmode-toggle.dark:checked) .orders .card-orders-head,
+*:has(.darkmode-toggle.dark:checked) .offers .card-offers-head,
 *:has(.darkmode-toggle.dark:checked) .logo,
 *:has(.darkmode-toggle.dark:checked) .add-work-section label,
 *:has(.darkmode-toggle.dark:checked) .add-work .how-add-work-section h2,
@@ -1001,6 +1028,10 @@ a {
 }
 *:has(.darkmode-toggle.dark:checked) .search-about-section .workers,
 *:has(.darkmode-toggle.dark:checked) .search-about-section .workers .worker,
+*:has(.darkmode-toggle.dark:checked) .search-about-section .orders,
+*:has(.darkmode-toggle.dark:checked) .search-about-section .orders .order,
+*:has(.darkmode-toggle.dark:checked) .search-about-section .offers,
+*:has(.darkmode-toggle.dark:checked) .search-about-section .offers .offer,
 *:has(.darkmode-toggle.dark:checked) .why-us,
 *:has(.darkmode-toggle.dark:checked) .questions,
 *:has(.darkmode-toggle.dark:checked) .add-work-section input,
@@ -1105,7 +1136,9 @@ a {
 *:has(.darkmode-toggle.dark:checked) .up-footer a:has(svg):hover {
   background-color: transparent !important;
 }
-*:has(.darkmode-toggle.dark:checked) .search-about-section .workers .card {
+*:has(.darkmode-toggle.dark:checked) .search-about-section .workers .card,
+*:has(.darkmode-toggle.dark:checked) .search-about-section .offers .card,
+*:has(.darkmode-toggle.dark:checked) .search-about-section .orders .card {
   border-color: #303030 !important;
 }
 *:has(.darkmode-toggle.dark:checked) .add-work button {
@@ -1128,6 +1161,18 @@ a {
   .search-about-section
   .workers
   .worker
+  .card-top-title-job
+  div,
+*:has(.darkmode-toggle.dark:checked)
+  .search-about-section
+  .orders
+  .order
+  .card-top-title-job
+  div,
+*:has(.darkmode-toggle.dark:checked)
+  .search-about-section
+  .offers
+  .offer
   .card-top-title-job
   div,
 *:has(.darkmode-toggle.dark:checked) .search-about-section .see-more a {
@@ -1541,3 +1586,7 @@ a {
   }
 }
 /* End Media */
+
+.test {
+  border: 1px solid;
+}

@@ -2,9 +2,6 @@
   --main-color: #7fc225;
   --secondary-color: #82ae46;
 }
-.test {
-  border: 1px solid;
-}
 body {
   font-family: "Cairo", sans-serif;
   position: relative;
@@ -31,7 +28,7 @@ body {
   opacity: 0;
   z-index: 99999999999;
   animation: text-color 1s ease-in-out infinite alternate;
-  transition: opacity 0s ease-in-out 5s, visibility 0s ease-in-out 5s;
+  transition: opacity 0s ease-in-out 2.5s, visibility 0s ease-in-out 2.5s;
 }
 .loader {
   display: flex;
@@ -99,6 +96,9 @@ header {
   z-index: 99999;
   width: 100%;
   box-shadow: 0 0 20px #00000060;
+}
+.nav-item.nav-link {
+  padding: 23px 15px;
 }
 header .nav-item,
 .side-bar .nav-item {
@@ -696,17 +696,23 @@ a {
 .add-work-section {
   background-color: #fff;
 }
+.add-work div.work-warning-btn {
+  width: 220px;
+  height: 50px;
+}
 .add-work button,
 .add-work div.work-warning-btn {
   background-color: var(--main-color);
   border: none;
   border-radius: 10px;
-  padding: 10px;
   color: #fff;
   font-weight: bolder;
+  padding: 10px;
   box-shadow: 0 0 5px #00000040;
   scale: 1;
   cursor: pointer;
+  justify-content: center;
+  align-items: center;
   transition: all 0.2s ease-in-out;
 }
 .add-work button:hover,
@@ -763,28 +769,50 @@ a {
 }
 /* End Add Work */
 /* Start Open Alert Video Overlay */
-.popup-overlay,
-.container-video {
-  display: none;
-}
-.popup-overlay.active {
-  display: flex;
-  justify-content: center;
-  position: absolute;
+.popup-overlay {
+  visibility: hidden;
+  position: fixed;
   width: 100%;
   height: 100%;
-  background-color: #00000050;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease-in-out;
+}
+.container-video {
+  visibility: hidden;
+  position: fixed;
+  width: 60%;
+  height: 60%;
+  top: -100%;
+  left: 50%;
+  transform: translate(-50%, -65%);
+  transition: all 0.3s ease-in-out;
+}
+.popup-overlay.active {
+  visibility: visible;
+  background-color: #00000080;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 999999999;
+  transition: all 0.2s ease-in-out;
 }
 .container-video.active {
-  display: block;
+  visibility: visible;
   position: fixed;
+  display: block;
   background-color: #fff;
   border-radius: 20px;
   width: 60%;
   height: 60%;
   margin: 40px auto;
-  z-index: 9999999999;
+  top: 50%;
+  transform: translate(-50%, -75%);
+  z-index: 999999999999;
+  transition: all 0.3s ease-in-out;
 }
 .container-video iframe {
   width: 100%;
@@ -1229,9 +1257,6 @@ a {
   .heading {
     font-size: 40px !important;
   }
-  .container-video.active {
-    width: 80%;
-  }
   .add-work-section input,
   .add-work-section textarea {
     font-size: 14px;
@@ -1294,7 +1319,7 @@ a {
     transition: all 0.3s ease-in-out;
   }
   .filter {
-    display: none;
+    overflow: hidden;
     position: absolute;
     z-index: 9999999999;
     background-color: #fff;
@@ -1305,7 +1330,7 @@ a {
     transition: all 0.5s ease-in-out;
   }
   .filter.active {
-    display: block;
+    overflow: visible;
     left: 0;
     transition: all 0.5s ease-in-out;
   }
@@ -1393,13 +1418,20 @@ a {
   .search-about-section .see-more a {
     font-size: 22px !important;
   }
+  .add-work div.work-warning-btn {
+    width: 150px;
+    height: 40px;
+    padding-right: 10px !important;
+    padding-left: 7px !important;
+  }
   .add-work button,
   .add-work .work-warning-btn {
-    font-size: 14px;
+    font-size: 12px;
   }
   .add-work button .work-plus,
   .add-work div .work-warning {
-    width: 20px;
+    width: 18px;
+    margin-left: 10px;
   }
   .add-work-section textarea {
     max-height: 90px;
@@ -1432,9 +1464,6 @@ a {
   .darkmode-label svg.moon {
     left: 45px;
   }
-}
-.nav-item.nav-link {
-  padding: 23px 15px;
 }
 @media (max-width: 768px) {
   .container {
@@ -1474,6 +1503,10 @@ a {
   .add-work-section textarea {
     max-height: 75px;
   }
+  .container-video.active {
+    height: 50%;
+    width: 90%;
+  }
   .darkmode-label {
     width: 60px;
     height: 28px;
@@ -1498,6 +1531,14 @@ a {
   }
   .darkmode-label svg.moon {
     left: 38px;
+  }
+  .orders .card-orders-head,
+  .offers .card-offers-head {
+    font-size: 22px !important;
+  }
+  .orders .card-orders-text,
+  .offers .card-offers-text {
+    font-size: 14px !important;
   }
 }
 @media (max-width: 576px) {
@@ -1544,6 +1585,14 @@ a {
     text-align: center;
     font-size: 22px !important;
   }
+  .orders .card-orders-head,
+  .offers .card-offers-head {
+    font-size: 20px !important;
+  }
+  .orders .card-orders-text,
+  .offers .card-offers-text {
+    font-size: 12px !important;
+  }
 }
 @media (max-width: 400px) {
   .container {
@@ -1574,7 +1623,8 @@ a {
     font-size: 16px !important;
   }
   .container-video.active {
-    height: 45%;
+    height: 40%;
+    width: 90%;
   }
   .add-work button .work-plus,
   .add-work div .work-warning {
@@ -1583,6 +1633,14 @@ a {
   .edit-profile .heading,
   .personal-profile .heading {
     font-size: 20px !important;
+  }
+  .orders .card-orders-head,
+  .offers .card-offers-head {
+    font-size: 18px !important;
+  }
+  .orders .card-orders-text,
+  .offers .card-offers-text {
+    font-size: 12px !important;
   }
 }
 /* End Media */

@@ -6,6 +6,157 @@ body {
   font-family: "Cairo", sans-serif;
   position: relative;
 }
+/* Start Chatbot */
+::-webkit-scrollbar {
+  width: 0;
+}
+.chat-bot-btn {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #fff;
+  font-weight: bold;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  bottom: 0;
+  right: 0;
+  margin: 35px 50px;
+  z-index: 999999999;
+  cursor: pointer;
+}
+#main {
+  background-color: #fff;
+  box-shadow: 0 0 10px 1px rgba(99, 154, 71, 0.4);
+  position: fixed;
+  bottom: -50px;
+  right: -50px;
+  height: 0;
+  width: 0;
+  margin: 50px 120px;
+  z-index: 99999;
+  border-radius: 10px;
+  visibility: hidden;
+  display: none;
+  transition: visibility 0.1s ease-in-out;
+}
+#main.active-chat {
+  display: block;
+  visibility: visible;
+  bottom: 0;
+  right: 0;
+  height: 75vh;
+  width: 25vw;
+  transition: visibility 0.1s ease-in-out;
+}
+#main .exit::before {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 17px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  transform: rotate(45deg);
+  color: #fff;
+  cursor: pointer;
+}
+#msg_send {
+  outline: none;
+  font-size: 20px;
+  padding: 0 15px;
+  border-radius: 0 0 0 10px;
+  background: #ececee;
+  color: #333;
+  border: solid 1px #777;
+  border: none;
+}
+.chatbot-input {
+  background: linear-gradient(#ebebeb 50%, #257c29 50%);
+  display: grid;
+  grid-template-columns: 75% 25%;
+  border-radius: 32px;
+  height: 50px;
+  box-shadow: inset 0 1px 0 #777;
+  position: absolute;
+  top: 90.91%;
+  width: 100%;
+}
+.chatbot-send {
+  outline: none;
+  font-size: 20px;
+  border: none;
+  background: #257c29;
+  border-radius: 0 0px 9px 0;
+  color: #eee;
+  transition: font-size 0.1s ease-in-out;
+}
+.chatbot-send:active {
+  font-size: 15px;
+  transition: font-size 0.1s ease-in-out;
+}
+.left,
+.right {
+  font-size: 14px;
+  display: inline-block;
+  padding: 14px;
+  width: auto;
+  max-width: 60%;
+  margin: 10px 5px;
+  font-family: monospace;
+  word-wrap: break-word;
+}
+.left {
+  color: #000;
+  background: #b3cabb68;
+  border-radius: 0 15px 15px 15px;
+}
+.right {
+  float: right;
+  color: #fff;
+  background: #257c29;
+  border-radius: 15px 15px 0 15px;
+}
+#msg {
+  overflow-y: scroll;
+  height: 80%;
+  padding: 10px 5px;
+  scroll-behavior: smooth;
+}
+#main h2 {
+  text-align: center;
+  background: #257c29;
+  padding: 15px;
+  font-family: sans-serif;
+  color: #fff;
+  box-shadow: 0 2px 5px #257c2950;
+  margin-bottom: 0px;
+  border-radius: 9px 9px 0px 0px;
+}
+.bot {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: url(../images/bot.jpg);
+  background-size: 100%;
+  margin: 10px;
+}
+#robot h3 {
+  font-family: monospace;
+  font-size: 20px;
+}
+#robot {
+  display: flex;
+  align-items: center;
+}
+.msgCon1,
+.msgCon2 {
+  width: 100%;
+  display: inline-block;
+}
+/* End Chatbot */
 /* Start Loader In All Pages */
 .loader-container {
   display: none;
@@ -153,7 +304,7 @@ header .nav-item,
   padding-bottom: 100px;
   background-color: #fff;
   box-shadow: none;
-  z-index: 99999;
+  z-index: 999999999;
   width: 300px;
   height: 100%;
   position: fixed;
@@ -1027,6 +1178,7 @@ a {
 *:has(.darkmode-toggle.dark:checked) .add-work .how-add-work-section p {
   opacity: 0.8;
 }
+*:has(.darkmode-toggle.dark:checked) #main,
 *:has(.darkmode-toggle.dark:checked)
   .personal-profile
   .personal-profile-section,
@@ -1040,6 +1192,9 @@ a {
   background-color: #242424;
   color: #fff;
 }
+*:has(.darkmode-toggle.dark:checked) #main,
+*:has(.darkmode-toggle.dark:checked) #main #msg_send,
+*:has(.darkmode-toggle.dark:checked) #main .left,
 *:has(.darkmode-toggle.dark:checked) .settings-personal-profile,
 *:has(.darkmode-toggle.dark:checked) .settings-edit-profile,
 *:has(.darkmode-toggle.dark:checked) .filter .check-filter label,
@@ -1054,6 +1209,8 @@ a {
 *:has(.darkmode-toggle.dark:checked) .create-account-form .sign-div .sign {
   border: 0;
 }
+*:has(.darkmode-toggle.dark:checked) #main #msg_send,
+*:has(.darkmode-toggle.dark:checked) #main .left,
 *:has(.darkmode-toggle.dark:checked) .search-about-section .workers,
 *:has(.darkmode-toggle.dark:checked) .search-about-section .workers .worker,
 *:has(.darkmode-toggle.dark:checked) .search-about-section .orders,
@@ -1281,6 +1438,9 @@ a {
   }
 }
 @media (max-width: 1200px) {
+  #main.active-chat {
+    width: 35vw;
+  }
   .sign {
     font-size: 13px !important;
     padding: 0 10px !important;
@@ -1367,6 +1527,15 @@ a {
   }
 }
 @media (max-width: 991px) {
+  #main.active-chat {
+    width: 45vw;
+  }
+  #main .exit::before {
+    margin: 7px 20px;
+  }
+  #main h2 {
+    padding: 10px;
+  }
   .container {
     max-width: 90% !important;
   }
@@ -1466,6 +1635,9 @@ a {
   }
 }
 @media (max-width: 768px) {
+  #main.active-chat {
+    width: 65vw;
+  }
   .container {
     max-width: 90% !important;
   }
@@ -1542,6 +1714,30 @@ a {
   }
 }
 @media (max-width: 576px) {
+  .chat-bot-btn {
+    width: 40px;
+    height: 40px;
+    margin: 25px 30px;
+  }
+  #main.active-chat {
+    margin: 75px 50px;
+    width: 70vw;
+  }
+  #msg_send {
+    font-size: 14px;
+    padding: 10px;
+  }
+  .chatbot-send {
+    font-size: 14px;
+  }
+  .chatbot-send:active {
+    font-size: 12px;
+  }
+  .left,
+  .right {
+    font-size: 12px;
+    padding: 12px;
+  }
   .container {
     max-width: 90% !important;
   }
@@ -1595,6 +1791,18 @@ a {
   }
 }
 @media (max-width: 400px) {
+  #main.active-chat {
+    width: 80vw;
+  }
+  #msg_send {
+    font-size: 12px;
+  }
+  .chatbot-send {
+    font-size: 12px;
+  }
+  .chatbot-send:active {
+    font-size: 10px;
+  }
   .container {
     max-width: 90% !important;
   }

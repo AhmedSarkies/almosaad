@@ -18,7 +18,7 @@
     <!-- *** -->
     <link rel="stylesheet" href="../style/style.css" />
   </head>
-  <body>
+  <body onload="init()">
     <!-- Start Loader -->
     <div class="loader-container">
       Loading
@@ -26,6 +26,25 @@
       <div class="loader load-left"></div>
     </div>
     <!-- End Loader -->
+    <!-- Start Chatbot -->
+    <img class="chat-bot-btn" src="../images/bot.jpg" alt="chatBot" />
+    <div id="main">
+      <div class="exit"></div>
+      <h2>المساعد بوت</h2>
+      <div id="msg">
+        <div id="robot">
+          <div class="bot"></div>
+          <h3>بوتك المساعد</h3>
+        </div>
+      </div>
+      <div class="chatbot-input">
+        <input type="text" id="msg_send" placeholder="New Message" />
+        <button class="chatbot-send" id="reply">
+          Send <i class="fas fa-paper-plane"></i>
+        </button>
+      </div>
+    </div>
+    <!-- End Chatbot -->
     <!-- Start Header -->
     <header class="navbar p-0 pe-0 ps-2 ps-xl-5">
       <div
@@ -814,6 +833,7 @@
     <script src="../js/bootstrap.bundle.min.js"></script>
     <script src="../js/all.min.js"></script>
     <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../database/db.js"></script>
     <script src="../js/main.js"></script>
   </body>
 </html>

@@ -23,33 +23,29 @@ body {
   border-radius: 50%;
   bottom: 0;
   right: 0;
-  margin: 35px 50px;
-  z-index: 999999999;
+  margin: 10px 15px;
+  z-index: 99999;
   cursor: pointer;
 }
 #main {
+  visibility: hidden;
   background-color: #fff;
   box-shadow: 0 0 10px 1px rgba(99, 154, 71, 0.4);
   position: fixed;
-  bottom: -50px;
-  right: -50px;
-  height: 0;
-  width: 0;
-  margin: 50px 120px;
-  z-index: 99999;
-  border-radius: 10px;
-  visibility: hidden;
-  display: none;
-  transition: visibility 0.1s ease-in-out;
-}
-#main.active-chat {
-  display: block;
-  visibility: visible;
-  bottom: 0;
+  bottom: -100%;
   right: 0;
   height: 75vh;
   width: 25vw;
-  transition: visibility 0.1s ease-in-out;
+  margin: 10px 15px;
+  z-index: 99999;
+  border-radius: 10px;
+  display: block;
+  transition: all 0.3s ease-in-out;
+}
+#main.active-chat {
+  visibility: visible;
+  bottom: 0;
+  transition: all 0.3s ease-in-out;
 }
 #main .exit::before {
   content: "+";
@@ -1719,9 +1715,14 @@ a {
     height: 40px;
     margin: 25px 30px;
   }
+  #main {
+    top: 10px;
+  }
   #main.active-chat {
-    margin: 75px 50px;
-    width: 70vw;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    z-index: 999999;
   }
   #msg_send {
     font-size: 14px;
@@ -1791,8 +1792,14 @@ a {
   }
 }
 @media (max-width: 400px) {
+  #main {
+    top: 10px;
+  }
   #main.active-chat {
-    width: 80vw;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    z-index: 999999;
   }
   #msg_send {
     font-size: 12px;

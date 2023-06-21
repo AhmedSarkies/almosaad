@@ -35,8 +35,6 @@ $(window).on(`load`, function () {
   });
   const send = async (e) => {
     e.preventDefault();
-    const resAPI = await fetch("../database/db.json");
-    const data = await resAPI.json();
     let req = document.getElementById("msg_send").value.trim().toLowerCase();
     let res = "";
     if (req === undefined || req === "") {

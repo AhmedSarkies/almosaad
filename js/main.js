@@ -20,10 +20,32 @@ $(window).on(`load`, function () {
     }
   });
   const init = () => {
-    let res_elm = document.createElement("div");
-    res_elm.innerHTML = "السلام عليكم، كيف يمكن أن أساعدك";
-    res_elm.setAttribute("class", "left");
-    document.getElementById("msg").appendChild(res_elm);
+    data.requests.forEach((requests) => {
+      let data_req = document.createElement("div");
+      let data_res = document.createElement("div");
+      let container1 = document.createElement("div");
+      let container2 = document.createElement("div");
+      container1.setAttribute("class", "msgCon1");
+      data_req.innerHTML = requests.my_msg;
+      data_req.setAttribute("class", "right");
+      let message = document.getElementById("msg");
+      message.appendChild(container1);
+      container1.appendChild(data_req);
+      document.getElementById("msg_send").value = "";
+      data_req.addEventListener("click", () => {
+        container2.setAttribute("class", "msgCon2");
+        data_res.innerHTML = requests.bot_answer;
+        data_res.setAttribute("class", "left");
+        message.appendChild(container2);
+        container2.appendChild(data_res);
+        const scroll = () => {
+          let scrollMsg = document.getElementById("msg");
+          scrollMsg.scrollTop = scrollMsg.scrollHeight;
+        };
+        init();
+        scroll();
+      });
+    });
   };
   document.getElementById("msg_send").addEventListener("keydown", (e) => {
     if (e.key === "Enter") {
@@ -33,41 +55,7 @@ $(window).on(`load`, function () {
   document.getElementById("reply").addEventListener("click", (e) => {
     send(e);
   });
-  const send = async (e) => {
-    e.preventDefault();
-    let req = document.getElementById("msg_send").value.trim().toLowerCase();
-    let res = "";
-    if (req === undefined || req === "") {
-      alert("Please insert value");
-    } else {
-      data.requests.forEach((requests) => {
-        if (requests.my_msg === req) {
-          res = requests.bot_answer;
-          let data_req = document.createElement("div");
-          let data_res = document.createElement("div");
-          let container1 = document.createElement("div");
-          let container2 = document.createElement("div");
-          container1.setAttribute("class", "msgCon1");
-          container2.setAttribute("class", "msgCon2");
-          data_req.innerHTML = req;
-          data_res.innerHTML = res;
-          data_req.setAttribute("class", "right");
-          data_res.setAttribute("class", "left");
-          let message = document.getElementById("msg");
-          message.appendChild(container1);
-          message.appendChild(container2);
-          container1.appendChild(data_req);
-          document.getElementById("msg_send").value = "";
-          container2.appendChild(data_res);
-        }
-      });
-    }
-    const scroll = () => {
-      let scrollMsg = document.getElementById("msg");
-      scrollMsg.scrollTop = scrollMsg.scrollHeight;
-    };
-    scroll();
-  };
+  init();
   // End Chatbot
   // Start Dark Mode
   if (

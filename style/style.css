@@ -35,7 +35,7 @@ body {
   bottom: -100%;
   right: 0;
   height: 75vh;
-  width: 25vw;
+  width: 30vw;
   margin: 10px 15px;
   z-index: 99999;
   border-radius: 10px;
@@ -103,22 +103,30 @@ body {
   margin: 10px 5px;
   font-family: monospace;
   word-wrap: break-word;
+  direction: rtl;
 }
 .left {
   color: #000;
   background: #b3cabb68;
   border-radius: 0 15px 15px 15px;
+  width: 100%;
 }
 .right {
   float: right;
   color: #fff;
   background: #257c29;
-  border-radius: 15px 15px 0 15px;
+  border-radius: 15px;
+  width: 45%;
+  cursor: pointer;
+  box-shadow: 0 0 3px #000;
+}
+.right:hover {
+  box-shadow: none;
 }
 #msg {
   overflow-y: scroll;
   height: 80%;
-  padding: 10px 5px;
+  padding: 10px 5px 200px 5px;
   scroll-behavior: smooth;
 }
 #main h2 {
@@ -150,7 +158,7 @@ body {
 .msgCon1,
 .msgCon2 {
   width: 100%;
-  display: inline-block;
+  display: inline;
 }
 /* End Chatbot */
 /* Start Loader In All Pages */
@@ -234,7 +242,7 @@ header {
   background-color: var(--main-color);
   box-shadow: none;
   font-weight: 600;
-  max-height: 71px;
+  min-height: 100px;
   z-index: 99999;
 }
 .header-sticky {
@@ -302,9 +310,9 @@ header .nav-item,
   box-shadow: none;
   z-index: 999999999;
   width: 300px;
-  height: 100%;
+  height: 100vh;
   position: fixed;
-  top: 71px;
+  top: 100px;
   right: -100%;
   overflow-y: auto;
   transition-property: right;
@@ -1398,6 +1406,12 @@ a {
   border: 0;
   outline: none !important;
 }
+*:has(.darkmode-toggle.dark:checked) .right {
+  box-shadow: 0 0 2px var(--main-color);
+}
+*:has(.darkmode-toggle.dark:checked) .right:hover {
+  box-shadow: none;
+}
 /* End Dark Mode */
 /* Start Media */
 @media (max-width: 1400px) {
@@ -1736,7 +1750,7 @@ a {
   }
   .left,
   .right {
-    font-size: 12px;
+    font-size: 14px;
     padding: 12px;
   }
   .container {

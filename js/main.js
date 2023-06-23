@@ -31,7 +31,6 @@ $(window).on(`load`, function () {
       let message = document.getElementById("msg");
       message.appendChild(container1);
       container1.appendChild(data_req);
-      document.getElementById("msg_send").value = "";
       data_req.addEventListener("click", () => {
         container2.setAttribute("class", "msgCon2");
         data_res.innerHTML = requests.bot_answer;
@@ -47,14 +46,6 @@ $(window).on(`load`, function () {
       });
     });
   };
-  document.getElementById("msg_send").addEventListener("keydown", (e) => {
-    if (e.key === "Enter") {
-      send(e);
-    }
-  });
-  document.getElementById("reply").addEventListener("click", (e) => {
-    send(e);
-  });
   init();
   // End Chatbot
   // Start Dark Mode
